@@ -1,9 +1,9 @@
 /* Debug */
 
- .debug {
-     @include debug(rgba(0, 0, 0, 0.5), 1px solid #ff0);
-     z-index: 99999;
- }
+//.debug {
+//	@include debug(rgba(0, 0, 0, 0.5), 1px solid #ff0);
+//	z-index: 99999;
+//}
 
 /* Containers */
 .container {
@@ -107,6 +107,11 @@
 	&--white {
 		color: var(--color-white);
 	}
+	&--red-gradient {
+		background: var(--text-red-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
 	&--w-bold {
 		font-weight: bold;
 	}
@@ -116,11 +121,11 @@
 }
 
 .title--indent-small {
-	margin: 30px;
+	margin-bottom: 30px;
 }
 
 .title--indent-large {
-	margin: 60px;
+	margin-bottom: 60px;
 }
 
 /* Text */

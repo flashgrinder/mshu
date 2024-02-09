@@ -1,0 +1,19 @@
+.dictation--member {
+  padding: 100px 0 100px;
+}
+
+.dictation--info {
+  padding: 50px 0 50px;
+}
+
+.dictation--info .dictation__actions {
+  margin-top: 60px;
+}
+
+.dictation--member .dictation__actions {
+  margin-top: 30px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+}

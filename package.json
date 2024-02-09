@@ -51,7 +51,8 @@
     "babel-preset-es2015": "^6.24.1",
     "hystmodal": "^0.5.1",
     "postcss-responsive-type": "^1.0.0",
-    "smooth-scrollbar": "^8.6.3"
+    "smooth-scrollbar": "^8.6.3",
+    "swiper": "^11.0.6"
   },
   "babel": {
     "presets": [
