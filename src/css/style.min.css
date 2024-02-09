@@ -1,0 +1,441 @@
+/* Fonts */
+
+@font-face {
+  font-family: "Winston";
+  src: url("../../fonts/Winston/Winston-Italic.eot");
+  src: url("../../fonts/Winston/Winston-Italic.eot?#iefix") format("embedded-opentype"), url("../../fonts/Winston/Winston-Italic.woff2") format("woff2"), url("../../fonts/Winston/Winston-Italic.woff") format("woff"), url("../../fonts/Winston/Winston-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Winston";
+  src: url("../../fonts/Winston/Winston-Regular.eot");
+  src: url("../../fonts/Winston/Winston-Regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/Winston/Winston-Regular.woff2") format("woff2"), url("../../fonts/Winston/Winston-Regular.woff") format("woff"), url("../../fonts/Winston/Winston-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Winston";
+  src: url("../../fonts/Winston/Winston-Bold.eot");
+  src: url("../../fonts/Winston/Winston-Bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/Winston/Winston-Bold.woff2") format("woff2"), url("../../fonts/Winston/Winston-Bold.woff") format("woff"), url("../../fonts/Winston/Winston-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Variables */
+
+:root {
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-dark: #3E3E3E;
+  --text-red-gradient: linear-gradient(208.77deg, #A42E32 -24.41%, #E52A31 92.24%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
+  --gradient-btn: linear-gradient(0deg, #3772FF, #3772FF), linear-gradient(208.77deg, #A42E32 -24.41%, #E52A31 92.24%);
+  --font-winston: "Winston", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* Base */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Animation */
+
+/* Base Classes */
+
+/* Debug */
+
+.debug {
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  z-index: 99999;
+}
+
+.debug > div {
+  height: inherit;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.debug > div > div {
+  height: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.debug > div > div > div {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(8.3333333333% - 20px);
+  height: inherit;
+  outline: 1px solid #ff0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Containers */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.container-full {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+/* Hide */
+
+.hide {
+  display: none !important;
+}
+
+/* Position */
+
+.left {
+  text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+/* Background */
+
+.bg--white {
+  background-color: var(--color-white);
+}
+
+.bg--blue {
+  background-color: var(--color-blue);
+}
+
+.bg--light-blue {
+  background-color: var(--color-light-blue);
+}
+
+.block-padding {
+  padding: 75px 0;
+}
+
+.block-padding-large {
+  padding: 120px 0 150px;
+}
+
+.block-padding-small {
+  padding: 50px 0 50px;
+}
+
+/* Links */
+
+.link {
+  text-decoration: none;
+  transition: ease 0.3s;
+}
+
+.link:hover {
+  color: var(--color-blue);
+}
+
+/* Title */
+
+.title {
+  font-family: var(--font-winston);
+  font-style: normal;
+  margin: 0;
+}
+
+.title--big {
+  font-size: calc(30px + 20 * ((100vw - 360px) / 1080));
+}
+
+@media screen and (min-width: 1440px) {
+
+  .title--big {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+
+  .title--big {
+    font-size: 30px;
+  }
+}
+
+.title--large {
+  font-size: calc(30px + 10 * ((100vw - 360px) / 1080));
+}
+
+@media screen and (min-width: 1440px) {
+
+  .title--large {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+
+  .title--large {
+    font-size: 30px;
+  }
+}
+
+.title--medium {
+  font-size: calc(20px + 5 * ((100vw - 360px) / 1080));
+}
+
+@media screen and (min-width: 1440px) {
+
+  .title--medium {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+
+  .title--medium {
+    font-size: 20px;
+  }
+}
+
+.title--tiny {
+  font-size: 18px;
+}
+
+.title--black {
+  color: var(--color-black);
+}
+
+.title--white {
+  color: var(--color-white);
+}
+
+.title--w-bold {
+  font-weight: bold;
+}
+
+.title--uppercase {
+  text-transform: uppercase;
+}
+
+.title--indent-small {
+  margin: 30px;
+}
+
+.title--indent-large {
+  margin: 60px;
+}
+
+/* Text */
+
+.text {
+  font-family: var(--font-winston);
+  font-style: normal;
+  margin: 0;
+}
+
+.text--black {
+  color: var(--color-black);
+}
+
+.text--white {
+  color: var(--color-white);
+}
+
+.text--dark {
+  color: var(--color-dark);
+}
+
+.text--medium {
+  font-size: calc(16px + 4 * ((100vw - 1024px) / 416));
+}
+
+@media screen and (min-width: 1440px) {
+
+  .text--medium {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  .text--medium {
+    font-size: 16px;
+  }
+}
+
+.text--normal {
+  font-size: calc(14px + 2 * ((100vw - 1024px) / 416));
+}
+
+@media screen and (min-width: 1440px) {
+
+  .text--normal {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  .text--normal {
+    font-size: 14px;
+  }
+}
+
+.text--small {
+  font-size: 12px;
+}
+
+.text--w-regular {
+  font-weight: normal;
+}
+
+.text--w-bold {
+  font-weight: 700;
+}
+
+.text--italic {
+  font-style: italic;
+}
+
+.text--uppercase {
+  text-transform: uppercase;
+}
+
+/* ANOTHER MODULES */
+
+/* Swiper Slider Examples*/
+
+/* ANOTHER MODULES */
+
+/* Blocks */
+
+/* Page */
+
+.page {
+  margin: 0;
+  font-family: var(--font-winston);
+  font-size: 16px;
+  line-height: 1.25;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.page__container {
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  flex: 1 0 auto;
+}
+
+.page.is-open {
+  overflow-y: hidden;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1024px) {
+  .hide-tablet {
+    display: none !important;
+  }
+
+  .block-padding-large {
+    padding: 70px 0 100px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .hide-tabletSM {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .debug > div {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .debug > div > div {
+    margin-left: -7.5px;
+    margin-right: -7.5px;
+  }
+
+  .debug > div > div > div {
+    margin-left: 7.5px;
+    margin-right: 7.5px;
+  }
+
+  .debug > div > div > div {
+    width: calc(8.3333333333% - 15px);
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .container-full {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .block-padding-large {
+    padding: 50px 0 100px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .debug > div {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .container-full {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}

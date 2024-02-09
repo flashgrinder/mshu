@@ -1,5 +1,5 @@
 {
-  "name": "template",
+  "name": "mshu",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -49,9 +49,9 @@
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
+    "hystmodal": "^0.5.1",
     "postcss-responsive-type": "^1.0.0",
-    "smooth-scrollbar": "^8.6.3",
-    "swiper": "^6.8.2"
+    "smooth-scrollbar": "^8.6.3"
   },
   "babel": {
     "presets": [
@@ -63,5 +63,13 @@
     "last 15 version",
     "maintained node versions",
     "not dead"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/flashgrinder/mshu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/flashgrinder/mshu/issues"
+  },
+  "homepage": "https://github.com/flashgrinder/mshu#readme"
 }
