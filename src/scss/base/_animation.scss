@@ -1,0 +1,19 @@
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes lines-transform {
+  from {
+    transform: translateX(-5%);
+  }
+
+  to {
+    transform: translateX(-32%);
+  }
+}

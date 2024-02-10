@@ -1,0 +1,30 @@
+.combine {
+  padding: 60px 0 300px;
+}
+
+.combine__body {
+  position: relative;
+}
+
+.combine__body::before {
+  content: '';
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  max-width: 1421px;
+  background-image: url('../img/combine/combine-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  user-select: none;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.combine__info {
+  padding: 65px 0;
+  max-width: 710px;
+}
+
+.combine__text ~ .combine__text {
+  margin-top: 30px;
+}

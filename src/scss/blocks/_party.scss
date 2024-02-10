@@ -1,0 +1,67 @@
+.party {
+  position: relative;
+  padding: 100px 0;
+}
+
+.party__decor {
+  display: block;
+  position: absolute;
+  animation: rotate 12s linear infinite forwards;
+  @include mobile(display, none);
+}
+
+.party__decor-img {
+  display: block;
+  margin: 0;
+}
+
+.party__decor--1 {
+  top: 223px;
+  right: 34px;
+}
+
+.party__decor--2 {
+  top: 223px;
+  left: 34px;
+}
+
+.party__decor--3,
+.party__decor--4,
+.party__decor--5,
+.party__decor--6 {
+  bottom: 119px;
+}
+
+.party__decor--3 {
+  right: -150px;
+}
+
+.party__decor--4 {
+  left: -150px;
+}
+
+.party__decor--5 {
+  right: 235px;
+}
+
+.party__decor--6 {
+  left: 235px;
+}
+
+.party__items {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 135px 50px;
+  @include mobileXS-block {
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
+
+.party__item {
+  text-align: center;
+  width: 30%;
+  @include mobileXS(width, auto);
+}

@@ -1,17 +1,23 @@
 .partners--slider {
   padding: 100px 0 30px;
+  @include mobile(padding, 30px 0);
 }
 
 .partners--info {
   padding: 30px 0 50px;
+  @include mobile(padding, 30px 0);
 }
 
 .partners__logo {
   display: block;
 }
 
-.partners__items {
+.partners--info .partners__items {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 30px;
+  @include mobileXS-block {
+    flex-direction: column;
+  }
 }

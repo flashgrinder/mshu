@@ -6,6 +6,14 @@
   padding: 50px 0 50px;
 }
 
+.dictation--about {
+  padding: 30px 0 60px;
+}
+
+.dictation--about .dictation__actions {
+  margin-top: 35px;
+}
+
 .dictation--info .dictation__actions {
   margin-top: 60px;
 }
@@ -16,4 +24,5 @@
   gap: 30px;
   align-items: center;
   justify-content: center;
+  @include mobile(flex-direction, column);
 }

@@ -1,0 +1,120 @@
+.main-screen {
+  padding: 35px 0 30px;
+}
+
+.main-screen__body {
+  position: relative;
+  background-image: url('../img/main-screen/main-screen.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.main-screen__body::before {
+  content: '';
+  position: absolute;
+  background-image: url(../img/main-screen/main-screen-grid.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  user-select: none;
+  @include mobileXS(background-size, cover);
+}
+
+.main-screen__decor {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  @include mobileXS(display, none);
+}
+
+.main-screen__img-decor {
+  display: block;
+  margin: 0;
+  z-index: -1;
+}
+
+.main-screen__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 50px;
+  padding: 35px 25px 90px;
+  @include mobileXS-block {
+    padding: 35px 0 105px;
+    display: block;
+  }
+}
+
+.main-screen__text ~ .main-screen__text {
+  margin-top: 38px;
+}
+
+.main-screen__info {
+  @include mobile(display, none);
+}
+
+.main-screen__wrap-lines {
+  max-width: 581px;
+  overflow: hidden;
+  position: absolute;
+  left: 55px;
+  bottom: 55px;
+  @include mobileXS-block {
+    left: 10px;
+    bottom: 35px;
+    max-width: 360px;
+  }
+}
+
+.main-screen__lines {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  transform: translateX(-5%);
+  width: 100%;
+  animation: lines-transform 10s linear infinite alternate backwards;
+}
+
+.main-screen__line {
+  display: inline-block;
+  background: var(--color-white);
+  height: 15px;
+}
+
+.main-screen__line--large {
+  width: 236px;
+}
+
+.main-screen__line--large:first-child {
+  margin-right: 64px;
+}
+
+.main-screen__line--medium {
+  width: 91px;
+}
+
+.main-screen__line--medium:nth-child(2) {
+  margin-right: 35px;
+}
+
+.main-screen__line--medium:nth-child(3) {
+  margin-right: 59px;
+}
+
+.main-screen__logos {
+  margin-top: 60px;
+  display: flex;
+  gap: 72px;
+  justify-content: space-around;
+  @include mobile-block {
+    flex-wrap: wrap;
+  }
+}
+
+.main-screen__img {
+  display: block;
+  margin: 0;
+}
