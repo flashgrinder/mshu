@@ -10,10 +10,12 @@ function init() {
         slidesPerView: 6,
         spaceBetween: 20,
         effect: 'slide',
-        speed: 10000,
+        centeredSlides: true,
+        speed: 6000,
         autoplay: {
             delay: 0,
-            disableOnInteraction: false
+            disableOnInteraction: false,
+            waitForTransition: false
         },
         breakpoints: {
             320: {

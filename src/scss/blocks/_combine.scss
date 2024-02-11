@@ -1,5 +1,19 @@
 .combine {
+  position: relative;
   padding: 60px 0 300px;
+  @include mobile(padding, 30px 0 200px);
+}
+
+.combine::before {
+  content: '';
+  position: absolute;
+  background-image: url(../img/combine/combine-decor-line.svg);
+  background-repeat: no-repeat;
+  left: 0;
+  bottom: 100px;
+  height: 48px;
+  width: 90%;
+  max-width: 1421px;
 }
 
 .combine__body {
@@ -20,6 +34,21 @@
   z-index: -1;
 }
 
+.combine__body::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -10%;
+  left: 0;
+  background-image: url('../img/combine/combine-bg-line.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  user-select: none;
+  pointer-events: none;
+}
+
 .combine__info {
   padding: 65px 0;
   max-width: 710px;
@@ -27,4 +56,81 @@
 
 .combine__text ~ .combine__text {
   margin-top: 30px;
+}
+
+
+.combine__wrapper-decor {
+  position: relative;
+  max-width: 1380px;
+  width: 85%;
+}
+
+.combine__decor {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.combine__images-decor {
+  position: relative;
+  user-select: none;
+  pointer-events: none;
+}
+
+.combine__circle-decor--big {
+  position: absolute;
+  top: -60px;
+  right: -300px;
+  //right: -220px;
+  width: 441px;
+  height: 441px;
+  background: linear-gradient(208.77deg, #A42E32 -24.41%, #E52A31 92.24%);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotate 30s linear infinite forwards;
+  overflow: hidden;
+}
+
+.combine__circle-decor--big::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/combine/vektor-big.svg");
+}
+
+.combine__circle-decor--small {
+  position: absolute;
+  top: 5px;
+  //right: -154px;
+  right: -230px;
+  width: 308px;
+  height: 308px;
+  background: linear-gradient(208.77deg, #A42E32 -24.41%, #E52A31 92.24%);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  box-shadow: 0 0 12px 0 #00000026;
+  overflow: hidden;
+  animation: rotate-revert 30s linear infinite forwards;
+}
+
+.combine__circle-decor--small::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/combine/vektor-small.svg");
+}
+
+.combine__name-decor {
+  position: absolute;
+  top: -28px;
+  //right: -76px;
+  right: -150px;
 }

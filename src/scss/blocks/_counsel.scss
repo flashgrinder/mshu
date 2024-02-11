@@ -1,0 +1,96 @@
+.counsel {
+  padding: 100px 0;
+  background-color: var(--color-white);
+  @include mobile(padding, 60px 0);
+}
+
+.counsel__item ~ .counsel__item {
+  margin-top: 60px;
+  @include mobile(margin-top, 30px);
+}
+
+.counsel__inner {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  @include tablet(gap, 20px);
+  @include mobile-block {
+    flex-direction: column;
+  }
+}
+
+.counsel__photo {
+  position: relative;
+  width: 100%;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  overflow: hidden;
+  max-width: 440px;
+}
+
+.counsel__img {
+  display: block;
+  margin: 0;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.counsel__name  {
+  position: absolute;
+  background: var(--gradient-btn);
+  padding: 11px 50px 11px 10px;
+  text-align: right;
+  width: 90%;
+  right: 0;
+  bottom: 30px;
+}
+
+.counsel__name,
+.counsel__item--revert .counsel__name {
+  @include tablet-block {
+    bottom: 0;
+    right: auto;
+    left: auto;
+    width: 100%;
+    padding: 11px 20px;
+    text-align: center;
+  }
+}
+
+
+.counsel__info {
+  max-width: 640px;
+  @include tablet(max-width, 100%);
+}
+
+.counsel__list {
+  list-style: none;
+  padding: 0;
+}
+
+.counsel__item-list ~ .counsel__item-list {
+  margin-top: 10px;
+}
+
+.counsel__text {
+  margin-top: 60px;
+}
+
+.counsel__item--revert .counsel__info {
+  order: -1;
+  @include mobile(order, 0);
+}
+
+.counsel__item--revert .counsel__description {
+  text-align: right;
+  @include mobile(text-align, left);
+}
+
+.counsel__item--revert .counsel__name {
+  left: 0;
+  right: auto;
+  text-align: left;
+  padding: 11px 10px 11px 50px;
+}
