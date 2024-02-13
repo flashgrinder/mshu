@@ -1,0 +1,5 @@
+.short-text {
+  padding: 60px 0;
+  background: var(--gradient-btn);
+  @include mobile(padding, 30px 0);
+}

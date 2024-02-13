@@ -1,8 +1,25 @@
 .tasks {
   padding: 60px 0;
+  background: url("../img/task/tasks-bg.svg") no-repeat;
+  background-size: cover;
   @include mobile(padding, 30px 0);
 }
 
+.tasks__list {
+  max-width: 875px;
+  margin: 0 auto;
+}
+
+.tasks__item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
 .tasks__item ~ .tasks__item {
-  margin-top: 30px;
+  margin-top: 20px;
+}
+
+.tasks__icon svg {
+  display: block;
 }

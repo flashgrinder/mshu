@@ -876,10 +876,27 @@ img {
 
 .tasks {
   padding: 60px 0;
+  background: url("../img/task/tasks-bg.svg") no-repeat;
+  background-size: cover;
+}
+
+.tasks__list {
+  max-width: 875px;
+  margin: 0 auto;
+}
+
+.tasks__item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
 
 .tasks__item ~ .tasks__item {
-  margin-top: 30px;
+  margin-top: 20px;
+}
+
+.tasks__icon svg {
+  display: block;
 }
 
 /* Party */
@@ -951,6 +968,11 @@ img {
   background: linear-gradient(248.14deg, #C52D32 14.32%, #E52B32 85.68%), linear-gradient(0deg, #D9D9D9, #D9D9D9);
 }
 
+.main-blocks-wrapper {
+  background: url("../img/main-pattern.svg") no-repeat fixed;
+  background-size: cover;
+}
+
 /* General */
 
 .general {
@@ -989,8 +1011,19 @@ img {
 /* Counsel */
 
 .counsel {
+  position: relative;
   padding: 100px 0;
   background-color: var(--color-white);
+}
+
+.counsel::before {
+  content: "";
+  background: linear-gradient(45deg, #e52b32, #db2c32);
+  position: absolute;
+  width: 3vw;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .counsel__item ~ .counsel__item {
@@ -1078,21 +1111,8 @@ img {
 /* News-slider */
 
 .news-slider {
-  position: relative;
   padding: 60px 0;
   background: var(--gradient-btn);
-}
-
-.news-slider::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("../img/news-slider/news-slider-bg.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .news-slider__outer {
@@ -1258,6 +1278,54 @@ img {
 .contacts__link--adr:hover {
   text-decoration: underline;
 }
+
+/* Head-info */
+
+.head-info {
+  padding: 60px 0;
+  background: url("../img/head-info-bg.png") no-repeat;
+  background-size: cover;
+}
+
+/* Stages */
+
+.stages {
+  padding: 100px 0;
+  background: url("../img/main-pattern.svg") no-repeat;
+  background-size: cover;
+}
+
+.stages__head {
+  position: relative;
+}
+
+.stages__list {
+  padding-left: 70px;
+}
+
+.stages__item ~ .stages__item {
+  margin-top: 30px;
+}
+
+.stages__icon {
+  position: absolute;
+  left: -70px;
+  top: -5px;
+}
+
+.stages__date,
+.stages__description {
+  margin-top: 30px;
+}
+
+/* Short-text */
+
+.short-text {
+  padding: 60px 0;
+  background: var(--gradient-btn);
+}
+
+/* Team */
 
 /* Footer */
 
@@ -1458,6 +1526,10 @@ img {
   .contacts__info {
     padding: 20px;
     gap: 30px;
+  }
+
+  .short-text {
+    padding: 30px 0;
   }
 }
 

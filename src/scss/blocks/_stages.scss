@@ -1,0 +1,28 @@
+.stages {
+  padding: 100px 0;
+  background: url("../img/main-pattern.svg") no-repeat;
+  background-size: cover;
+}
+
+.stages__head {
+  position: relative;
+}
+
+.stages__list {
+  padding-left: 70px;
+}
+
+.stages__item ~ .stages__item {
+  margin-top: 30px;
+}
+
+.stages__icon {
+  position: absolute;
+  left: -70px;
+  top: -5px;
+}
+
+.stages__date,
+.stages__description {
+  margin-top: 30px;
+}
