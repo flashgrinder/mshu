@@ -2,4 +2,5 @@
   padding: 60px 0;
   background: url("../img/head-info-bg.png") no-repeat;
   background-size: cover;
+  @include mobile(padding, 30px 0);
 }

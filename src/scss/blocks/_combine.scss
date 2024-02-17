@@ -7,13 +7,15 @@
 .combine::before {
   content: '';
   position: absolute;
-  background-image: url(../img/combine/combine-decor-line.svg);
+  background-image: url('../img/combine/combine-decor-line.svg');
   background-repeat: no-repeat;
+  background-size: contain;
   left: 0;
   bottom: 100px;
   height: 48px;
   width: 90%;
   max-width: 1421px;
+  @include mobile(content, none);
 }
 
 .combine__body {

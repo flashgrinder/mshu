@@ -746,8 +746,9 @@ img {
 .combine::before {
   content: "";
   position: absolute;
-  background-image: url(../img/combine/combine-decor-line.svg);
+  background-image: url("../img/combine/combine-decor-line.svg");
   background-repeat: no-repeat;
+  background-size: contain;
   left: 0;
   bottom: 100px;
   height: 48px;
@@ -876,7 +877,9 @@ img {
 
 .tasks {
   padding: 60px 0;
-  background: url("../img/task/tasks-bg.svg") no-repeat;
+  background-image: url("../img/task/tasks-bg.svg");
+  background-repeat: no-repeat;
+  background-color: rgba(181, 181, 181, 0.05);
   background-size: cover;
 }
 
@@ -1327,6 +1330,40 @@ img {
 
 /* Team */
 
+.team {
+  padding: 100px 0 130px;
+}
+
+.team__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  grid-gap: 60px;
+}
+
+.team__item {
+  position: relative;
+}
+
+.team__photo {
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.team__img {
+  display: block;
+  width: 100%;
+}
+
+.team__name {
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  width: 100%;
+  background: var(--gradient-btn);
+  padding: 23px;
+  border-radius: 0 0 20px 20px;
+}
+
 /* Footer */
 
 .footer {
@@ -1466,6 +1503,10 @@ img {
     padding: 30px 0 200px;
   }
 
+  .combine::before {
+    content: none;
+  }
+
   .tasks {
     padding: 30px 0;
   }
@@ -1528,8 +1569,20 @@ img {
     gap: 30px;
   }
 
+  .head-info {
+    padding: 30px 0;
+  }
+
+  .stages {
+    padding: 50px 0;
+  }
+
   .short-text {
     padding: 30px 0;
+  }
+
+  .team {
+    padding: 50px 0;
   }
 }
 

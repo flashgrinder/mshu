@@ -1,0 +1,38 @@
+.team {
+  padding: 100px 0 130px;
+  @include mobile(padding, 50px 0);
+}
+
+.team__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  grid-gap: 60px;
+}
+
+.team__item {
+  position: relative;
+}
+
+.team__photo {
+  overflow: hidden;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.team__img {
+  display: block;
+  width: 100%;
+}
+
+.team__name {
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  width: 100%;
+  background: var(--gradient-btn);
+  padding: 23px;
+  -webkit-border-radius: 0 0 20px 20px;
+  -moz-border-radius: 0 0 20px 20px;
+  border-radius: 0 0 20px 20px;
+}
