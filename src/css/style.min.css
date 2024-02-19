@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: "Winston";
-  src: url("../../fonts/Winston/Winston-Italic.eot");
-  src: url("../../fonts/Winston/Winston-Italic.eot?#iefix") format("embedded-opentype"), url("../../fonts/Winston/Winston-Italic.woff2") format("woff2"), url("../../fonts/Winston/Winston-Italic.woff") format("woff"), url("../../fonts/Winston/Winston-Italic.ttf") format("truetype");
+  src: url("../fonts/Winston/Winston-Italic.eot");
+  src: url("../fonts/Winston/Winston-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Winston/Winston-Italic.woff2") format("woff2"), url("../fonts/Winston/Winston-Italic.woff") format("woff"), url("../fonts/Winston/Winston-Italic.ttf") format("truetype");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
@@ -11,8 +11,8 @@
 
 @font-face {
   font-family: "Winston";
-  src: url("../../fonts/Winston/Winston-Regular.eot");
-  src: url("../../fonts/Winston/Winston-Regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/Winston/Winston-Regular.woff2") format("woff2"), url("../../fonts/Winston/Winston-Regular.woff") format("woff"), url("../../fonts/Winston/Winston-Regular.ttf") format("truetype");
+  src: url("../fonts/Winston/Winston-Regular.eot");
+  src: url("../fonts/Winston/Winston-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Winston/Winston-Regular.woff2") format("woff2"), url("../fonts/Winston/Winston-Regular.woff") format("woff"), url("../fonts/Winston/Winston-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -20,8 +20,8 @@
 
 @font-face {
   font-family: "Winston";
-  src: url("../../fonts/Winston/Winston-Bold.eot");
-  src: url("../../fonts/Winston/Winston-Bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/Winston/Winston-Bold.woff2") format("woff2"), url("../../fonts/Winston/Winston-Bold.woff") format("woff"), url("../../fonts/Winston/Winston-Bold.ttf") format("truetype");
+  src: url("../fonts/Winston/Winston-Bold.eot");
+  src: url("../fonts/Winston/Winston-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Winston/Winston-Bold.woff2") format("woff2"), url("../fonts/Winston/Winston-Bold.woff") format("woff"), url("../fonts/Winston/Winston-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -933,7 +933,7 @@ img {
   padding: 60px 0;
   background-image: url("../img/task/tasks-bg.svg");
   background-repeat: no-repeat;
-  background-color: rgba(181, 181, 181, 0.05);
+  background-color: rgba(252, 252, 252, 0.9);
   background-size: cover;
 }
 
@@ -1011,7 +1011,7 @@ img {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  gap: 135px 50px;
+  gap: 104px 50px;
 }
 
 .party__item {
