@@ -1083,6 +1083,14 @@ img {
   left: 0;
 }
 
+.counsel__block ~ .counsel__block {
+  margin-top: 100px;
+}
+
+.counsel__excerpt {
+  margin-bottom: 60px;
+}
+
 .counsel__item ~ .counsel__item {
   margin-top: 60px;
 }
@@ -1723,6 +1731,12 @@ img {
 
 /* MEDIA QUERIES */
 
+@media screen and (max-width: 1365px) {
+  .counsel::before {
+    content: none;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .hide-tablet {
     display: none !important;
@@ -1732,8 +1746,25 @@ img {
     padding: 70px 0 100px;
   }
 
+  .counsel__block ~ .counsel__block {
+    margin-top: 60px;
+  }
+
+  .counsel__excerpt {
+    margin-bottom: 30px;
+  }
+
   .counsel__inner {
     gap: 20px;
+  }
+
+  .counsel__photo {
+    max-width: 229px;
+    height: 400px;
+  }
+
+  .counsel__img {
+    height: 100%;
   }
 
   .counsel__name,
@@ -1838,6 +1869,15 @@ img {
 
   .counsel__inner {
     flex-direction: column;
+  }
+
+  .counsel__photo {
+    height: auto;
+    max-width: 440px;
+  }
+
+  .counsel__img {
+    height: auto;
   }
 
   .counsel__item--revert .counsel__info {

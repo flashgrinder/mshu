@@ -13,6 +13,19 @@
   height: 100%;
   top: 0;
   left: 0;
+  @include to(1365px) {
+      content: none;
+  }
+}
+
+.counsel__block ~ .counsel__block {
+  margin-top: 100px;
+  @include tablet(margin-top, 60px);
+}
+
+.counsel__excerpt {
+  margin-bottom: 60px;
+  @include tablet(margin-bottom, 30px);
 }
 
 .counsel__item ~ .counsel__item {
@@ -38,6 +51,14 @@
   border-radius: 25px;
   overflow: hidden;
   max-width: 440px;
+  @include tablet-block {
+    max-width: 229px;
+    height: 400px;
+  }
+  @include mobile-block {
+    height: auto;
+    max-width: 440px;
+  }
 }
 
 .counsel__img {
@@ -46,6 +67,12 @@
   width: 100%;
   object-fit: cover;
   object-position: center;
+  @include tablet-block {
+    height: 100%;
+  }
+  @include mobile-block {
+    height: auto;
+  }
 }
 
 .counsel__name  {
