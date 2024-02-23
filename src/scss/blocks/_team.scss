@@ -11,6 +11,7 @@
 
 .team__item {
   position: relative;
+  perspective: 700px;
 }
 
 .team__photo {
@@ -35,4 +36,38 @@
   -webkit-border-radius: 0 0 20px 20px;
   -moz-border-radius: 0 0 20px 20px;
   border-radius: 0 0 20px 20px;
+}
+
+.team__side--front,
+.team__side--back {
+  backface-visibility: hidden;
+  transition: transform 0.3s ease;
+}
+
+.team__side--back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--color-white);
+  transform: rotateY(180deg);
+  font-size: 11px;
+  padding: 30px 20px;
+  border-radius: 20px;
+  border: 1px solid var(--color-dark);
+  display: flex;
+  align-items: center;
+}
+
+.team__side--front {
+  transform: rotateY(0deg);
+}
+
+.team__item:hover .team__side--front {
+  transform: rotateY(180deg);
+}
+
+.team__item:hover .team__side--back {
+  transform: rotateY(0deg);
 }
