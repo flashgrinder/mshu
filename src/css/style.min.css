@@ -862,6 +862,10 @@ img {
   width: 85%;
 }
 
+.combine__wrapper-decor--only-mobile {
+  display: none;
+}
+
 .combine__decor {
   position: absolute;
   right: 0;
@@ -1732,6 +1736,22 @@ img {
 /* MEDIA QUERIES */
 
 @media screen and (max-width: 1365px) {
+  .combine::before {
+    max-width: 1024px;
+  }
+
+  .combine__body::before {
+    max-width: 1024px;
+  }
+
+  .combine__info {
+    max-width: 500px;
+  }
+
+  .combine__wrapper-decor {
+    max-width: 1024px;
+  }
+
   .counsel::before {
     content: none;
   }
@@ -1843,7 +1863,23 @@ img {
   }
 
   .combine::before {
-    content: none;
+    bottom: 50px;
+  }
+
+  .combine__wrapper-decor {
+    width: 90%;
+  }
+
+  .combine__circle-decor--big {
+    right: -280px;
+  }
+
+  .combine__circle-decor--small {
+    right: -210px;
+  }
+
+  .combine__name-decor {
+    right: -130px;
   }
 
   .tasks {
@@ -1974,6 +2010,26 @@ img {
     left: 10px;
     bottom: 35px;
     max-width: 360px;
+  }
+
+  .combine {
+    padding: 30px 0 400px;
+  }
+
+  .combine::before {
+    content: none;
+  }
+
+  .combine__body::before {
+    width: 100%;
+  }
+
+  .combine__wrapper-decor--only-desktop {
+    display: none;
+  }
+
+  .combine__wrapper-decor--only-mobile {
+    display: block;
   }
 
   .party {

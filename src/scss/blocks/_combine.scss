@@ -2,6 +2,7 @@
   position: relative;
   padding: 60px 0 300px;
   @include mobile(padding, 30px 0 200px);
+  @include mobileXS(padding, 30px 0 400px);
 }
 
 .combine::before {
@@ -15,7 +16,11 @@
   height: 48px;
   width: 90%;
   max-width: 1421px;
-  @include mobile(content, none);
+  @include to(1365px){
+    max-width: 1024px;
+  }
+  @include mobile(bottom, 50px);
+  @include mobileXS(content, none);
 }
 
 .combine__body {
@@ -34,6 +39,10 @@
   user-select: none;
   pointer-events: none;
   z-index: -1;
+  @include to(1365px){
+    max-width: 1024px;
+  }
+  @include mobileXS(width, 100%);
 }
 
 .combine__body::after {
@@ -54,6 +63,9 @@
 .combine__info {
   padding: 65px 0;
   max-width: 710px;
+  @include to(1365px){
+    max-width: 500px;
+  }
 }
 
 .combine__text ~ .combine__text {
@@ -65,6 +77,19 @@
   position: relative;
   max-width: 1380px;
   width: 85%;
+  @include to(1365px){
+    max-width: 1024px;
+  }
+  @include mobile(width, 90%);
+}
+
+.combine__wrapper-decor--only-desktop {
+  @include mobileXS(display, none);
+}
+
+.combine__wrapper-decor--only-mobile {
+  display: none;
+  @include mobileXS(display, block);
 }
 
 .combine__decor {
@@ -96,6 +121,7 @@
   align-items: center;
   animation: rotate 30s linear infinite forwards;
   overflow: hidden;
+  @include mobile(right, -280px);
 }
 
 .combine__circle-decor--big::before {
@@ -120,6 +146,7 @@
   box-shadow: 0 0 12px 0 #00000026;
   overflow: hidden;
   animation: rotate-revert 30s linear infinite forwards;
+  @include mobile(right, -210px);
 }
 
 .combine__circle-decor--small::before {
@@ -135,4 +162,5 @@
   top: -28px;
   //right: -76px;
   right: -150px;
+  @include mobile(right, -130px);
 }
