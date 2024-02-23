@@ -28,3 +28,9 @@
   justify-content: center;
   @include mobile(flex-direction, column);
 }
+
+.dictation--info .dictation__button,
+.dictation--member .dictation__button,
+.dictation--about .dictation__button {
+  @include mobileXS(width, 100%);
+}

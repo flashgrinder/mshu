@@ -2058,6 +2058,12 @@ img {
     padding: 30px 0;
   }
 
+  .dictation--info .dictation__button,
+  .dictation--member .dictation__button,
+  .dictation--about .dictation__button {
+    width: 100%;
+  }
+
   .news-list__items {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   }
