@@ -29,6 +29,14 @@
   width: 100%;
 }
 
+.news-list__pic {
+  transition: filter .150s ease-in-out;
+}
+
+.news-list__post:hover .news-list__pic {
+  filter: blur(10px) grayscale(1);
+}
+
 .news-list__plunk {
   position: absolute;
   left: 0;
@@ -42,6 +50,15 @@
   align-items: center;
   justify-content: center;
   text-decoration: none;
+  -webkit-transition: opacity .150s ease-in-out;
+  -moz-transition: opacity .150s ease-in-out;
+  -ms-transition: opacity .150s ease-in-out;
+  -o-transition: opacity .150s ease-in-out;
+  transition: opacity .150s ease-in-out;
+}
+
+.news-list__post:hover .news-list__plunk {
+  opacity: 0;
 }
 
 .news-list__date {
@@ -49,6 +66,61 @@
   left: 0;
   top: 0;
   padding: 13px 43px;
+  -webkit-transition: opacity .150s ease-in-out;
+  -moz-transition: opacity .150s ease-in-out;
+  -ms-transition: opacity .150s ease-in-out;
+  -o-transition: opacity .150s ease-in-out;
+  transition: opacity .150s ease-in-out;
+}
+
+.news-list__post:hover .news-list__date {
+  opacity: 0;
+}
+
+.news-list__description {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding: 50px;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity .150s ease-in-out, visibility .150s ease-in-out;
+  -moz-transition: opacity .150s ease-in-out, visibility .150s ease-in-out;
+  -ms-transition: opacity .150s ease-in-out, visibility .150s ease-in-out;
+  -o-transition: opacity .150s ease-in-out, visibility .150s ease-in-out;
+  transition: opacity .150s ease-in-out, visibility .150s ease-in-out;
+}
+
+.news-list__post:hover .news-list__description {
+  opacity: 1;
+  visibility: visible;
+}
+
+.news-list__description::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  filter: blur(50px);
+}
+
+.news-list__excerpt {
+  position: relative;
+}
+
+.news-list__more-btn {
+  padding: 13px 27px;
+  font-size: 16px;
 }
 
 .news-list__nav {
