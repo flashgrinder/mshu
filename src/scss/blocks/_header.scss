@@ -5,7 +5,17 @@
   width: 100%;
   z-index: 1;
   background: var(--color-white);
+  -webkit-transition: padding .3s ease-in-out;
+  -moz-transition: padding .3s ease-in-out;
+  -ms-transition: padding .3s ease-in-out;
+  -o-transition: padding .3s ease-in-out;
+  transition: padding .3s ease-in-out;
   @include tablet(padding, 30px 0);
+}
+
+.header.is-scroll {
+  padding: 20px 0;
+  box-shadow: 0 0 6px 0 var(--color-dark);
 }
 
 .header__body {

@@ -675,6 +675,12 @@ img {
   width: 100%;
   z-index: 1;
   background: var(--color-white);
+  transition: padding 0.3s ease-in-out;
+}
+
+.header.is-scroll {
+  padding: 20px 0;
+  box-shadow: 0 0 6px 0 var(--color-dark);
 }
 
 .header__body {
@@ -797,6 +803,7 @@ img {
   margin: 0 auto;
   overflow: hidden;
   flex: 1 0 auto;
+  padding-top: 149px;
 }
 
 /* Buttons */
