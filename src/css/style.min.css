@@ -2129,10 +2129,10 @@ img {
 .team__name {
   position: absolute;
   left: 0;
-  bottom: -30px;
+  bottom: 0;
   width: 100%;
   background: var(--gradient-btn);
-  padding: 23px;
+  padding: 20px;
   border-radius: 0 0 20px 20px;
 }
 
@@ -2161,6 +2161,7 @@ img {
 
 .team__side--front {
   transform: rotateY(0deg);
+  height: 100%;
 }
 
 .team__item:hover .team__side--front {
