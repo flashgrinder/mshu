@@ -172,3 +172,83 @@
 </body>
 
 </html>
+<!-- Modal -->
+<div class="modal hystmodal" id="feedback" aria-hidden="true">
+    <div class="hystmodal__wrap">
+        <div class="modal__body hystmodal__window" role="modal window feedback" aria-modal="true">
+            <div class="modal__close" data-hystclose>
+                <svg class="modal__close-svg" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L12 12M12 1L1 12" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+            </div>
+            <h3 class="modal__title title title--medium title--white title--w-bold center">
+
+                Оставить заявку
+
+            </h3>
+            <div class="wpcf7">
+                <form action="" class="modal__form invalid wpcf7-form">
+                    <div class="modal__field">
+                        <input type="text" class="modal__input" placeholder="Ваше имя">
+                    </div>
+                    <div class="modal__field">
+                        <input type="email" class="modal__input" placeholder="Ваше Email">
+                    </div>
+                    <div class="modal__field">
+                        <input type="tel" class="modal__input" placeholder="Ваш телефон">
+                    </div>
+                    <div class="modal__field">
+                        <input type="text" class="modal__input" placeholder="Образовательное учреждение">
+                    </div>
+                    <div class="modal__field">
+                        <select class="js-select-modal">
+                            <option value="value 1">Саратов</option>
+                            <option value="value 2">Москва</option>
+                            <option value="value 3">Смоленск</option>
+                        </select>
+                    </div>
+                    <div class="modal__wrap-policy">
+                        <div class="modal__policy text text--small text--black text--w-light center">
+                            Ваши данные находятся под защитой
+                        </div>
+                        <a href="https://fcdigital.ru/politika-konfidenczialnosti/" class="modal__link-policy text text--black text--small text--w-light center link" target="_blank">
+
+                            Политика конфиденциальности
+
+                        </a>
+                    </div>
+                    <div class="modal__actions">
+                        <input type="button" value="Принять участие" class="modal__btn button button--primary button--small">
+                        <span class="wpcf7-spinner"></span>
+                    </div>
+                    <div class="wpcf7-response-output" aria-hidden="true">
+                        Одно или несколько полей содержат ошибочные данные. Пожалуйста, проверьте их и попробуйте ещё раз.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /. Modal -->
+
+<!-- Success -->
+<div class="modal modal--success hystmodal js-modal-success" id="success" aria-hidden="true">
+    <div class="modal__wrap hystmodal__wrap">
+        <div class="modal__body hystmodal__window" role="modal window feedback" aria-modal="true">
+            <div class="modal__close" data-hystclose>
+                <svg class="modal__close-svg" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L12 12M12 1L1 12" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+            </div>
+            <div class="modal__wrapper-success">
+                <div class="modal__success-icon">
+                    <img src="./img/check-success.svg" alt="Заявка принята" class="modal__success-img">
+                </div>
+                <div class="modal__success-text text text--medium text--dark text--w-regular">
+                    Спасибо, ваша заявка принята!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /. Success -->
