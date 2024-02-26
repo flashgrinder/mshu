@@ -267,7 +267,7 @@
 	<!-- ./ General -->
 
 	<!-- Counsel -->
-	<section class="counsel js-reveal gs-reveal">
+	<section class="counsel js-reveal gs-reveal" id="participants">
 		<div class="counsel__body container">
 			<div class="counsel__block">
 				<h2 class="counsel__heading title title--big title--black title--w-bold title--indent-large js-reveal gs-reveal a-reveal-left">
@@ -491,7 +491,7 @@
 	<!-- ./ Counsel -->
 
 	<!-- Mentors -->
-	<section class="mentors">
+	<section class="mentors" id="mentors">
 		<div class="mentors__body container">
 			<div class="mentors__head-wrap">
 				<h2 class="mentors__heading title title--big title--white title--w-bold">
@@ -648,7 +648,7 @@
 			знаний и понимания молодежью основных правовых аспектов предпринимательской деятельности.
 		</div>
 		<div class="dictation__actions center">
-			<a href="#feedback" class="dictation__button button button--primary js-reveal gs-reveal a-reveal-left">
+			<a href="/diktant" class="dictation__button button button--primary js-reveal gs-reveal a-reveal-left">
 				Перейти
 			</a>
 		</div>
@@ -657,7 +657,7 @@
 <!-- ./ Dictation-info -->
 
 <!-- Contacts -->
-<section class="contacts js-reveal gs-reveal">
+<section class="contacts js-reveal gs-reveal" id="contacts">
 	<div class="contacts__body">
 		<div class="contacts__inner">
 			<div class="contacts__map js-reveal gs-reveal a-reveal-left">

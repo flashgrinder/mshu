@@ -14,30 +14,15 @@
 			<img src="<?= STANDART_DIR; ?>/img/logo.svg" alt="" class="header__logo-img logo__img">
 		</a>
 		<div class="header__inner js-menu">
-			<nav class="header__menu menu">
-				<ul class="header__menu-list menu__list">
-					<li class="header__menu-item menu__item">
-						<a href="javascript:;" class="header__menu-link menu__link">
-							Участники
-						</a>
-					</li>
-					<li class="header__menu-item menu__item">
-						<a href="" class="header__menu-link menu__link">
-							Наставники
-						</a>
-					</li>
-					<li class="header__menu-item menu__item">
-						<a href="" class="header__menu-link menu__link">
-							Новости
-						</a>
-					</li>
-					<li class="header__menu-item menu__item">
-						<a href="" class="header__menu-link menu__link">
-							Контакты
-						</a>
-					</li>
-				</ul>
-			</nav>
+			<?php
+				wp_nav_menu([
+					'theme_location'  => 'header-menu',
+					'container'       => 'nav',
+					'container_class' => 'header__menu menu',
+					'menu_class'      => '',
+					'items_wrap'      => '<ul class="%2$s header__menu-list menu__list">%3$s</ul>'
+				]);
+			?>
 		</div>
 		<a href="tel:+7 927 136 26 60" class="header__phone">
 			<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
