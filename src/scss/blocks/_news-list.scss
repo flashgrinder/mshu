@@ -63,9 +63,13 @@
 
 .news-list__date {
   position: absolute;
-  left: 0;
-  top: 0;
-  padding: 13px 43px;
+  left: 10px;
+  top: 10px;
+  padding: 8px 26px;
+  background: linear-gradient(180deg, #A42E32 0%, #E52A31 100%);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
   -webkit-transition: opacity .150s ease-in-out;
   -moz-transition: opacity .150s ease-in-out;
   -ms-transition: opacity .150s ease-in-out;

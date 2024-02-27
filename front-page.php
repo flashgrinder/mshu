@@ -1,6 +1,9 @@
 <?php /* Template Name: Главная */?>
 <?php get_header(); ?>
-
+<?php
+	$about = get_field('about');
+	$dictation = get_field('dictation');
+?>
 <div class="main-blocks-wrapper">
 	<!-- Main-screen -->
 	<section class="main-screen js-reveal gs-reveal">
@@ -54,8 +57,7 @@
 				О программе
 			</h2>
 			<div class="dictation__text text text--medium text--dark text--w-regular left">
-				Молодежная школа юриста (МШЮ) Уполномоченного по защите прав предпринимателей в городе
-				Москве – образовательная модель и площадка для трансляции профессиональных ценностей юридического сообщества через институт наставничества, повышения уровня правовой грамотности подрастающего поколения и профессиональной ориентации школьников в сфере юриспруденции.
+				<?= $about; ?>
 			</div>
 			<div class="dictation__actions left">
 				<a href="javascript:;" class="dictation__button button button--primary" data-modal="#success">
@@ -269,223 +271,70 @@
 	<!-- Counsel -->
 	<section class="counsel js-reveal gs-reveal" id="participants">
 		<div class="counsel__body container">
-			<div class="counsel__block">
-				<h2 class="counsel__heading title title--big title--black title--w-bold title--indent-large js-reveal gs-reveal a-reveal-left">
-					Управляющий совет
-					<br>
-					Молодежной школы юриста
-				</h2>
-				<div class="counsel__items">
-					<div class="counsel__item js-reveal gs-reveal a-reveal-left">
-						<div class="counsel__inner">
-							<div class="counsel__photo">
-								<img src="<?= STANDART_DIR; ?>/img/counsel/counsel-1.png" alt="" class="counsel__img">
-								<h3 class="counsel__name text text--medium text--white text--w-bold">
-									Дамир Валеев
-								</h3>
+			<?php if (have_rows('counsel-block')) : ?>
+				<?php while (have_rows('counsel-block')) : the_row();
+
+					$counsel_block_title = get_sub_field('counsel-block_title');
+					$counsel_block_description = get_sub_field('counsel-block_descr');
+
+					?>
+					<div class="counsel__block">
+						<h2 class="counsel__heading title title--big title--black title--w-bold <?php if(!empty($counsel_block_description)): ?>title--indent-small<?php else: ?>title--indent-large<?php endif; ?> js-reveal gs-reveal a-reveal-left">
+							<?= $counsel_block_title; ?>
+						</h2>
+						<?php if(!empty($counsel_block_description)): ?>
+							<div class="counsel__excerpt text text--medium text--dark text--w-regular">
+								<?= $counsel_block_description; ?>
 							</div>
-							<div class="counsel__info">
-								<div class="counsel__description">
-									<ul class="counsel__list text text--medium text--dark text--w-bold">
-										<li class="counsel__item-list">
-											Председатель Управляющего совета Молодежной школы юриста
-										</li>
-										<li class="counsel__item-list">
-											Заместитель декана по научной деятельности юридического факультета Казанского (Приволжского) федерального университета, д.ю.н., профессор
-										</li>
-										<li class="counsel__item-list">
-											Член Ученого Совета КФУЧлен Ученого Совета юридического факультета КФУ
-										</li>
-										<li class="counsel__item-list">
-											Член экзаменационной комиссии при Верховном Суде Республики Татарстан
-										</li>
-										<li class="counsel__item-list">
-											Член экспертного совета Комитета по правовым и судебным вопросам Совета Федерации Федерального Собрания Российской Федерации
-										</li>
-										<li class="counsel__item-list">
-											Член Диссертационного совета при Казанском (Приволжском) федеральном университете и Диссертационного совета при Саратовской государственной юридической академии
-										</li>
-										<li class="counsel__item-list">
-											Председатель Общественного совета при Управлении Федеральной службы судебных приставов Российской Федерации по Республике Татарстан
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<div class="counsel__text text text--medium text--dark text--w-regular">
-							<b>Практическая деятельность:</b>
-							<br>
-							<br>
-							<ul class="counsel__list text text--medium text--dark text--w-regular">
-								<li class="counsel__item-list">
-									Член межведомственной рабочей группы при Министерстве юстиции Российской Федерации по подготовке проекта Исполнительного кодекса РФ, член НКС при Верховном Суде Республики Татарстан.
-								</li>
-								<li class="counsel__item-list">
-									Автор более 200 публикаций по актуальным вопросам гражданского права и процесса, исполнительного производства и медиации.Главный редактор Федерального научно-практического журнала "Вестник гражданского процесса", главный редактор журнала "Kazan University Law Review".
-								</li>
-								<li class="counsel__item-list">
-									Заслуженный юрист Республики Татарстан. Лауреат высшей юридической премии "Юрист года".Международный эксперт в проекте Европейского Союза «Поддержка реформы судебной системы в Кыргызской Республике».
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="counsel__item counsel__item--revert js-reveal gs-reveal a-reveal-right">
-						<div class="counsel__inner">
-							<div class="counsel__photo">
-								<img src="<?= STANDART_DIR; ?>/img/counsel/counsel-2.png" alt="" class="counsel__img">
-								<h3 class="counsel__name text text--medium text--white text--w-bold">
-									Анна Савин-Кровякова
-								</h3>
-							</div>
-							<div class="counsel__info">
-								<div class="counsel__description">
-									<ul class="counsel__list text text--medium text--dark text--w-bold">
-										<li class="counsel__item-list">
-											Директор АНО "Институт правовой грамотности и поддержки предпринимательства"
-										</li>
-										<li class="counsel__item-list">
-											Руководитель Общественной приемной при Уполномоченном
-											по защите прав предпринимателей
-											в г. Москве по вопросам молодежного предпринимательства
-										</li>
-										<li class="counsel__item-list">
-											Управляющий партнер международной консалтинговой компании FINCOM group
-										</li>
-									</ul>
-								</div>
-							</div>
+						<?php endif; ?>
+						<div class="counsel__items">
+							<?php if (have_rows('counsel')) : ?>
+								<?php $count = 0; ?>
+								<?php while (have_rows('counsel')) : the_row();
+
+									$counsel_photo = get_sub_field('counsel_photo');
+									$counsel_name = get_sub_field('counsel_name');
+									$counsel_description = get_sub_field('counsel_description');
+
+									?>
+									<div class="counsel__item js-reveal gs-reveal <?= (++$count%2 ? 'a-reveal-left' : 'counsel__item--revert a-reveal-right') ?>">
+										<div class="counsel__inner">
+											<div class="counsel__photo">
+												<?php if (!empty($counsel_photo)) : ?>
+													<img src="<?= esc_url($counsel_photo['url']); ?>" class="counsel__img" alt="<?= esc_url($counsel_photo['alt']); ?>">
+												<?php endif; ?>
+												<h3 class="counsel__name text text--medium text--white text--w-bold">
+													<?= $counsel_name; ?>
+												</h3>
+											</div>
+											<div class="counsel__info">
+												<div class="counsel__description">
+													<ul class="counsel__list text text--medium text--dark text--w-bold">
+														<?php if (have_rows('counsel-list')) : ?>
+															<?php while (have_rows('counsel-list')) : the_row();
+																$counsel_list_item = get_sub_field('counsel_list_item');
+																?>
+																	<li class="counsel__item-list">
+																		<?= $counsel_list_item; ?>
+																	</li>
+															<?php endwhile; ?>
+														<?php endif; ?>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<?php if(!empty($counsel_description)): ?>
+											<div class="counsel__text text text--medium text--dark text--w-regular">
+												<?= $counsel_description; ?>
+											</div>
+										<?php endif; ?>
+									</div>
+								<?php endwhile; ?>
+							<?php endif; ?>
 						</div>
 					</div>
-					<div class="counsel__item js-reveal gs-reveal a-reveal-left">
-						<div class="counsel__inner">
-							<div class="counsel__photo">
-								<img src="<?= STANDART_DIR; ?>/img/counsel/counsel-3.png" alt="" class="counsel__img">
-								<h3 class="counsel__name text text--medium text--white text--w-bold">
-									Айнур Ялилов
-								</h3>
-							</div>
-							<div class="counsel__info">
-								<div class="counsel__description">
-									<ul class="counsel__list text text--medium text--dark text--w-bold">
-										<li class="counsel__item-list">
-											Управляющий партнер юридической компании Yalilov & Partners
-										</li>
-										<li class="counsel__item-list">
-											Эксперт Уполномоченного по защите прав предпринимателей в городе Москве
-										</li>
-										<li class="counsel__item-list">
-											Председатель Совета Ассоциации выпускников Юридического факультета Казанского (Приволжского) федерального университета
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="counsel__block">
-				<h2 class="counsel__heading title title--big title--black title--w-bold title--indent-small js-reveal gs-reveal a-reveal-left">
-					Научно-методический совет
-				</h2>
-				<div class="counsel__excerpt text text--medium text--dark text--w-regular">
-					Преподаватели ведущих университетов страны, представители научного юридического сообщества
-				</div>
-				<div class="counsel__items">
-					<div class="counsel__item js-reveal gs-reveal a-reveal-left">
-						<div class="counsel__inner">
-							<div class="counsel__photo">
-								<img src="<?= STANDART_DIR; ?>/img/counsel/counsel-4.jpg" alt="" class="counsel__img">
-								<h3 class="counsel__name text text--medium text--white text--w-bold">
-									Азалия Ахмадуллина
-								</h3>
-							</div>
-							<div class="counsel__info">
-								<div class="counsel__description">
-									<ul class="counsel__list text text--medium text--dark text--w-bold">
-										<li class="counsel__item-list">
-											Куратор проекта "Молодежная школа юриста" в Казани
-										</li>
-										<li class="counsel__item-list">
-											Кандидат юридических наук, преподаватель, репетитор по праву
-										</li>
-										<li class="counsel__item-list">
-											Научный консультант
-										</li>
-										<li class="counsel__item-list">
-											Автор более 30 научных статей по юриспруденции Исполнительный директор Ассоциации выпускников Юридического факультета КФУ
-										</li>
-										<li class="counsel__item-list">
-											Автор курса «Правовые основы информационной безопасности»
-										</li>
-										<li class="counsel__item-list">
-											Креативный директор Скульптурной мастерской «АХ»
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="counsel__item counsel__item--revert js-reveal gs-reveal a-reveal-right">
-						<div class="counsel__inner">
-							<div class="counsel__photo">
-								<img src="<?= STANDART_DIR; ?>/img/counsel/counsel-5.jpg" alt="" class="counsel__img">
-								<h3 class="counsel__name text text--medium text--white text--w-bold">
-									Владислав Миронов
-								</h3>
-							</div>
-							<div class="counsel__info">
-								<div class="counsel__description">
-									<ul class="counsel__list text text--medium text--dark text--w-bold">
-										<li class="counsel__item-list">
-											Кандидат юридических наук
-										</li>
-										<li class="counsel__item-list">
-											Доцент кафедры финансового банковского и таможенного права Саратовской государственной юридической академии
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="counsel__item js-reveal gs-reveal a-reveal-left">
-						<div class="counsel__inner">
-							<div class="counsel__photo">
-								<img src="<?= STANDART_DIR; ?>/img/counsel/counsel-6.jpg" alt="" class="counsel__img">
-								<h3 class="counsel__name text text--medium text--white text--w-bold">
-									Наталья Грешнова
-								</h3>
-							</div>
-							<div class="counsel__info">
-								<div class="counsel__description">
-									<ul class="counsel__list text text--medium text--dark text--w-bold">
-										<li class="counsel__item-list">
-											Ученый секретарь ФГБОУ ВО «СГЮА»
-										</li>
-										<li class="counsel__item-list">
-											Доцент кафедры теории государства и права, ведущий юрисконсульт службы внутреннего контроля ФГБОУ ВО «СГЮА»
-										</li>
-										<li class="counsel__item-list">
-											Исполнительный директор – руководитель Аппарата Саратовского регионального отделения Общероссийской общественной организации «Ассоциация юристов России»
-										</li>
-										<li class="counsel__item-list">
-											Куратор Совета молодых юристов СРО ООО «АЮР»
-										</li>
-										<li class="counsel__item-list">
-											Член Общественного совета при министерстве молодежной политики и спорта Саратовской области
-										</li>
-										<li class="counsel__item-list">
-											Член Молодежного совета при Уполномоченном по правам человека в Российской Федерации
-										</li>
-										<li class="counsel__item-list">
-											Член избирательной комиссии Саратовской области с правом решающего голоса
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+				<?php endwhile; ?>
+			<?php endif; ?>
 		</div>
 	</section>
 	<!-- ./ Counsel -->
@@ -513,10 +362,10 @@
 		<h2 class="dictation__heading title title--big title--black title--w-bold center title--indent-small js-reveal gs-reveal a-reveal-left">
 			Стать участником и наставником
 		</h2>
-		<div class="dictation__text text text--medium text--dark text--w-regular center js-reveal gs-reveal a-reveal-left">
-			Правовой предпринимательский диктант для молодежи – специальное мероприятие, организованное с целью проверки
-			знаний и понимания молодежью основных правовых аспектов предпринимательской деятельности.
-		</div>
+<!--		<div class="dictation__text text text--medium text--dark text--w-regular center js-reveal gs-reveal a-reveal-left">-->
+<!--			Правовой предпринимательский диктант для молодежи – специальное мероприятие, организованное с целью проверки-->
+<!--			знаний и понимания молодежью основных правовых аспектов предпринимательской деятельности.-->
+<!--		</div>-->
 		<div class="dictation__actions center">
 			<a href="#feedback" class="dictation__button button button--primary js-reveal gs-reveal a-reveal-left">
 				Участник
@@ -538,36 +387,35 @@
 		<div class="news-slider__outer">
 			<div class="news-slider__swiper js-news-slider swiper-container">
 				<div class="news-slider__items swiper-wrapper">
-					<div class="news-slider__item swiper-slide">
-						<img src="<?= STANDART_DIR; ?>/img/news-slider/slide-1.jpg" alt="" class="news-slider__img">
-						<div class="news-slider__inner text text--medium text--w-regular center">
-							Подведены итоги пилотного сезона МШЮ на КМЮФ-2023
-						</div>
-					</div>
-					<div class="news-slider__item swiper-slide">
-						<img src="<?= STANDART_DIR; ?>/img/news-slider/slide-2.jpg" alt="" class="news-slider__img">
-						<div class="news-slider__inner text text--medium text--w-regular center">
-							Подведены итоги пилотного сезона МШЮ на КМЮФ-2023
-						</div>
-					</div>
-					<div class="news-slider__item swiper-slide">
-						<img src="<?= STANDART_DIR; ?>/img/news-slider/slide-3.jpg" alt="" class="news-slider__img">
-						<div class="news-slider__inner text text--medium text--w-regular center">
-							Подведены итоги пилотного сезона МШЮ на КМЮФ-2023
-						</div>
-					</div>
-					<div class="news-slider__item swiper-slide">
-						<img src="<?= STANDART_DIR; ?>/img/news-slider/slide-4.jpg" alt="" class="news-slider__img">
-						<div class="news-slider__inner text text--medium text--w-regular center">
-							Подведены итоги пилотного сезона МШЮ на КМЮФ-2023
-						</div>
-					</div>
-					<div class="news-slider__item swiper-slide">
-						<img src="<?= STANDART_DIR; ?>/img/news-slider/slide-5.jpg" alt="" class="news-slider__img">
-						<div class="news-slider__inner text text--medium text--w-regular center">
-							Подведены итоги пилотного сезона МШЮ на КМЮФ-2023
-						</div>
-					</div>
+					<?php
+						global $post;
+						$main_list = new WP_Query(array(
+							'post_type'   => 'post',
+							'post_status' => 'publish',
+							'posts_per_page' => 8,
+							'paged'       => get_query_var('paged') ?: 1,
+							'orderby'     => 'date',
+							'order'       => 'DESC',
+							'suppress_filters' => true
+						));
+
+					?>
+					<?php if( $main_list->have_posts() ) :
+						while( $main_list->have_posts() ) : $main_list->the_post(); ?>
+							<div class="news-slider__item swiper-slide">
+								<?php
+									$default_attr = [
+										'class'	=> "news-slider__img",
+										'alt'   => get_the_title()
+									];
+									echo get_the_post_thumbnail( $post->ID, 'full', $default_attr ); ?>
+								<div class="news-slider__inner text text--medium text--w-regular center">
+									<?php the_title(); ?>
+								</div>
+							</div>
+						<?php endwhile; ?>
+						<?php wp_reset_postdata(); ?>
+					<?php  endif; ?>
 				</div>
 			</div>
 		</div>
@@ -644,8 +492,7 @@
 		</h2>
 		<div
 			class="dictation__text text text--medium text--dark text--w-regular center js-reveal gs-reveal a-reveal-right">
-			Правовой предпринимательский диктант для молодежи – специальное мероприятие, организованное с целью проверки
-			знаний и понимания молодежью основных правовых аспектов предпринимательской деятельности.
+			<?= $dictation; ?>
 		</div>
 		<div class="dictation__actions center">
 			<a href="/diktant" class="dictation__button button button--primary js-reveal gs-reveal a-reveal-left">

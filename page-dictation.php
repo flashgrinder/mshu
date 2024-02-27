@@ -1,6 +1,9 @@
 <?php /* Template Name: Диктант */?>
 <?php get_header(); ?>
-
+<?php
+	$description = get_field('description');
+	$short_text = get_field('short_text');
+?>
 <?php the_post(); ?>
 <!-- Head-info -->
 <section class="head-info js-reveal gs-reveal">
@@ -9,7 +12,7 @@
 			Диктант
 		</h1>
 		<div class="head-info__description text text--medium text--white text--w-regular js-reveal gs-reveal a-reveal-right">
-			Правовой предпринимательский диктант для молодежи – специальное мероприятие, организованное с целью проверки знаний и понимания молодежью основных правовых аспектов предпринимательской деятельности. Диктант состоит из ряда вопросов и заданий, которые проверяют участников на знание законодательства, осведомленность о правах и обязанностях предпринимателей, а также способность применять эти знания на практике.
+			<?= $description; ?>
 		</div>
 	</div>
 </section>
@@ -25,7 +28,7 @@
 			<li class="stages__item js-reveal gs-reveal a-reveal-left">
 				<div class="stages__head">
 					<div class="stages__icon">
-						<img class="stages__img" src="./img/stages/icon-1.svg" alt="">
+						<img class="stages__img" src="<?= STANDART_DIR; ?>/img/stages/icon-1.svg" alt="">
 					</div>
 					Входное тестирование
 				</div>
@@ -39,7 +42,7 @@
 			<li class="stages__item js-reveal gs-reveal a-reveal-right">
 				<div class="stages__head">
 					<div class="stages__icon">
-						<img class="stages__img" src="./img/stages/icon-2.svg" alt="">
+						<img class="stages__img" src="<?= STANDART_DIR; ?>/img/stages/icon-2.svg" alt="">
 					</div>
 					Подведение итогов финала 1-го тура. Онлайн бизнес-игра
 				</div>
@@ -53,7 +56,7 @@
 			<li class="stages__item js-reveal gs-reveal a-reveal-left">
 				<div class="stages__head">
 					<div class="stages__icon">
-						<img class="stages__img" src="./img/stages/icon-3.svg" alt="">
+						<img class="stages__img" src="<?= STANDART_DIR; ?>/img/stages/icon-3.svg" alt="">
 					</div>
 					Видеопрезентация проектов, награждение победителей
 				</div>
@@ -80,9 +83,7 @@
 <div class="short-text js-reveal gs-reveal">
 	<div class="short-text__body container">
 		<div class="short-text__description text text--medium text--white text--w-regular">
-			Правовой предпринимательский диктант для молодежи – это не только проверка знаний и умений, но и стимул
-			для развития и саморазвития молодых предпринимателей, а также способ популяризации предпринимательства
-			среди молодежи. Эксперты конкурса – успешные предприниматели и специалисты в области права и бизнеса.
+			<?= $short_text; ?>
 		</div>
 	</div>
 </div>
@@ -95,95 +96,29 @@
 			Экспертный совет
 		</h2>
 		<div class="team__items">
-			<article class="team__item js-reveal gs-reveal a-reveal-left">
-				<div class="team__card team__side--front">
-					<div class="team__photo">
-						<img src="./img/team/team-1.jpg" alt="" class="team__img">
-					</div>
-					<h3 class="team__name text text--medium text--white text--w-bold center">
-						Татьяна Минеева
-					</h3>
-				</div>
-				<div class="team__card team__side--back text text--dark text--w-bold">
-					Уполномоченный по защите прав предпринимателей в городе Москве
-				</div>
-			</article>
-			<article class="team__item js-reveal gs-reveal">
-				<div class="team__card team__side--front">
-					<div class="team__photo">
-						<img src="./img/team/team-2.jpg" alt="" class="team__img">
-					</div>
-					<h3 class="team__name text text--medium text--white text--w-bold center">
-						Дамир Валеев
-					</h3>
-				</div>
-				<div class="team__card team__side--back text text--dark text--w-bold">
-					Председатель Управляющего совета Молодежной школы юриста
-					Заместитель декана по научной деятельности юридического факультета Казанского (Приволжского) федерального университета, д.ю.н., профессор
-					Член Ученого Совета КФУЧлен Ученого Совета юридического факультета КФУ
-					Член экзаменационной комиссии при Верховном Суде Республики Татарстан
-					Член экспертного совета Комитета по правовым и судебным вопросам Совета Федерации Федерального Собрания Российской Федерации
-					Член Диссертационного совета при Казанском (Приволжском) федеральном университете и Диссертационного совета при Саратовской государственной юридической академии
-					Председатель Общественного совета при Управлении Федеральной службы судебных приставов Российской Федерации по Республике Татарстан
-				</div>
-			</article>
-			<article class="team__item js-reveal gs-reveal a-reveal-right">
-				<div class="team__card team__side--front">
-					<div class="team__photo">
-						<img src="./img/team/team-3.jpg" alt="" class="team__img">
-					</div>
-					<h3 class="team__name text text--medium text--white text--w-bold center">
-						Анна Савин-Кровякова
-					</h3>
-				</div>
-				<div class="team__card team__side--back text text--dark text--w-bold">
-					Директор АНО "Институт правовой грамотности и поддержки предпринимательства"
-					Руководитель Общественной приемной при Уполномоченном
-					по защите прав предпринимателей
-					в г. Москве по вопросам молодежного предпринимательства
-					Управляющий партнер международной консалтинговой компании FINCOM group
-				</div>
-			</article>
-			<article class="team__item js-reveal gs-reveal a-reveal-left">
-				<div class="team__card team__side--front">
-					<div class="team__photo">
-						<img src="./img/team/team-4.jpg" alt="" class="team__img">
-					</div>
-					<h3 class="team__name text text--medium text--white text--w-bold center">
-						Айнур Ялилов
-					</h3>
-				</div>
-				<div class="team__card team__side--back text text--dark text--w-bold">
-					Управляющий партнер юридической компании Yalilov & Partners
-					Эксперт Уполномоченного по защите прав предпринимателей в городе Москве Председатель Совета Ассоциации выпускников Юридического факультета Казанского (Приволжского) федерального университета
-				</div>
-			</article>
-			<article class="team__item js-reveal gs-reveal">
-				<div class="team__card team__side--front">
-					<div class="team__photo">
-						<img src="./img/team/team-5.jpg" alt="" class="team__img">
-					</div>
-					<h3 class="team__name text text--medium text--white text--w-bold center">
-						Анна Лапа
-					</h3>
-				</div>
-				<div class="team__card team__side--back text text--dark text--w-bold">
+			<?php if (have_rows('team')) : ?>
+				<?php while (have_rows('team')) : the_row();
 
-				</div>
-			</article>
-			<article class="team__item js-reveal gs-reveal a-reveal-right">
-				<div class="team__card team__side--front">
-					<div class="team__photo">
-						<img src="./img/team/team-6.jpg" alt="" class="team__img">
-					</div>
-					<h3 class="team__name text text--medium text--white text--w-bold center">
-						Антон Ищенко
-					</h3>
-				</div>
-				<div class="team__card team__side--back text text--dark text--w-bold">
-					Генеральный директор, Всероссийское общество изобретателей и рационализаторов (ВОИР)
-				</div>
-			</article>
+					$team_photo = get_sub_field('team_photo');
+					$team_name = get_sub_field('team_name');
+					$team_description = get_sub_field('team_description');
+
+					?>
+					<article class="team__item js-reveal gs-reveal a-reveal-left">
+						<div class="team__card team__side--front">
+							<?php if (!empty($team_photo)) : ?>
+								<img src="<?= esc_url($team_photo['url']); ?>" class="team__img" alt="<?= esc_url($team_photo['alt']); ?>">
+							<?php endif; ?>
+							<h3 class="team__name text text--medium text--white text--w-bold center">
+								<?= $team_name; ?>
+							</h3>
+						</div>
+						<div class="team__card team__side--back text text--dark text--w-bold">
+							<?= $team_description; ?>
+						</div>
+					</article>
+				<?php endwhile; ?>
+			<?php endif; ?>
 		</div>
 	</div>
 </section>

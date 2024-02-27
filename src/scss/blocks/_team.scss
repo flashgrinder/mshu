@@ -63,6 +63,8 @@
 .team__side--front {
   transform: rotateY(0deg);
   height: 100%;
+  overflow: hidden;
+  border-radius: 20px;
 }
 
 .team__item:hover .team__side--front {
