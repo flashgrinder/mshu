@@ -9,6 +9,7 @@
     <meta name="theme-color" content="#000" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
     <title>Главная</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
@@ -627,14 +628,169 @@
             <!-- Mentors -->
             <section class="mentors">
                 <div class="mentors__body container">
-                    <div class="mentors__head-wrap">
-                        <h2 class="mentors__heading title title--big title--white title--w-bold">
+                    <div class="mentors__tabs tabs">
+                        <div class="mentors__head-wrap title--indent-large">
+                            <h2 class="mentors__heading title title--big title--white title--w-bold">
 
-                    Наставники и спикеры
+                        Наставники и спикеры
 
-                </h2>
-                        <div class="mentors__select">
-                            Москва
+                    </h2>
+                            <div class="mentors__tabs-buttons tabs__buttons dropdown">
+                                <div id="basic-select" class="selected">
+                                    <div class="carpet">
+                                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M26 12L16 22L6 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </div>
+                                    <span id="select-title" class="selected__title">Москва</span>
+                                </div>
+                                <ul id="option-select" class="options">
+                                    <li class="options__item tabs__button is-active options__item--active" data-tab-trigger="slider-1">
+                                        Москва
+                                    </li>
+                                    <li class="options__item tabs__button" data-tab-trigger="slider-2">
+                                        Саратов
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tarifs__tabs-wrapper tabs__wrapper">
+                            <div class="mentors__outer tabs__content is-open js-slider-mentors-init" data-tab-content="slider-1">
+                                <div class="mentors__slider-wrap">
+                                    <div class="mentors__swiper mentors__swiper--text js-mentors-slider-text swiper">
+                                        <div class="mentors__items swiper-wrapper">
+                                            <div class="mentors__slide swiper-slide">
+                                                <div class="mentors__name text text--medium text--white text--w-bold">
+                                                    Иванов Иван
+                                                </div>
+                                                <div class="mentors__info text text--medium text--white text--w-regular">
+                                                    <ul>
+                                                        <li>Психолог, коуч, стаж с 1996</li>
+                                                        <li>Эксперт по профессиональному самоопределению подростков и взрослых, развитию проектного мышления и эмоционального интеллекта.</li>
+                                                        <li>Авторская коучинговая программа "Быстрая Активизация Ресурсной Среды человека"</li>
+                                                        <li>Заместитель председателя Комитета по социальному предпринимательству и поддержке социальных программ Московской Торгово-Промышленной Палаты</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="mentors__slide swiper-slide">
+                                                <div class="mentors__name text text--medium text--white text--w-bold">
+                                                    Георгий Филипов
+                                                </div>
+                                                <div class="mentors__info text text--medium text--white text--w-regular">
+                                                    <ul>
+                                                        <li>Психолог, коуч, стаж с 1996</li>
+                                                        <li>Эксперт по профессиональному самоопределению подростков и взрослых, развитию проектного мышления и эмоционального интеллекта.</li>
+                                                        <li>Авторская коучинговая программа "Быстрая Активизация Ресурсной Среды человека"</li>
+                                                        <li>Заместитель председателя Комитета по социальному предпринимательству и поддержке социальных программ Московской Торгово-Промышленной Палаты</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="mentors__slide swiper-slide">
+                                                <div class="mentors__name text text--medium text--white text--w-bold">
+                                                    Нина Витальевна
+                                                </div>
+                                                <div class="mentors__info text text--medium text--white text--w-regular">
+                                                    <ul>
+                                                        <li>Психолог, коуч, стаж с 1996</li>
+                                                        <li>Эксперт по профессиональному самоопределению подростков и взрослых, развитию проектного мышления и эмоционального интеллекта.</li>
+                                                        <li>Авторская коучинговая программа "Быстрая Активизация Ресурсной Среды человека"</li>
+                                                        <li>Заместитель председателя Комитета по социальному предпринимательству и поддержке социальных программ Московской Торгово-Промышленной Палаты</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mentors__slider-wrap">
+                                    <div class="mentors__swiper mentors__swiper--photo js-mentors-slider-photo swiper">
+                                        <div class="mentors__items swiper-wrapper">
+                                            <div class="mentors__slide swiper-slide">
+                                                <img src="./img/mentor-1.jpg" alt="" class="mentors__img">
+                                            </div>
+                                            <div class="mentors__slide swiper-slide">
+                                                <img src="./img/mentor-2.jpg" alt="" class="mentors__img">
+                                            </div>
+                                            <div class="mentors__slide swiper-slide">
+                                                <img src="./img/mentor-3.jpg" alt="" class="mentors__img">
+                                            </div>
+                                            <div class="mentors__slide swiper-slide">
+                                                <img src="./img/mentor-1.jpg" alt="" class="mentors__img">
+                                            </div>
+                                            <div class="mentors__slide swiper-slide">
+                                                <img src="./img/mentor-2.jpg" alt="" class="mentors__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mentors__outer tabs__content js-slider-mentors-init" data-tab-content="slider-2">
+                                <div class="mentors__slider-wrap">
+                                    <div class="mentors__swiper mentors__swiper--text js-mentors-slider-text swiper">
+                                        <div class="mentors__items swiper-wrapper">
+                                            <div class="mentors__slide swiper-slide">
+                                                <div class="mentors__name text text--medium text--white text--w-bold">
+                                                    Иванов Иван
+                                                </div>
+                                                <div class="mentors__info text text--medium text--white text--w-regular">
+                                                    <ul>
+                                                        <li>Психолог, коуч, стаж с 1996</li>
+                                                        <li>Эксперт по профессиональному самоопределению подростков и взрослых, развитию проектного мышления и эмоционального интеллекта.</li>
+                                                        <li>Авторская коучинговая программа "Быстрая Активизация Ресурсной Среды человека"</li>
+                                                        <li>Заместитель председателя Комитета по социальному предпринимательству и поддержке социальных программ Московской Торгово-Промышленной Палаты</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="mentors__slide swiper-slide">
+                                                <div class="mentors__name text text--medium text--white text--w-bold">
+                                                    Георгий Филипов
+                                                </div>
+                                                <div class="mentors__info text text--medium text--white text--w-regular">
+                                                    <ul>
+                                                        <li>Психолог, коуч, стаж с 1996</li>
+                                                        <li>Эксперт по профессиональному самоопределению подростков и взрослых, развитию проектного мышления и эмоционального интеллекта.</li>
+                                                        <li>Авторская коучинговая программа "Быстрая Активизация Ресурсной Среды человека"</li>
+                                                        <li>Заместитель председателя Комитета по социальному предпринимательству и поддержке социальных программ Московской Торгово-Промышленной Палаты</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="mentors__slide swiper-slide">
+                                                <div class="mentors__name text text--medium text--white text--w-bold">
+                                                    Нина Витальевна
+                                                </div>
+                                                <div class="mentors__info text text--medium text--white text--w-regular">
+                                                    <ul>
+                                                        <li>Психолог, коуч, стаж с 1996</li>
+                                                        <li>Эксперт по профессиональному самоопределению подростков и взрослых, развитию проектного мышления и эмоционального интеллекта.</li>
+                                                        <li>Авторская коучинговая программа "Быстрая Активизация Ресурсной Среды человека"</li>
+                                                        <li>Заместитель председателя Комитета по социальному предпринимательству и поддержке социальных программ Московской Торгово-Промышленной Палаты</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mentors__slider-wrap">
+                                    <div class="mentors__swiper mentors__swiper--photo js-mentors-slider-photo swiper">
+                                        <div class="mentors__items swiper-wrapper">
+                                            <div class="mentors__slide swiper-slide">
+                                                <img src="./img/mentor-1.jpg" alt="" class="mentors__img">
+                                            </div>
+                                            <div class="mentors__slide swiper-slide">
+                                                <img src="./img/mentor-2.jpg" alt="" class="mentors__img">
+                                            </div>
+                                            <div class="mentors__slide swiper-slide">
+                                                <img src="./img/mentor-3.jpg" alt="" class="mentors__img">
+                                            </div>
+                                            <div class="mentors__slide swiper-slide">
+                                                <img src="./img/mentor-1.jpg" alt="" class="mentors__img">
+                                            </div>
+                                            <div class="mentors__slide swiper-slide">
+                                                <img src="./img/mentor-2.jpg" alt="" class="mentors__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -679,7 +835,7 @@
 
         </h2>
                 <div class="news-slider__outer">
-                    <div class="news-slider__swiper js-news-slider swiper-container">
+                    <div class="news-slider__swiper js-news-slider swiper">
                         <div class="news-slider__items swiper-wrapper">
                             <div class="news-slider__item swiper-slide">
                                 <img src="./img/news-slider/slide-1.jpg" alt="" class="news-slider__img">
@@ -728,7 +884,7 @@
         </h2>
             </div>
             <div class="partners__outer">
-                <div class="partners__swiper partners__slider js-partners-slider swiper-container">
+                <div class="partners__swiper partners__slider js-partners-slider swiper">
                     <div class="partners__items swiper-wrapper">
                         <a href="" class="partners__item swiper-slide">
                             <img src="img/partners/logo-1.png" alt="" class="partners__logo">
@@ -910,6 +1066,7 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/scripts.min.js"></script>
 </body>
 

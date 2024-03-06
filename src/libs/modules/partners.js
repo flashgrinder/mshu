@@ -1,8 +1,6 @@
-import Swiper, { Autoplay } from 'swiper';
+// import Swiper, { Autoplay } from 'swiper';
 
 function init() {
-
-    Swiper.use([ Autoplay ]);
 
     const partnersSlider = new Swiper(".js-partners-slider", {
         loop: true,
@@ -15,7 +13,7 @@ function init() {
         autoplay: {
             delay: 0,
             disableOnInteraction: false,
-            waitForTransition: false
+            // waitForTransition: false
         },
         breakpoints: {
             320: {

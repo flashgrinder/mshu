@@ -1,8 +1,8 @@
-import Swiper, { Autoplay, EffectCoverflow } from 'swiper';
+// import Swiper, { Autoplay, EffectCoverflow } from 'swiper';
 
 function init() {
 
-    Swiper.use([ Autoplay, EffectCoverflow ]);
+    // Swiper.use([ Autoplay, EffectCoverflow ]);
 
     const newsSlider = new Swiper(".js-news-slider", {
         slidesPerView: 2,

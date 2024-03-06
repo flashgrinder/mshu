@@ -3,9 +3,10 @@ import gsReveal from '../libs/modules/gs-reveal';
 import modal from '../libs/modules/modal';
 import scrollHeader from '../libs/modules/scroll-header';
 import burgerMenu from '../libs/modules/burger-menu';
-import partnersSlider from '../libs/modules/partners';
 import newsSlider from '../libs/modules/news-slider';
+import partnersSlider from '../libs/modules/partners';
 import slimSelect from '../libs/modules/slim-select.js';
+import mentors from '../libs/modules/mentors';
 
 document.addEventListener('DOMContentLoaded', function(e) {
 
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     scrollHeader.init();
     gsReveal.init();
     slimSelect.init();
+    mentors.init();
     partnersSliderTrue ? partnersSlider.init() : false;
     newsSliderTrue ? newsSlider.init() : false;
 

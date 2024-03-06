@@ -52,8 +52,7 @@
     "hystmodal": "^0.5.1",
     "postcss-responsive-type": "^1.0.0",
     "slim-select": "^2.8.1",
-    "smooth-scrollbar": "^8.6.3",
-    "swiper": "^6.8.4"
+    "smooth-scrollbar": "^8.6.3"
   },
   "babel": {
     "presets": [
