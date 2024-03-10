@@ -340,14 +340,95 @@
 	<!-- ./ Counsel -->
 
 	<!-- Mentors -->
-	<section class="mentors" id="mentors">
+	<section class="mentors js-mentors-init">
 		<div class="mentors__body container">
-			<div class="mentors__head-wrap">
-				<h2 class="mentors__heading title title--big title--white title--w-bold">
-					Наставники и спикеры
-				</h2>
-				<div class="mentors__select">
-					Москва
+			<div class="mentors__tabs tabs">
+				<div class="mentors__head-wrap title--indent-large">
+					<h2 class="mentors__heading title title--big title--white title--w-bold">
+						Наставники и спикеры
+					</h2>
+					<?php if( have_rows('mentors') ): ?>
+						<div class="mentors__tabs-buttons tabs__buttons dropdown">
+							<div id="basic-select" class="selected">
+								<div class="carpet">
+									<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M26 12L16 22L6 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+									</svg>
+								</div>
+								<span id="select-title" class="selected__title">Москва</span>
+							</div>
+							<ul id="option-select" class="options">
+								<?php while( have_rows('mentors') ): the_row();
+									$mentors_city = get_sub_field('mentors_city');
+									?>
+									<li class="options__item tabs__button <?php if( get_row_index() == 1) echo 'is-active options__item--active'; ?>" data-tab-trigger="<?= get_row_index(); ?>">
+										<?= $mentors_city; ?>
+									</li>
+								<?php endwhile; ?>
+							</ul>
+						</div>
+					<?php endif; ?>
+				</div>
+				<div class="mentors__tabs-wrapper tabs__wrapper">
+					<?php if( have_rows('mentors') ): ?>
+						<?php while( have_rows('mentors') ): the_row(); ?>
+							<div class="mentors__outer tabs__content <?php if( get_row_index() == 1) echo 'is-open'; ?> js-slider-mentors-init" data-tab-content="<?= get_row_index(); ?>">
+								<div class="mentors__slider-wrap">
+									<?php if( have_rows('mentors-slider') ): ?>
+										<div class="mentors__swiper mentors__swiper--text js-mentors-slider-text swiper">
+											<div class="mentors__items swiper-wrapper">
+												<?php while( have_rows('mentors-slider') ): the_row();
+													$mentors_slider_name = get_sub_field('mentors-slider_name');
+													$mentors_slider_text = get_sub_field('mentors-slider_text');
+													?>
+														<div class="mentors__slide swiper-slide">
+															<div class="mentors__name text text--medium text--white text--w-bold">
+																<?= $mentors_slider_name; ?>
+															</div>
+															<div class="mentors__info text text--medium text--white text--w-regular">
+																<?= $mentors_slider_text; ?>
+															</div>
+														</div>
+												<?php endwhile; ?>
+											</div>
+										</div>
+									<?php endif; ?>
+								</div>
+								<div class="mentors__slider-wrap">
+									<?php if( have_rows('mentors-slider') ): ?>
+										<div class="mentors__swiper mentors__swiper--photo js-mentors-slider-photo swiper">
+											<div class="mentors__items swiper-wrapper">
+												<?php while( have_rows('mentors-slider') ): the_row();
+													$mentors_slider_photo = get_sub_field('mentors-slider_photo');
+													?>
+													<div class="mentors__slide swiper-slide">
+														<img src="<?php echo esc_url($mentors_slider_photo['url']); ?>" alt="<?php echo esc_attr($mentors_slider_photo['alt']); ?>" class="mentors__img">
+													</div>
+												<?php endwhile; ?>
+											</div>
+											<div class="news-slider__arrows slider-arrows slider-nav">
+												<div class="swiper-button-prev news-slider__arrow news-slider__arrow--prev slider-arrows__arrow slider-arrows__arrow--prev js-slider-prev">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M19 12H5" stroke="#EFEFEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M12 19L5 12L12 5" stroke="#EFEFEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												</div>
+
+												<div class="news-slider__pagination swiper-pagination slider-pagination js-mentors-slider-pagination"></div>
+
+												<div class="swiper-button-next news-slider__arrow news-slider__arrow--next slider-arrows__arrow slider-arrows__arrow--next js-slider-next">
+													<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M5 12H19" stroke="#EFEFEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+														<path d="M12 5L19 12L12 19" stroke="#EFEFEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+													</svg>
+												</div>
+											</div>
+										</div>
+									<?php endif; ?>
+								</div>
+							</div>
+						<?php endwhile; ?>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
@@ -416,6 +497,23 @@
 						<?php endwhile; ?>
 						<?php wp_reset_postdata(); ?>
 					<?php  endif; ?>
+				</div>
+				<div class="news-slider__arrows slider-arrows slider-nav">
+					<div class="swiper-button-prev news-slider__arrow news-slider__arrow--prev slider-arrows__arrow slider-arrows__arrow--prev js-slider-prev">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M19 12H5" stroke="#EFEFEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M12 19L5 12L12 5" stroke="#EFEFEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
+
+					<div class="news-slider__pagination swiper-pagination slider-pagination js-news-slider-pagination"></div>
+
+					<div class="swiper-button-next news-slider__arrow news-slider__arrow--next slider-arrows__arrow slider-arrows__arrow--next js-slider-next">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M5 12H19" stroke="#EFEFEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M12 5L19 12L12 19" stroke="#EFEFEF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>
+					</div>
 				</div>
 			</div>
 		</div>
