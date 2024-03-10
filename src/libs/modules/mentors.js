@@ -6,8 +6,9 @@ function init() {
         let sliderText = item.querySelector('.js-mentors-slider-text');
         let sliderPhoto = item.querySelector('.js-mentors-slider-photo');
 
-        // const nextEl = item.querySelector('.js-slider-cards-next');
-        // const prevEl = item.querySelector('.js-slider-cards-prev');
+        const nextEl = item.querySelector('.js-slider-next');
+        const prevEl = item.querySelector('.js-slider-prev');
+        const sliderPagination = item.querySelector('.js-mentors-slider-pagination');
 
         const mentorsSliderText = new Swiper(sliderText, {
             slidesPerView: 1,
@@ -31,7 +32,15 @@ function init() {
             },
             mousewheel: {
                 invert: false,
-            }
+            },
+            pagination: {
+                el: sliderPagination,
+                type: 'bullets',
+            },
+            navigation: {
+                nextEl: nextEl,
+                prevEl: prevEl,
+            },
         });
 
         mentorsSliderPhoto.on('slideNextTransitionStart', function() {

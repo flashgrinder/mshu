@@ -71,7 +71,7 @@
 			</li>
 		</ol>
 		<div class="stages__actions">
-			<a href="#feedback" class="stages__button button button--primary">
+			<a href="javascript:;" class="stages__button button button--primary" data-modal="#participant">
 				Принять участие
 			</a>
 		</div>

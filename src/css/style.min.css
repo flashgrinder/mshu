@@ -1833,6 +1833,48 @@ img {
   transition: opacity 0.3s ease-in-out;
 }
 
+/* Slider-arrows */
+
+.slider-arrows__arrow {
+  position: static;
+  margin-top: 0;
+  display: block;
+}
+
+.slider-arrows__arrow::after {
+  content: none;
+}
+
+/* Slider-arrows */
+
+.slider-pagination {
+  position: static;
+  width: auto !important;
+  display: flex;
+}
+
+.slider-pagination .swiper-pagination-bullet {
+  background-color: var(--color-white);
+  opacity: 1;
+  transition: width 0.15s linear, border-radius 0.15s linear, background-color 0.15s linear;
+}
+
+.slider-pagination .swiper-pagination-bullet-active {
+  background: #333333;
+  width: 12px;
+  border-radius: 20px;
+}
+
+/* Slider-nav */
+
+.slider-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin-top: 40px;
+}
+
 /* Partners */
 
 .partners--slider {
@@ -2594,7 +2636,9 @@ img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  right: 10px;
   margin: 0 10px;
+  z-index: 10;
 }
 
 .modal .wpcf7-spinner {
@@ -2607,7 +2651,7 @@ img {
   border: none;
   border-radius: 100%;
   padding: 0;
-  margin: 0 14px;
+  margin: 0;
 }
 
 .modal .wpcf7-spinner::before {
@@ -2655,7 +2699,7 @@ img {
   color: var(--color-invalid);
   position: absolute;
   width: 100%;
-  top: -45px;
+  top: 24px;
 }
 
 /* Succes */

@@ -1,8 +1,4 @@
-// import Swiper, { Autoplay, EffectCoverflow } from 'swiper';
-
 function init() {
-
-    // Swiper.use([ Autoplay, EffectCoverflow ]);
 
     const newsSlider = new Swiper(".js-news-slider", {
         slidesPerView: 2,
@@ -10,11 +6,12 @@ function init() {
         centeredSlides: true,
         loop: true,
         effect: 'coverflow',
-        speed: 1500,
+        speed: 800,
         autoplay: {
-            delay: 1500,
+            delay: 3000,
             disableOnInteraction: false,
-            waitForTransition: false
+            waitForTransition: false,
+            pauseOnMouseEnter: true,
         },
         coverflowEffect: {
             slideShadows: false,
@@ -22,6 +19,14 @@ function init() {
             stretch: 231,
             depth: 150,
             modifier: 1.7,
+        },
+        pagination: {
+            el: '.js-news-slider-pagination',
+            type: 'bullets',
+        },
+        navigation: {
+            nextEl: '.js-slider-next',
+            prevEl: '.js-slider-prev',
         },
         // breakpoints: {
         //     320: {

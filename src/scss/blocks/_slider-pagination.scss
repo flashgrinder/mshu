@@ -1,0 +1,17 @@
+.slider-pagination {
+  position: static;
+  width: auto !important;
+  display: flex;
+}
+
+.slider-pagination .swiper-pagination-bullet {
+  background-color: var(--color-white);
+  opacity: 1;
+  transition: width .150s linear, border-radius .150s linear, background-color .150s linear;
+}
+
+.slider-pagination .swiper-pagination-bullet-active {
+  background: #333333;
+  width: 12px;
+  border-radius: 20px;
+}

@@ -17,14 +17,15 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     const partnersSliderTrue = document.querySelector('.partners--slider');
     const newsSliderTrue = document.querySelector('.news-slider');
+    const mentorsSliderTrue = document.querySelector('.js-mentors-init');
 
     modal.init();
     burgerMenu.init();
     scrollHeader.init();
     gsReveal.init();
     slimSelect.init();
-    mentors.init();
     partnersSliderTrue ? partnersSlider.init() : false;
+    mentorsSliderTrue ? mentors.init() : false;
     newsSliderTrue ? newsSlider.init() : false;
 
 });

@@ -60,7 +60,7 @@
 				<?= $about; ?>
 			</div>
 			<div class="dictation__actions left">
-				<a href="javascript:;" class="dictation__button button button--primary" data-modal="#success">
+				<a href="javascript:;" class="dictation__button button button--primary" data-modal="#participant">
 					Присоединиться
 				</a>
 			</div>
@@ -367,10 +367,10 @@
 <!--			знаний и понимания молодежью основных правовых аспектов предпринимательской деятельности.-->
 <!--		</div>-->
 		<div class="dictation__actions center">
-			<a href="#feedback" class="dictation__button button button--primary js-reveal gs-reveal a-reveal-left">
+			<a href="javascript:;" class="dictation__button button button--primary js-reveal gs-reveal a-reveal-left" data-modal="#participant">
 				Участник
 			</a>
-			<a href="#feedback" class="dictation__button button button--primary js-reveal gs-reveal a-reveal-right">
+			<a href="javascript:;" class="dictation__button button button--primary js-reveal gs-reveal a-reveal-right" data-modal="#mentor">
 				Наставник
 			</a>
 		</div>
@@ -385,7 +385,7 @@
 			Новости
 		</h2>
 		<div class="news-slider__outer">
-			<div class="news-slider__swiper js-news-slider swiper-container">
+			<div class="news-slider__swiper js-news-slider swiper">
 				<div class="news-slider__items swiper-wrapper">
 					<?php
 						global $post;
@@ -431,7 +431,7 @@
 		</h2>
 	</div>
 	<div class="partners__outer">
-		<div class="partners__swiper partners__slider js-partners-slider swiper-container">
+		<div class="partners__swiper partners__slider js-partners-slider swiper">
 			<div class="partners__items swiper-wrapper">
 				<a href="" class="partners__item swiper-slide">
 					<img src="<?= STANDART_DIR; ?>/img/partners/logo-1.png" alt="" class="partners__logo">

@@ -1,0 +1,9 @@
+.slider-arrows__arrow {
+  position: static;
+  margin-top: 0;
+  display: block;
+}
+
+.slider-arrows__arrow::after {
+  content: none;
+}
