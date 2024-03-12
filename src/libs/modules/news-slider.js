@@ -28,17 +28,17 @@ function init() {
             nextEl: '.js-slider-next',
             prevEl: '.js-slider-prev',
         },
-        // breakpoints: {
-        //     320: {
-        //         slidesPerView: 2,
-        //     },
-        //     768: {
-        //         slidesPerView: 5,
-        //     },
-        //     1280: {
-        //         slidesPerView: 6,
-        //     }
-        // }
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            // 1280: {
+            //     slidesPerView: 6,
+            // }
+        }
     });
 
 }

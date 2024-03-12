@@ -50,12 +50,11 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: var(--color-white);
+  background: #F4F4F4;
   transform: rotateY(180deg);
   font-size: 11px;
   padding: 30px 20px;
   border-radius: 20px;
-  border: 1px solid var(--color-dark);
   display: flex;
   align-items: center;
 }

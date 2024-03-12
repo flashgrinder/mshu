@@ -13,6 +13,8 @@ function init() {
         const mentorsSliderText = new Swiper(sliderText, {
             slidesPerView: 1,
             loop: true,
+            speed: 500,
+            allowTouchMove: false,
             effect: 'fade',
             fadeEffect: {
                 crossFade: true

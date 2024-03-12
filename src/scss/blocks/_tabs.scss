@@ -41,6 +41,11 @@
   color: var(--color-white);
   cursor: pointer;
   transition: color var(--anim-time) ease-in-out;
+  @include mobileXS-block {
+    min-width: auto;
+    margin-top: 30px;
+    padding: 10px 10px 10px 0;
+  }
 }
 
 .carpet{
@@ -68,6 +73,9 @@
   align-items: center;
   font-size: 20px;
   transition: transform var(--anim-option-height) cubic-bezier(0.860, 0.005, 0.260, 1.000);
+  @include mobileXS-block {
+    background: #333333c9;
+  }
 }
 
 .options__item{
@@ -76,10 +84,16 @@
   padding: 10px 0;
   text-align: right;
   width: 100%;
+  @include mobileXS-block {
+    padding: 10px;
+  }
 }
 
 .options__item:hover{
   color: var(--color-dark);
+  @include mobileXS-block {
+    color: rgba(255, 255, 255, 0.8);
+  }
 }
 
 .selected:hover + .options, .options:hover{
