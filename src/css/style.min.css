@@ -1662,7 +1662,7 @@ img {
 .mentors__swiper--photo {
   width: 400px;
   height: 480px;
-  padding: 50px 0;
+  padding: 0 0 50px;
 }
 
 .mentors__swiper--photo .mentors__pic {
