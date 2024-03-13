@@ -2281,20 +2281,8 @@ img {
   padding: 60px 0;
   position: relative;
   overflow: hidden;
-}
-
-.post__header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  filter: grayscale(1) blur(5px);
-  background-repeat: no-repeat;
+  background: url("../img/head-info-news.png") no-repeat;
   background-size: cover;
-  background-position: center;
-  z-index: -1;
 }
 
 .post__footer,
