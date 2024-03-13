@@ -7,3 +7,7 @@
 .slider-arrows__arrow::after {
   content: none;
 }
+
+.slider-arrows__arrow svg {
+  width: 30px;
+}
