@@ -29,6 +29,10 @@
   max-height: 480px;
   object-fit: cover;
   object-position: center;
+  @include mobile-block {
+    min-height: 280px;
+    max-height: 280px;
+  }
 }
 
 .news-slider__inner {
@@ -55,4 +59,7 @@
   -ms-transition: opacity .3s ease-in-out;
   -o-transition: opacity .3s ease-in-out;
   transition: opacity .3s ease-in-out;
+  @include mobile-block {
+    padding: 5px;
+  }
 }

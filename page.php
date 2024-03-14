@@ -4,7 +4,7 @@
 		<article class="post__article">
 			<header class="post__header">
 				<div class="post__wrap container">
-					<h1 class="post__title title title--large title--black title--w-bold js-reveal gs-reveal a-reveal-left">
+					<h1 class="post__title title title--large title--white title--w-bold js-reveal gs-reveal a-reveal-left">
 						<?php the_title(); ?>
 					</h1>
 				</div>

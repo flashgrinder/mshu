@@ -67,6 +67,10 @@
   -o-transition: opacity .150s ease-in-out;
   transition: opacity .150s ease-in-out;
   z-index: 1;
+  @include mobile-block {
+    padding: 10px;
+    height: auto;
+  }
 }
 
 .news-list__post:hover .news-list__plunk {

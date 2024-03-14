@@ -1386,6 +1386,8 @@ img {
   width: 100%;
   height: 100%;
   background-image: url("../img/combine/vektor-small.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .combine__name-decor {
@@ -2707,6 +2709,19 @@ img {
   top: 24px;
 }
 
+.modal__personal {
+  display: inline-flex;
+  align-items: center;
+}
+
+.modal__personal .wpcf7-list-item {
+  margin: 0;
+}
+
+.modal__personal input {
+  margin: 0;
+}
+
 /* Succes */
 
 .modal__wrapper-success {
@@ -2902,20 +2917,34 @@ img {
     bottom: 50px;
   }
 
+  .combine__info {
+    padding: 65px 0 85px;
+  }
+
   .combine__wrapper-decor {
     width: 90%;
   }
 
   .combine__circle-decor--big {
-    right: -280px;
+    width: 320px;
+    height: 320px;
+    right: -150px;
   }
 
   .combine__circle-decor--small {
-    right: -210px;
+    width: 230px;
+    height: 230px;
+    top: -12px;
+    right: -105px;
   }
 
   .combine__name-decor {
-    right: -130px;
+    right: -45px;
+    top: -30px;
+  }
+
+  .combine__name-svg {
+    max-width: 110px;
   }
 
   .tasks {
@@ -2972,6 +3001,15 @@ img {
     width: 60%;
   }
 
+  .news-slider__img {
+    min-height: 280px;
+    max-height: 280px;
+  }
+
+  .news-slider__inner {
+    padding: 5px;
+  }
+
   .partners--slider {
     padding: 30px 0;
   }
@@ -3023,6 +3061,11 @@ img {
 
   .news-list {
     padding: 30px 0;
+  }
+
+  .news-list__plunk {
+    padding: 10px;
+    height: auto;
   }
 
   .news-list__nav {
@@ -3077,7 +3120,7 @@ img {
   }
 
   .combine {
-    padding: 30px 0 400px;
+    padding: 30px 0 270px;
   }
 
   .combine::before {
@@ -3131,6 +3174,7 @@ img {
   .mentors__slider-wrap:last-child {
     width: 100%;
     padding: 0 0 50px;
+    order: -1;
   }
 
   .mentors__swiper--photo {

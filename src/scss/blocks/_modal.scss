@@ -240,6 +240,18 @@
   top: 24px;
 }
 
+.modal__personal {
+  display: inline-flex;
+  align-items: center;
+}
+
+.modal__personal .wpcf7-list-item {
+  margin: 0;
+}
+.modal__personal input {
+  margin: 0;
+}
+
 /* Succes */
 .modal__wrapper-success {
   opacity: 0;

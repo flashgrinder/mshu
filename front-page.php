@@ -340,7 +340,7 @@
 	<!-- ./ Counsel -->
 
 	<!-- Mentors -->
-	<section class="mentors js-mentors-init">
+	<section class="mentors js-mentors-init" id="mentors">
 		<div class="mentors__body container">
 			<div class="mentors__tabs tabs">
 				<div class="mentors__head-wrap title--indent-large">
@@ -490,9 +490,9 @@
 										'alt'   => get_the_title()
 									];
 									echo get_the_post_thumbnail( $post->ID, 'full', $default_attr ); ?>
-								<div class="news-slider__inner text text--medium text--w-regular center">
+								<a href="<?php the_permalink(); ?>" class="news-slider__inner text text--medium text--w-regular center">
 									<?php the_title(); ?>
-								</div>
+								</a>
 							</div>
 						<?php endwhile; ?>
 						<?php wp_reset_postdata(); ?>
