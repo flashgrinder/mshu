@@ -1832,6 +1832,7 @@ img {
   color: #A42E32;
   border-radius: 20px 20px 20px 0;
   opacity: 0;
+  text-decoration: none;
   transition: opacity 0.3s ease-in-out;
 }
 
