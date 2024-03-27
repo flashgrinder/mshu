@@ -531,30 +531,16 @@
 	<div class="partners__outer">
 		<div class="partners__swiper partners__slider js-partners-slider swiper">
 			<div class="partners__items swiper-wrapper">
-				<a href="" class="partners__item swiper-slide">
-					<img src="<?= STANDART_DIR; ?>/img/partners/logo-1.png" alt="" class="partners__logo">
-				</a>
-				<a href="" class="partners__item swiper-slide">
-					<img src="<?= STANDART_DIR; ?>/img/partners/logo-2.png" alt="" class="partners__logo">
-				</a>
-				<a href="" class="partners__item swiper-slide">
-					<img src="<?= STANDART_DIR; ?>/img/partners/logo-3.png" alt="" class="partners__logo">
-				</a>
-				<a href="" class="partners__item swiper-slide">
-					<img src="<?= STANDART_DIR; ?>/img/partners/logo-4.png" alt="" class="partners__logo">
-				</a>
-				<a href="" class="partners__item swiper-slide">
-					<img src="<?= STANDART_DIR; ?>/img/partners/logo-5.png" alt="" class="partners__logo">
-				</a>
-				<a href="" class="partners__item swiper-slide">
-					<img src="<?= STANDART_DIR; ?>/img/partners/logo-6.png" alt="" class="partners__logo">
-				</a>
-				<a href="" class="partners__item swiper-slide">
-					<img src="<?= STANDART_DIR; ?>/img/partners/logo-7.png" alt="" class="partners__logo">
-				</a>
-				<a href="" class="partners__item swiper-slide">
-					<img src="<?= STANDART_DIR; ?>/img/partners/logo-8.png" alt="" class="partners__logo">
-				</a>
+				<?php if( have_rows('partners') ): ?>
+					<?php while( have_rows('partners') ): the_row();
+						$partners_link = get_sub_field('partners_link');
+						$partners_logo = get_sub_field('partners_logo');
+						?>
+						<a href="<?= (!empty($partners_link)) ? $partners_link : 'javascript:;'; ?>" class="partners__item swiper-slide">
+							<img src="<?php echo esc_url($partners_logo['url']); ?>" alt="<?php echo esc_attr($partners_logo['alt']); ?>" class="partners__logo">
+						</a>
+					<?php endwhile; ?>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>
@@ -568,15 +554,16 @@
 			Информационные партнёры
 		</h2>
 		<div class="partners__items">
-			<a href="" class="partners__item js-reveal gs-reveal a-reveal-left">
-				<img src="<?= STANDART_DIR; ?>/img/partners/info-logo-1.png" alt="" class="partners__logo">
-			</a>
-			<a href="" class="partners__item js-reveal gs-reveal a-reveal-left">
-				<img src="<?= STANDART_DIR; ?>/img/partners/info-logo-2.png" alt="" class="partners__logo">
-			</a>
-			<a href="" class="partners__item js-reveal gs-reveal a-reveal-left">
-				<img src="<?= STANDART_DIR; ?>/img/partners/info-logo-3.png" alt="" class="partners__logo">
-			</a>
+			<?php if( have_rows('info-partners') ): ?>
+				<?php while( have_rows('info-partners') ): the_row();
+					$info_partners_link = get_sub_field('info_partners_link');
+					$info_partners_logo = get_sub_field('info_partners_logo');
+					?>
+					<a href="<?= (!empty($info_partners_link)) ? $info_partners_link : 'javascript:;'; ?>" class="partners__item js-reveal gs-reveal a-reveal-left">
+						<img src="<?php echo esc_url($info_partners_logo['url']); ?>" alt="<?php echo esc_attr($info_partners_logo['alt']); ?>" class="partners__logo">
+					</a>
+				<?php endwhile; ?>
+			<?php endif; ?>
 		</div>
 	</div>
 </section>

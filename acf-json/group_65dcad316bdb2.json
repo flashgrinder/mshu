@@ -508,6 +508,176 @@
                     "parent_repeater": "field_65edb4197d44b"
                 }
             ]
+        },
+        {
+            "key": "field_66041a7125b59",
+            "label": "Партнёры",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_66041a8325b5a",
+            "label": "Партнёры",
+            "name": "partners",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Добавить",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_66041a8325b5b",
+                    "label": "Ссылка",
+                    "name": "partners_link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "Если не указана ссылка, то никуда переходить не будет.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_66041a8325b5a"
+                },
+                {
+                    "key": "field_66041ae625b61",
+                    "label": "Логотип",
+                    "name": "partners_logo",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_66041a8325b5a"
+                }
+            ]
+        },
+        {
+            "key": "field_66041b0412347",
+            "label": "Информационные партнёры",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_66041b0812348",
+            "label": "Информационные партнёры",
+            "name": "info-partners",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Добавить",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_66041b0812349",
+                    "label": "Ссылка",
+                    "name": "info_partners_link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "Если не указана ссылка, то никуда переходить не будет.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "parent_repeater": "field_66041b0812348"
+                },
+                {
+                    "key": "field_66041b081234a",
+                    "label": "Логотип",
+                    "name": "info_partners_logo",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_66041b0812348"
+                }
+            ]
         }
     ],
     "location": [
@@ -528,5 +698,5 @@
     "active": true,
     "description": "Главная страница",
     "show_in_rest": 0,
-    "modified": 1710077307
+    "modified": 1711545150
 }
