@@ -13,7 +13,12 @@
         overflow: hidden;
         flex: 1 0 auto;
         padding-top: 149px;
+        @include mobile(padding-top, 110px);
     }
+}
+
+.page-template-front-page .page__container {
+    @include mobile(padding-top, 76px);
 }
 
 //.page.is-open {
