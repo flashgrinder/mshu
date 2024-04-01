@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
 	<? wp_head(); ?>
 </head>
-<body class="page bg--white js-page-open-menu">
+<body <? body_class('page bg--white js-page-open-menu'); ?>>
 <!-- Header -->
 <header class="header js-header">
 	<div class="header__body container">

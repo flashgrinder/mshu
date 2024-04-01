@@ -38,6 +38,8 @@
 .news-list__img {
   display: block;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .news-list__pic {
