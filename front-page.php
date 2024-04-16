@@ -549,7 +549,6 @@
 
 <!-- Partners-info -->
 <section class="partners partners--info js-reveal gs-reveal">
-	<div style="display: none"></div>
 	<div class="partners__body container">
 		<h2 class="partners__heading title title--big title--red-gradient title--w-bold center title--indent-large js-reveal gs-reveal a-reveal-left">
 			Информационные партнёры
