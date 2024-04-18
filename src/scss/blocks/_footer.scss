@@ -22,3 +22,14 @@
   gap: 30px;
   @include mobile(align-items, center);
 }
+
+.footer__creator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer a {
+  text-decoration: none;
+}
