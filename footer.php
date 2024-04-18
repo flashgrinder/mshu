@@ -17,7 +17,7 @@
 		</div>
 		<a class="footer__creator text text--medium text--white text--w-regular" href="https://fcdigital.ru/" target="_blank">
             <span class="footer__creator-capture">Создание и разработка сайта Fincom Digital</span>
-            <img src="./img/fincom-logo.svg" class="footer__creator-logo" width="40"
+            <img src="<?= STANDART_DIR; ?>/img/fincom-logo.svg" class="footer__creator-logo" width="40"
                 height="40" alt="Логотип Fincom Digital">
         </a>
 	</div>
