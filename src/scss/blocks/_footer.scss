@@ -28,8 +28,14 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+  margin-top: 15px;
 }
 
 .footer a {
   text-decoration: none;
+}
+
+.footer__creator-capture {
+  display: block;
+  text-align: center;
 }
