@@ -5,10 +5,17 @@
 
 .footer__inner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   gap: 50px;
   @include mobile(justify-content, center);
+  @include mobileXS(flex-direction, column-reverse);
+}
+
+.footer__company {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
 }
 
 .footer__logo {
@@ -21,6 +28,7 @@
   align-items: end;
   gap: 30px;
   @include mobile(align-items, center);
+  @include mobile(min-width, 290px);
 }
 
 .footer__creator {
@@ -28,7 +36,6 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-top: 15px;
 }
 
 .footer a {

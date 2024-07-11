@@ -2456,9 +2456,14 @@ img {
 
 .footer__inner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   gap: 50px;
+}
+
+.footer__company {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .footer__info {
@@ -2473,7 +2478,6 @@ img {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin-top: 15px;
 }
 
 .footer a {
@@ -3120,6 +3124,10 @@ img {
   .footer__info {
     align-items: center;
   }
+
+  .footer__info {
+    min-width: 290px;
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -3263,6 +3271,10 @@ img {
   .wysiwyg ul,
   .wysiwyg ol {
     padding-left: 25px;
+  }
+
+  .footer__inner {
+    flex-direction: column-reverse;
   }
 
   .footer__logo {

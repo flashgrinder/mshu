@@ -38,14 +38,16 @@ const source = {
 		fonts: './src/fonts/**/*.*',
 		img:   './src/img/**/*.*',
 		js:    './src/js/*.js',
-		libs: './src/libs/scripts.js'
+		libs:  './src/libs/scripts.js',
+		docs:  './src/docs/*.pdf'
 	},
 	dist: {
 		html:  './assets',
 		css:   './assets/css',
 		fonts: './assets/fonts',
 		img:   './assets/img',
-		js:    './assets/js'
+		js:    './assets/js',
+		docs:  './assets/docs'
 	},
 	watch: {
 		pug: './src/**/*.+(jade|pug)',
@@ -54,7 +56,8 @@ const source = {
 		css:  './src/css/**/*.css',
 		sass: './src/scss/**/*.+(sass|scss)',
 		js:   './src/libs/**/*.js',
-		php:  './src/**/*.php'
+		php:  './src/**/*.php',
+		docs: './src/docs/*.pdf'
 	}
 };
 
@@ -124,6 +127,7 @@ function watch() {
 	gulp.watch(source.watch.js, js);
 	gulp.watch(source.watch.php);
 	gulp.watch(source.watch.pug, pugs);
+	gulp.watch(source.watch.docs);
 	gulp.watch(source.watch.nunchucks, nunjucksTmpl).on('change', browserSync.reload);
 	gulp.watch(source.watch.html).on('change', browserSync.reload);
 	gulp.watch('./smartgrid.js', grid).on('change', browserSync.reload);
@@ -195,6 +199,12 @@ function optimgBuild() {
 }
 gulp.task('optimgBuild', optimgBuild);
 
+// Collect all docs
+function docsBuild() {
+	return gulp.src(source.src.docs)
+	.pipe(gulp.dest(source.dist.docs));
+}
+
 // Uploading files via FTP
 function serverFTP() {
 	return gulp.src('./assets/**')
@@ -215,7 +225,7 @@ function clean() {
 gulp.task('clean', clean);
 
 // Run the build
-gulp.task('dev', gulp.series(clean, optimgBuild, gulp.parallel(htmlBuild, stylesBuild, scriptsBuild, fontsBuild)));
+gulp.task('dev', gulp.series(clean, optimgBuild, gulp.parallel(htmlBuild, stylesBuild, scriptsBuild, fontsBuild, docsBuild)));
 
 gulp.task('build', gulp.series('dev'));
 

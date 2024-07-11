@@ -3,9 +3,16 @@
 <footer class="footer">
 	<div class="footer__body container">
 		<div class="footer__inner">
-			<div class="footer__logo">
-				<img src="<?= STANDART_DIR; ?>/img/footer-logo.svg" alt="" class="footer__img-logo">
+			<div class="footer__company">
+				<div class="footer__logo">
+					<img src="<?= STANDART_DIR; ?>/img/footer-logo.svg" alt="" class="footer__img-logo">
+				</div>
+				<a class="footer__creator text text--normal text--white text--w-regular" href="https://fcdigital.ru/" target="_blank">
+					<span class="footer__creator-capture">Создание и разработка сайта Fincom Digital</span>
+					<img src="<?= STANDART_DIR; ?>/img/fincom-logo.svg" class="footer__creator-logo" width="40" height="40" alt="Логотип Fincom Digital">
+				</a>
 			</div>
+
 			<div class="footer__info">
 				<div class="footer__copy text text--medium text--white text--w-regular">
 					© 2024 МШЮ, Все права защищены
@@ -13,13 +20,10 @@
 				<a href="/policy/" class="footer__policy text text--medium text--white text--w-regular">
 					Политика конфиденциальности
 				</a>
+				<a href="<?= STANDART_DIR; ?>/docs/mshu_regulation.pdf" class="footer__regulation text text--medium text--white text--w-regular">Положение о МШЮ</a>
 			</div>
 		</div>
-		<a class="footer__creator text text--medium text--white text--w-regular" href="https://fcdigital.ru/" target="_blank">
-            <span class="footer__creator-capture">Создание и разработка сайта Fincom Digital</span>
-            <img src="<?= STANDART_DIR; ?>/img/fincom-logo.svg" class="footer__creator-logo" width="40"
-                height="40" alt="Логотип Fincom Digital">
-        </a>
+
 	</div>
 </footer>
 
@@ -29,7 +33,7 @@
 		<div class="modal__body hystmodal__window" role="modal window participant" aria-modal="true">
 			<div class="modal__close" data-hystclose>
 				<svg class="modal__close-svg" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M1 1L12 12M12 1L1 12" stroke-width="1.5" stroke-linecap="round"/>
+					<path d="M1 1L12 12M12 1L1 12" stroke-width="1.5" stroke-linecap="round" />
 				</svg>
 			</div>
 			<h3 class="modal__title title title--medium title--white title--w-bold center">
@@ -46,7 +50,7 @@
 		<div class="modal__body hystmodal__window" role="modal window mentor" aria-modal="true">
 			<div class="modal__close" data-hystclose>
 				<svg class="modal__close-svg" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M1 1L12 12M12 1L1 12" stroke-width="1.5" stroke-linecap="round"/>
+					<path d="M1 1L12 12M12 1L1 12" stroke-width="1.5" stroke-linecap="round" />
 				</svg>
 			</div>
 			<h3 class="modal__title title title--medium title--white title--w-bold center">
@@ -64,7 +68,7 @@
 		<div class="modal__body hystmodal__window" role="modal window feedback" aria-modal="true">
 			<div class="modal__close" data-hystclose>
 				<svg class="modal__close-svg" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M1 1L12 12M12 1L1 12" stroke-width="1.5" stroke-linecap="round"/>
+					<path d="M1 1L12 12M12 1L1 12" stroke-width="1.5" stroke-linecap="round" />
 				</svg>
 			</div>
 			<div class="modal__wrapper-success">
@@ -82,4 +86,5 @@
 
 <?php wp_footer(); ?>
 </body>
+
 </html>
