@@ -22,6 +22,12 @@ function init() {
       searchFocus: false,
     });
 
+    const partnerCampSelect = new SlimSelect({
+      select: document.querySelector('.js-select-participant-camp'),
+      showSearch: false,
+      searchFocus: false,
+    });
+
 }
 
 export default { init }
