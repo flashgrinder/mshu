@@ -65,66 +65,68 @@ function init() {
     });
 
     let tabTriggerBtns = document.querySelectorAll('.tabs__button');
-    tabTriggerBtns.forEach(function(tabTriggerBtn, index) {
 
-        tabTriggerBtn.addEventListener('click', function() {
+    if (tabTriggerBtns.length !== 0) {
+        tabTriggerBtns.forEach(function (tabTriggerBtn, index) {
 
-            let currentTabData = document.querySelector('.tabs__content[data-tab-content="' + this.dataset.tabTrigger + '"]');
+            tabTriggerBtn.addEventListener('click', function () {
 
-            document.querySelector('.tabs__content.is-open').classList.remove('is-open');
-            document.querySelector('.tabs__button.is-active').classList.remove('is-active');
-            currentTabData.classList.add('is-open');
-            this.classList.add('is-active');
+                let currentTabData = document.querySelector('.tabs__content[data-tab-content="' + this.dataset.tabTrigger + '"]');
 
+                document.querySelector('.tabs__content.is-open').classList.remove('is-open');
+                document.querySelector('.tabs__button.is-active').classList.remove('is-active');
+                currentTabData.classList.add('is-open');
+                this.classList.add('is-active');
+
+            });
         });
-    });
 
-    const select = document.getElementById("basic-select");
-    const menu = document.getElementById("option-select");
-    const dropdowns = document.querySelectorAll(".dropdown");
-    const cart = document.querySelector(".carpet");
-    const options = document.querySelectorAll(".options .options__item");
-    const selected = document.getElementById("select-title");
-    let active = document.querySelector(".options__item--active");
-    const animTime = 100;
+        const select = document.getElementById("basic-select");
+        const menu = document.getElementById("option-select");
+        const dropdowns = document.querySelectorAll(".dropdown");
+        const cart = document.querySelector(".carpet");
+        const options = document.querySelectorAll(".options .options__item");
+        const selected = document.getElementById("select-title");
+        let active = document.querySelector(".options__item--active");
+        const animTime = 100;
 
-    select.addEventListener('mouseenter', function(){
-        select.classList.add("selected--open");
-        cart.classList.add("carpet--open");
-        setTimeout(function(){
-            select.classList.add("selected--delay");
-        }, animTime);
-    });
-    select.addEventListener('mouseleave', function(){
-        select.classList.remove("selected--open");
-        cart.classList.remove("carpet--open");
-        setTimeout(function(){
-            select.classList.remove("selected--delay");
-        }, animTime);
-    });
-    menu.addEventListener('mouseenter', function(){
-        select.classList.add("selected--open");
-        cart.classList.add("carpet--open");
-        setTimeout(function(){
-            select.classList.add("selected--delay");
-        }, animTime);
-    });
-    menu.addEventListener('mouseleave', function(){
-        select.classList.remove("selected--open");
-        cart.classList.remove("carpet--open");
-        setTimeout(function(){
-            select.classList.remove("selected--delay");
-        }, animTime);
-    });
-    options.forEach(option => {
-        option.addEventListener("click", function(){
-            selected.innerText = option.innerText;
-            active.classList.remove("options__item--active");
-            option.classList.add("options__item--active");
-            active = document.querySelector(".options__item--active");
+        select.addEventListener('mouseenter', function () {
+            select.classList.add("selected--open");
+            cart.classList.add("carpet--open");
+            setTimeout(function () {
+                select.classList.add("selected--delay");
+            }, animTime);
         });
-    });
-
+        select.addEventListener('mouseleave', function () {
+            select.classList.remove("selected--open");
+            cart.classList.remove("carpet--open");
+            setTimeout(function () {
+                select.classList.remove("selected--delay");
+            }, animTime);
+        });
+        menu.addEventListener('mouseenter', function () {
+            select.classList.add("selected--open");
+            cart.classList.add("carpet--open");
+            setTimeout(function () {
+                select.classList.add("selected--delay");
+            }, animTime);
+        });
+        menu.addEventListener('mouseleave', function () {
+            select.classList.remove("selected--open");
+            cart.classList.remove("carpet--open");
+            setTimeout(function () {
+                select.classList.remove("selected--delay");
+            }, animTime);
+        });
+        options.forEach(option => {
+            option.addEventListener("click", function () {
+                selected.innerText = option.innerText;
+                active.classList.remove("options__item--active");
+                option.classList.add("options__item--active");
+                active = document.querySelector(".options__item--active");
+            });
+        });
+    }
 }
 
 export default { init }

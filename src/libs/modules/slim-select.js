@@ -16,6 +16,12 @@ function init() {
       searchFocus: false,
     });
 
+    const partnerSelect = new SlimSelect({
+      select: document.querySelector('.js-select-partner'),
+      showSearch: false,
+      searchFocus: false,
+    });
+
 }
 
 export default { init }

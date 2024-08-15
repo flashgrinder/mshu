@@ -1,0 +1,35 @@
+.lawsuit {
+    position: relative;
+    padding-bottom: 248px;
+    @include mobile(padding-bottom, 168px);
+    @include mobileXS(padding-bottom, 60px);
+}
+
+.lawsuit__body {
+    padding: 60px 0;
+    background-image: url("../img/task/tasks-bg.svg");
+    background-repeat: no-repeat;
+    background-color: rgba(252, 252, 252, 0.9);
+    background-size: cover;
+    @include mobile(padding, 30px 0);
+}
+
+.lawsuit::before {
+    content: "";
+    position: absolute;
+    background-image: url('../img/combine/combine-decor-line.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    left: 0;
+    bottom: 100px;
+    height: 48px;
+    width: 90%;
+    max-width: 1421px;
+
+    @include to(1365px) {
+        max-width: 1024px;
+    }
+
+    @include mobile(bottom, 60px);
+    @include mobileXS(content, none);
+}

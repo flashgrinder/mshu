@@ -1,0 +1,17 @@
+.camp {
+    padding: 100px 0;
+    @include mobile(padding, 60px 0);
+}
+  
+  .camp__actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    @include mobile(flex-direction, column);
+  }
+  
+  .camp__button {
+    @include mobileXS(width, 100%);
+  }

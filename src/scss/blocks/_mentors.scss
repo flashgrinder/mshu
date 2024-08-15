@@ -22,7 +22,12 @@
   justify-content: space-between;
   gap: 50px;
   @include mobile(gap, 0);
-  @include mobileXS-block {
+  // @include mobileXS-block {
+  //   flex-direction: column;
+  //   gap: 30px;
+  // }
+
+  @include to(767px) {
     flex-direction: column;
     gap: 30px;
   }
@@ -33,15 +38,25 @@
 }
 
 .mentors__slider-wrap:first-child {
-  @include mobile(width, 35%);
-  @include mobileXS-block {
+  @include tablet(width, 35%);
+  // @include mobileXS-block {
+  //   width: 100%;
+  // }
+
+  @include to(767px) {
     width: 100%;
   }
 }
 
 .mentors__slider-wrap:last-child {
-  @include mobile(width, 60%);
-  @include mobileXS-block {
+  @include tablet(width, 60%);
+  // @include mobileXS-block {
+  //   width: 100%;
+  //   padding: 0 0 50px;
+  //   order: -1;
+  // }
+
+  @include to(767px) {
     width: 100%;
     padding: 0 0 50px;
     order: -1;
@@ -56,7 +71,13 @@
   width: 400px;
   height: 480px;
   padding: 0 0 50px;
-  @include mobileXS-block {
+  // @include mobileXS-block {
+  //   width: 320px;
+  //   height: 322px;
+  //   padding: 0;
+  // }
+
+  @include to(767px) {
     width: 320px;
     height: 322px;
     padding: 0;

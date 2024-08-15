@@ -27,7 +27,7 @@
   flex-direction: column;
   align-items: end;
   gap: 30px;
-  @include mobile(align-items, center);
+  @include mobileXS(align-items, center);
   @include mobile(min-width, 290px);
 }
 

@@ -2,7 +2,8 @@
   background: linear-gradient(248.14deg,#A42E32 14.32%,#E52A31 85.68%),linear-gradient(0deg,#d9d9d9,#d9d9d9);
 }
 
-.main-blocks-wrapper {
+.main-blocks-wrapper,
+.camp-blocks-wrapper {
   background: url("../img/main-pattern.svg") no-repeat fixed;
   background-size: cover;
 }

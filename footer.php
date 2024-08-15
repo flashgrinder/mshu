@@ -61,6 +61,23 @@
 	</div>
 </div>
 <!-- /. Modal -->
+<!-- Modal -->
+<div class="modal hystmodal" id="partner" aria-hidden="true">
+	<div class="hystmodal__wrap">
+		<div class="modal__body hystmodal__window" role="modal window partner" aria-modal="true">
+			<div class="modal__close" data-hystclose>
+				<svg class="modal__close-svg" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M1 1L12 12M12 1L1 12" stroke-width="1.5" stroke-linecap="round" />
+				</svg>
+			</div>
+			<h3 class="modal__title title title--medium title--white title--w-bold center">
+				Оставить заявку
+			</h3>
+			<?= do_shortcode('[contact-form-7 id="dec28f4" title="Стать партнером" html_class="modal__form"]'); ?>
+		</div>
+	</div>
+</div>
+<!-- /. Modal -->
 
 <!-- Success -->
 <div class="modal modal--success hystmodal js-modal-success" id="success" aria-hidden="true">
