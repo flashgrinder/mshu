@@ -15,19 +15,7 @@ function init() {
       showSearch: false,
       searchFocus: false,
     });
-
-    const partnerSelect = new SlimSelect({
-      select: document.querySelector('.js-select-partner'),
-      showSearch: false,
-      searchFocus: false,
-    });
-
-    const partnerCampSelect = new SlimSelect({
-      select: document.querySelector('.js-select-participant-camp'),
-      showSearch: false,
-      searchFocus: false,
-    });
-
+    
 }
 
 export default { init }

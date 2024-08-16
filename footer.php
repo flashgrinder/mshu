@@ -73,7 +73,7 @@
 			<h3 class="modal__title title title--medium title--white title--w-bold center">
 				Оставить заявку
 			</h3>
-			<?= do_shortcode('[contact-form-7 id="dec28f4" title="Стать партнером" html_class="modal__form"]'); ?>
+			<?= do_shortcode('[contact-form-7 id="dec28f4" title="Стать партнером (лагерь МШЮ)" html_class="modal__form"]'); ?>
 		</div>
 	</div>
 </div>

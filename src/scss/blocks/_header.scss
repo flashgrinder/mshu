@@ -62,6 +62,8 @@
 }
 
 .header__menu-link {
+  display: block;
+  text-align: center;
   padding: 3px 15px;
   border: 1px solid var(--color-black);
   text-decoration: none;
