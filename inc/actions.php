@@ -11,7 +11,16 @@
 		wp_enqueue_script('jquery');
 
 		if (is_front_page() || is_page('lager-mshu')) {
-			wp_enqueue_script('swiper-js', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', [], time(), true);
+			wp_enqueue_script(
+				'swiper-js',
+				'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+				[],
+				time(),
+				[
+					'in_footer' => true,
+					'strategy'  => 'defer',
+				]
+			);
 		}
 		wp_enqueue_script('scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.min.js', [], time(), true);
 	});

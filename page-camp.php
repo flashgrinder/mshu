@@ -175,7 +175,6 @@ if ((!empty($lawsuit_heading)) && (!empty($lawsuit_description))) :
                             <?php endif; ?>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
