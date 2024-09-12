@@ -79,3 +79,13 @@
 		return (object) array_merge( (array) $labels, $new );
 
 	});
+
+	add_filter('style_loader_tag', function ($html, $handle, $href, $media) {
+		if ($handle === 'swiper') {
+			$html = str_replace("<link ", "<link integrity='sha384-qb3jc85aEQG16jURfFVIetUIc5p6W1uhHNcv5zewh8m3n+IWOHb41WO/3N9Or5Zv' crossorigin='anonymous' ", $html);
+		}
+		if ($handle === 'swiper-js') {
+			$html = str_replace("<link ", "<link integrity='sha384-MAGmzBVTmeQTSSONI7W9+cXWkt8l4on2ywlU/RB2JrQdD0x275DQ82KA5b+FsXJ2' crossorigin='anonymous' ", $html);
+		}
+		return $html;
+	}, 10, 4);
