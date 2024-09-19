@@ -15,15 +15,15 @@ document.addEventListener('DOMContentLoaded', function(e) {
         force3D: true
     });
 
+    const modalTrue = document.querySelector('[data-modal]');
     const partnersSliderTrue = document.querySelector('.partners--slider');
     const newsSliderTrue = document.querySelector('.news-slider');
     const mentorsSliderTrue = document.querySelector('.js-mentors-init');
 
-    modal.init();
     burgerMenu.init();
     scrollHeader.init();
     gsReveal.init();
-    slimSelect.init();
+    modalTrue ? modal.init() && slimSelect.init() : false;
     partnersSliderTrue ? partnersSlider.init() : false;
     mentorsSliderTrue ? mentors.init() : false;
     newsSliderTrue ? newsSlider.init() : false;
