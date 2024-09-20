@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', function(e) {
     burgerMenu.init();
     scrollHeader.init();
     gsReveal.init();
-    modalTrue ? modal.init() && slimSelect.init() : false;
+    modalTrue ? modal.init() : false;
+    modalTrue ? slimSelect.init() : false;
     partnersSliderTrue ? partnersSlider.init() : false;
     mentorsSliderTrue ? mentors.init() : false;
     newsSliderTrue ? newsSlider.init() : false;
