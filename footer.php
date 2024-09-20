@@ -30,7 +30,7 @@
 <!-- Modal -->
 <div class="modal hystmodal" id="participant" aria-hidden="true">
 	<div class="hystmodal__wrap">
-		<div class="modal__body hystmodal__window" role="modal window participant" aria-modal="true">
+		<div class="modal__body hystmodal__window" role="dialog" aria-modal="true">
 			<div class="modal__close" data-hystclose>
 				<svg class="modal__close-svg" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M1 1L12 12M12 1L1 12" stroke-width="1.5" stroke-linecap="round" />
@@ -47,7 +47,7 @@
 <!-- Modal -->
 <div class="modal hystmodal" id="mentor" aria-hidden="true">
 	<div class="hystmodal__wrap">
-		<div class="modal__body hystmodal__window" role="modal window mentor" aria-modal="true">
+		<div class="modal__body hystmodal__window" role="dialog" aria-modal="true">
 			<div class="modal__close" data-hystclose>
 				<svg class="modal__close-svg" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M1 1L12 12M12 1L1 12" stroke-width="1.5" stroke-linecap="round" />
@@ -64,7 +64,7 @@
 <!-- Modal -->
 <div class="modal hystmodal" id="partner" aria-hidden="true">
 	<div class="hystmodal__wrap">
-		<div class="modal__body hystmodal__window" role="modal window partner" aria-modal="true">
+		<div class="modal__body hystmodal__window" role="dialog" aria-modal="true">
 			<div class="modal__close" data-hystclose>
 				<svg class="modal__close-svg" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M1 1L12 12M12 1L1 12" stroke-width="1.5" stroke-linecap="round" />
@@ -81,7 +81,7 @@
 <!-- Modal -->
 <div class="modal hystmodal" id="participant-camp" aria-hidden="true">
 	<div class="hystmodal__wrap">
-		<div class="modal__body hystmodal__window" role="modal window participant-camp" aria-modal="true">
+		<div class="modal__body hystmodal__window" role="dialog" aria-modal="true">
 			<div class="modal__close" data-hystclose>
 				<svg class="modal__close-svg" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M1 1L12 12M12 1L1 12" stroke-width="1.5" stroke-linecap="round" />
@@ -99,7 +99,7 @@
 <!-- Success -->
 <div class="modal modal--success hystmodal js-modal-success" id="success" aria-hidden="true">
 	<div class="modal__wrap hystmodal__wrap">
-		<div class="modal__body hystmodal__window" role="modal window feedback" aria-modal="true">
+		<div class="modal__body hystmodal__window" role="dialog" aria-modal="true">
 			<div class="modal__close" data-hystclose>
 				<svg class="modal__close-svg" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M1 1L12 12M12 1L1 12" stroke-width="1.5" stroke-linecap="round" />

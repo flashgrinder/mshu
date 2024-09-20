@@ -80,6 +80,7 @@
 
 	});
 
+	// Добавляем атрибуты integrity и crossorigin при подключении стилей и скриптов swiper
 	add_filter('style_loader_tag', function ($html, $handle, $href, $media) {
 		if ($handle === 'swiper') {
 			$html = str_replace("<link ", "<link integrity='sha384-IFb872aCXZQb6BKRUHmGn0YHKnFl4ylZjkgVRRyMTEQ5bjo/H6xFUiLJm6opOO66' crossorigin='anonymous' ", $html);
