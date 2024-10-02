@@ -3,14 +3,14 @@
 	/* Подключение стилей и скриптов */
 	add_action('wp_enqueue_scripts', function () {
 
-		if (is_front_page() || is_page('lager-mshu')) {
+		if (is_front_page() || is_home() || is_page('lager-mshu')) {
 			wp_enqueue_style('swiper', 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', [], time());
 		}
 		wp_enqueue_style('styles', get_stylesheet_directory_uri() . '/assets/css/style.min.css', [], time());
 
 		wp_enqueue_script('jquery');
 
-		if (is_front_page() || is_page('lager-mshu')) {
+		if (is_front_page() || is_home() || is_page('lager-mshu')) {
 			wp_enqueue_script(
 				'swiper-js',
 				'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',

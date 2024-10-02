@@ -7,6 +7,7 @@ import newsSlider from '../libs/modules/news-slider';
 import partnersSlider from '../libs/modules/partners';
 import slimSelect from '../libs/modules/slim-select.js';
 import mentors from '../libs/modules/mentors';
+import registrationSlider from '../libs/modules/registration.js';
 
 document.addEventListener('DOMContentLoaded', function(e) {
 
@@ -28,5 +29,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     partnersSliderTrue ? partnersSlider.init() : false;
     mentorsSliderTrue ? mentors.init() : false;
     newsSliderTrue ? newsSlider.init() : false;
+
+    registrationSlider.init();
 
 });
