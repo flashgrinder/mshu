@@ -107,7 +107,7 @@
 			<h3 class="modal__title title title--medium title--white title--w-bold center">
 				Оставить заявку
 			</h3>
-			<?= do_shortcode('[contact-form-7 id="1bfe725" title="Зарегистрироваться" html_class="modal__form"]'); ?>
+			<?= do_shortcode('[contact-form-7 id="d5fa463" title="Зарегистрироваться" html_class="modal__form"]'); ?>
 		</div>
 	</div>
 </div>
