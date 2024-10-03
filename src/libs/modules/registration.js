@@ -1,11 +1,10 @@
 function init() {
 
     const registrationSlider = new Swiper('.js-registration-slider', {
-        direction: 'horizontal',
         grabCursor: true,
         loop: true,
-        centeredSlides: true,
-        slidesPerView: 1,
+        speed: 800,
+        spaceBetween: 30,
         mousewheel: {
             invert: false,
         },
@@ -17,7 +16,6 @@ function init() {
             nextEl: '.js-slider-next',
             prevEl: '.js-slider-prev',
         },
-
     });
 
     const slides = document.querySelectorAll('.reg-slider__item');

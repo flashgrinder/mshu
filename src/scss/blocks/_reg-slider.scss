@@ -3,23 +3,41 @@
     @include mobile(padding-top, 30px);
 }
 
-.reg-slider__item {
+.reg-slider__outer {
     @include from(769px) {
         @include wrapper();
     }
 }
 
-.reg-slider__outer {
-    background-image: url('../img/main-screen/main-screen.png');
+.reg-slider__inner {
+    position: relative;
+    background-image: url('../img/registration-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+
+    padding: 35px 55px 40px;
     border-radius: 10px;
-    @include mobile(border-radius, 0);
+
+    @include mobile-block {
+        padding: 35px 20px;
+        border-radius: 0;
+    }
 }
 
-.reg-slider__inner {
-    padding: 35px 55px 40px;
-    @include mobile(padding, 35px 20px);
+.reg-slider__inner::before {
+    content: '';
+    position: absolute;
+    background-image: url('../img/main-screen/main-screen-grid.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    user-select: none;
+    @include mobileXS(background-size, cover);
 }
 
 .reg-slider__title,
@@ -65,11 +83,19 @@
     }
 }
 
-.reg-slider__button {
+.reg-slider__button.button {
     display: block;
     width: 234px;
     padding: 15px 35px;
     margin: 0 auto;
 
     @include mobileXS(width, 100%);
+}
+
+.reg-slider__pagination .swiper-pagination-bullet {
+    background: var(--color-gray);
+}
+
+.reg-slider__pagination .swiper-pagination-bullet-active {
+    background: var(--color-black);
 }

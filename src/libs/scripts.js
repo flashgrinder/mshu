@@ -18,8 +18,9 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     const modalTrue = document.querySelector('[data-modal]');
     const partnersSliderTrue = document.querySelector('.partners--slider');
-    const newsSliderTrue = document.querySelector('.news-slider');
     const mentorsSliderTrue = document.querySelector('.js-mentors-init');
+    const newsSliderTrue = document.querySelector('.news-slider');
+    const registrationSliderTrue = document.querySelector('.js-registration-slider');
 
     burgerMenu.init();
     scrollHeader.init();
@@ -29,7 +30,5 @@ document.addEventListener('DOMContentLoaded', function(e) {
     partnersSliderTrue ? partnersSlider.init() : false;
     mentorsSliderTrue ? mentors.init() : false;
     newsSliderTrue ? newsSlider.init() : false;
-
-    registrationSlider.init();
-
+    registrationSliderTrue ? registrationSlider.init() : false;
 });
