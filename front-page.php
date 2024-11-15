@@ -587,7 +587,7 @@ $dictation = get_field('dictation');
 <!-- ./ Dictation-info -->
 
 <!-- Contacts -->
-<section class="contacts js-reveal gs-reveal" id="contacts">
+<!-- <section class="contacts js-reveal gs-reveal" id="contacts">
 	<div class="contacts__body">
 		<div class="contacts__inner">
 			<div class="contacts__map js-reveal gs-reveal a-reveal-left">
@@ -662,7 +662,7 @@ $dictation = get_field('dictation');
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 <!-- ./ Contacts -->
 
 <?php get_footer(); ?>

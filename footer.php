@@ -3,27 +3,63 @@
 <footer class="footer">
 	<div class="footer__body container">
 		<div class="footer__inner">
-			<div class="footer__company">
+			<div class="footer__columns-1">
 				<div class="footer__logo">
-					<img src="<?= STANDART_DIR; ?>/img/footer-logo.svg" alt="" class="footer__img-logo">
+					<img src="<?= STANDART_DIR; ?>/img/footer-logo.svg" width="146" height="41" alt="Логотип МШЮ"
+						class="footer__img-logo">
 				</div>
-				<a class="footer__creator text text--normal text--white text--w-regular" href="https://fcdigital.ru/" target="_blank">
-					<span class="footer__creator-capture">Создание и разработка сайта Fincom Digital</span>
-					<img src="<?= STANDART_DIR; ?>/img/fincom-logo.svg" class="footer__creator-logo" width="40" height="40" alt="Логотип Fincom Digital">
-				</a>
+				<div class="footer__contacts contacts">
+					<ul class="contacts__list">
+						<li class="contacts__item">
+							<a class="contacts__link" href="tel:+79271362660" aria-label="Телефон">
+								<img src="<?= STANDART_DIR; ?>/img/contacts/shortcut-phone.svg" width="36" height="36"
+									class="contacts__icon">
+							</a>
+						</li>
+						<li class="contacts__item">
+							<a class="contacts__link" href="mailto:lawschool@inregions.com"
+								aria-label="Электронная почта">
+								<img src="<?= STANDART_DIR; ?>/img/contacts/shortcut-mail.svg" width="36" height="36"
+									class="contacts__icon">
+							</a>
+						</li>
+						<li class="contacts__item">
+							<a class="contacts__link" href="https://t.me/LegalJuniorcamp" aria-label="Telegram">
+								<img src="<?= STANDART_DIR; ?>/img/contacts/shortcut-telegram.svg" width="36" height="36"
+									class="contacts__icon">
+							</a>
+						</li>
+						<li class="contacts__item">
+							<a class="contacts__link" href="https://vk.com/legaljuniorcamp" aria-label="Вконтакте">
+								<img src="<?= STANDART_DIR; ?>/img/contacts/shortcut-vk.svg" width="36" height="36"
+									class="contacts__icon">
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
+			<div class="footer__columns-2">
+				<div class="footer__address text text--medium text--white text--w-regular">Город Москва, вн.тер. г.&nbsp;Муниципальный Округ Басманный, пл.&nbsp;Спартаковская,
+					дом&nbsp;14, строение&nbsp;2, этаж/ком.&nbsp;2/1</div>
+				<div class="footer__info">
 
-			<div class="footer__info">
-				<div class="footer__copy text text--medium text--white text--w-regular">
-					© 2024 МШЮ, Все права защищены
+					<div class="footer__copy text text--medium text--white text--w-regular">
+						© 2024 МШЮ, Все права защищены
+					</div>
+					<a href="/policy/" class="footer__policy text text--medium text--white text--w-regular">
+						Политика конфиденциальности
+					</a>
+					<a href="<?= STANDART_DIR; ?>/docs/mshu_regulation.pdf"
+						class="footer__regulation text text--medium text--white text--w-regular">Положение о МШЮ</a>
 				</div>
-				<a href="/policy/" class="footer__policy text text--medium text--white text--w-regular">
-					Политика конфиденциальности
-				</a>
-				<a href="<?= STANDART_DIR; ?>/docs/mshu_regulation.pdf" class="footer__regulation text text--medium text--white text--w-regular">Положение о МШЮ</a>
 			</div>
 		</div>
-
+		<a class="footer__creator text text--normal text--white text--w-regular" href="https://fcdigital.ru/"
+			target="_blank">
+			<span class="footer__creator-capture">Создание и разработка сайта Fincom Digital</span>
+			<img src="<?= STANDART_DIR; ?>/img/fincom-logo.svg" class="footer__creator-logo" width="40" height="40"
+				alt="Логотип Fincom Digital">
+		</a>
 	</div>
 </footer>
 
