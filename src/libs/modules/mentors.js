@@ -24,6 +24,11 @@ function init() {
             grabCursor: true,
             centeredSlides: false,
             loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
             cardsEffect: {
                 rotate: true,
                 slideShadows: false,
