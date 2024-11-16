@@ -4,7 +4,7 @@ function init() {
 
     const partnersSlider = new Swiper(".js-partners-slider", {
         loop: true,
-        autoHeight: true,
+        // autoHeight: true,
         slidesPerView: 6,
         spaceBetween: 20,
         effect: 'slide',
