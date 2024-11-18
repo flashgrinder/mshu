@@ -44,7 +44,7 @@
 				<div class="footer__info">
 
 					<div class="footer__copy text text--medium text--white text--w-regular">
-						© 2024 МШЮ, Все права защищены
+						© <?php echo current_time('Y'); ?> МШЮ, Все права защищены
 					</div>
 					<a href="/policy/" class="footer__policy text text--medium text--white text--w-regular">
 						Политика конфиденциальности
