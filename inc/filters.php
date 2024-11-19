@@ -83,10 +83,14 @@
 	// Добавляем атрибуты integrity и crossorigin при подключении стилей и скриптов swiper
 	add_filter('style_loader_tag', function ($html, $handle, $href, $media) {
 		if ($handle === 'swiper') {
-			$html = str_replace("<link ", "<link integrity='sha384-IFb872aCXZQb6BKRUHmGn0YHKnFl4ylZjkgVRRyMTEQ5bjo/H6xFUiLJm6opOO66' crossorigin='anonymous' ", $html);
-		}
-		if ($handle === 'swiper-js') {
-			$html = str_replace("<link ", "<link integrity='sha384-MAGmzBVTmeQTSSONI7W9+cXWkt8l4on2ywlU/RB2JrQdD0x275DQ82KA5b+FsXJ2' crossorigin='anonymous' ", $html);
+			$html = str_replace("<link ", "<link integrity='sha384-MdnrlY6/tTqzJktd2Qggj4+cvO+mWr9dBsZQ85pDtLZ8pUz04iOGmZ/4y+dKB0/2' crossorigin='anonymous' ", $html);
 		}
 		return $html;
 	}, 10, 4);
+
+	add_filter('script_loader_tag', function ($tag, $handle, $src) {
+		if ($handle === 'swiper-js') {
+			$tag = str_replace("<script ", "<script integrity='sha384-eSR7zK1V2s4cY/aOWYdtyMXBr5qXmV7r8Wq7s39HiVKWy19PcLe1WCYP6bvdrRFu' crossorigin='anonymous' ", $tag);
+		}
+		return $tag;
+	}, 10, 3);
