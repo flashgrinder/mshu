@@ -2735,16 +2735,33 @@ img {
 }
 
 .camp-stages__list {
-  padding: 0 0 0 25px;
+  list-style: none;
+  padding: 0 16px;
+}
+
+.camp-stages__item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  max-width: 330px;
+  margin: 0 auto;
 }
 
 .camp-stages__item ~ .camp-stages__item {
-  margin-top: 30px;
+  margin-top: 50px;
+}
+
+.camp-stages__pic {
+  width: 87px;
+  height: 87px;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
 }
 
 .camp-stages__description {
-  margin-top: 30px;
-  margin-left: -25px;
+  text-align: center;
 }
 
 /* Participants */
@@ -2883,6 +2900,26 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .camp-stages__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 60px;
+         column-gap: 60px;
+    row-gap: 40px;
+    padding: 0 100px;
+  }
+
+  .camp-stages__item ~ .camp-stages__item {
+    margin-top: 0;
+  }
+
+  .camp-stages__pic {
+    width: 108px;
+    height: 108px;
+  }
+}
+
 @media screen and (min-width: 769px) {
   .footer__columns-2 {
     grid-template-columns: repeat(2, 1fr);
@@ -2916,6 +2953,14 @@ img {
 
   .footer__columns-2 {
     align-items: end;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .camp-stages__list {
+    -moz-column-gap: 100px;
+         column-gap: 100px;
+    row-gap: 60px;
   }
 }
 

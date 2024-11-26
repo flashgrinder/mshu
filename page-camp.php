@@ -44,7 +44,7 @@
     <!-- ./Participants -->
 
     <!-- Camp-stages -->
-    <?php if (have_rows('camp-stages_repeater')) : ?>
+    <?php if( have_rows('camp-stages_repeater') ) : ?>
         <section class="camp-stages js-reveal gs-reveal">
             <div class="camp-stages__body container">
                 <?php
@@ -52,23 +52,22 @@
                 if (!empty($camp_stages_heading)) :
                 ?>
                     <h2
-                        class="camp-stages__heading title title--big title--black title--w-bold title--indent-small js-reveal gs-reveal a-reveal-left">
+                        class="camp-stages__heading title title--big title--black title--w-bold title--indent-small center js-reveal gs-reveal a-reveal-left">
                         <?php echo esc_html($camp_stages_heading); ?>
                     </h2>
                 <?php endif; ?>
-                <ol class="camp-stages__list text text--medium text--black text--w-bold">
-                    <?php while (have_rows('camp-stages_repeater')) : the_row();
-                        $camp_stages_repeater_description = get_sub_field('camp-stages_repeater_description');
-                        if (!empty($camp_stages_repeater_description)) :
+                <ul class="camp-stages__list text text--medium text--black text--w-bold">
+                    <?php while( have_rows('camp-stages_repeater') ): the_row();
+                    $camp_stages_repeater_pic = get_sub_field('camp-stages_repeater_pic');
+                    $camp_stages_repeater_description = get_sub_field('camp-stages_repeater_description');
                     ?>
-                        <li class="camp-stages__item js-reveal gs-reveal a-reveal-left">
-                            <div class="camp-stages__head">Этап</div>
-                            <div class="camp-stages__description text--medium text--black text--w-regular text--italic">
-                                <?php echo wp_kses_post($camp_stages_repeater_description); ?>
-                            </div>
-                        </li>
-                    <?php endif; endwhile; ?>
-                </ol>
+                    <li class="camp-stages__item js-reveal gs-reveal a-reveal">
+                        <div class="camp-stages__pic" style="background-image: url('<?php echo esc_url($camp_stages_repeater_pic); ?>')"></div>
+                        <div class="camp-stages__description"><?php echo wp_kses_post($camp_stages_repeater_description); ?>
+                        </div>
+                    </li>
+                    <?php endwhile; ?>
+                </ul>
             </div>
         </section>
     <?php endif; ?>
