@@ -412,6 +412,28 @@
                     "parent_repeater": "field_66bcb33fe1625"
                 },
                 {
+                    "key": "field_67581d8d06a15",
+                    "label": "Цитата",
+                    "name": "mentors-slider_quote",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_66bcb33fe1625"
+                },
+                {
                     "key": "field_66bd9443b289b",
                     "label": "Описание",
                     "name": "mentors-slider_text",
@@ -511,5 +533,5 @@
     "active": true,
     "description": "Лагерь МШЮ",
     "show_in_rest": 0,
-    "modified": 1732606208
+    "modified": 1733828017
 }

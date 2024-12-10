@@ -1,7 +1,9 @@
 .slider-arrows__arrow {
   position: static;
   margin-top: 0;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slider-arrows__arrow::after {
@@ -10,4 +12,12 @@
 
 .slider-arrows__arrow svg {
   width: 30px;
+}
+
+.mentors-slider__arrows .slider-arrows__arrow svg {
+  width: 7px;
+
+  @include from(769px) {
+    width: 9px;
+  }
 }

@@ -44,7 +44,7 @@
     <!-- ./Participants -->
 
     <!-- Camp-stages -->
-    <?php if( have_rows('camp-stages_repeater') ) : ?>
+    <?php if (have_rows('camp-stages_repeater')) : ?>
         <section class="camp-stages js-reveal gs-reveal">
             <div class="camp-stages__body container">
                 <?php
@@ -57,15 +57,15 @@
                     </h2>
                 <?php endif; ?>
                 <ul class="camp-stages__list text text--medium text--black text--w-bold">
-                    <?php while( have_rows('camp-stages_repeater') ): the_row();
-                    $camp_stages_repeater_pic = get_sub_field('camp-stages_repeater_pic');
-                    $camp_stages_repeater_description = get_sub_field('camp-stages_repeater_description');
+                    <?php while (have_rows('camp-stages_repeater')): the_row();
+                        $camp_stages_repeater_pic = get_sub_field('camp-stages_repeater_pic');
+                        $camp_stages_repeater_description = get_sub_field('camp-stages_repeater_description');
                     ?>
-                    <li class="camp-stages__item js-reveal gs-reveal a-reveal">
-                        <div class="camp-stages__pic" style="background-image: url('<?php echo esc_url($camp_stages_repeater_pic); ?>')"></div>
-                        <div class="camp-stages__description"><?php echo wp_kses_post($camp_stages_repeater_description); ?>
-                        </div>
-                    </li>
+                        <li class="camp-stages__item js-reveal gs-reveal a-reveal">
+                            <div class="camp-stages__pic" style="background-image: url('<?php echo esc_url($camp_stages_repeater_pic); ?>')"></div>
+                            <div class="camp-stages__description"><?php echo wp_kses_post($camp_stages_repeater_description); ?>
+                            </div>
+                        </li>
                     <?php endwhile; ?>
                 </ul>
             </div>
@@ -100,75 +100,86 @@ if ((!empty($lawsuit_heading)) && (!empty($lawsuit_description))) :
 <div class="blocks-team-wrapper">
     <!-- Mentors -->
     <section class="mentors js-mentors-init">
-        <div class="mentors__body container">
+        <div class="mentors__body">
             <div class="mentors__tabs tabs">
-                <div class="mentors__head-wrap title--indent-large">
+                <div class="mentors__head-wrap title--indent-large container">
                     <h2 class="mentors__heading title title--big title--white title--w-bold">
                         Спикеры летнего правового лагеря МШЮ
                     </h2>
                 </div>
+
                 <div class="mentors__tabs-wrapper tabs__wrapper">
                     <div class="mentors__outer tabs__content is-open js-slider-mentors-init"
                         data-tab-content="slider-1">
+
+
+
                         <div class="mentors__slider-wrap">
-                            <?php if (have_rows('mentors-slider')) : ?>
+                            <?php if (have_rows('mentors-slider')): ?>
+                                <!-- Слайдер 1 -->
+                                <div class="mentors__swiper mentors__swiper--photo js-mentors-slider-photo swiper">
+                                    <!-- Обертка 1 -->
+                                    <div class="mentors__items swiper-wrapper">
+                                        <?php while (have_rows('mentors-slider')): the_row();
+                                            $mentors_slider_photo = get_sub_field('mentors-slider_photo');
+                                        ?>
+                                            <!-- Слайды 1го слайдера -->
+                                            <div class="mentors__slide swiper-slide">
+                                                <img src="<?php echo esc_url($mentors_slider_photo['url']); ?>" alt="<?php echo esc_attr($mentors_slider_photo['alt']); ?>" class="mentors__img">
+                                            </div>
+                                        <?php endwhile; ?>
+                                    </div>
+                                    <div class="mentors-slider__arrows slider-arrows">
+                                        <div
+                                            class="swiper-button-prev mentors-slider__arrow mentors-slider__arrow--prev slider-arrows__arrow slider-arrows__arrow--prev js-slider-prev">
+                                            <svg width="11" height="20" viewBox="0 0 11 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M10 1L1 10L10 19" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div
+                                            class="swiper-button-next mentors-slider__arrow mentors-slider__arrow--next slider-arrows__arrow slider-arrows__arrow--next js-slider-next">
+                                            <svg width="11" height="20" viewBox="0 0 11 20" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M1 19L10 10L1 1" stroke="white" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                        <div class="mentors__slider-wrap container">
+                            <?php if (have_rows('mentors-slider')): ?>
+                                <!-- Слайдер 2 -->
                                 <div class="mentors__swiper mentors__swiper--text js-mentors-slider-text swiper">
+                                    <!-- Обертка 2 -->
                                     <div class="mentors__items swiper-wrapper">
                                         <?php while (have_rows('mentors-slider')): the_row();
                                             $mentors_slider_name = get_sub_field('mentors-slider_name');
+                                            $mentors_slider_quote = get_sub_field('mentors-slider_quote');
                                             $mentors_slider_text = get_sub_field('mentors-slider_text');
                                         ?>
+                                            <!-- Слайды 2го слайдера -->
                                             <div class="mentors__slide swiper-slide">
-                                                <div class="mentors__name text text--medium text--white text--w-bold">
-                                                    <?= $mentors_slider_name; ?>
+                                                <div class="mentors__inner">
+                                                    <h3 class="mentors__name title title--big title--white title--w-bold">
+                                                        <?= $mentors_slider_name; ?>
+                                                    </h3>
+                                                    <?php if (!empty($mentors_slider_quote)) : ?>
+                                                        <div
+                                                            class="mentors__quote text text--medium text--white text--italic text--w-regular">
+                                                            <?= $mentors_slider_quote; ?>
+                                                            »</div>
+                                                    <?php endif; ?>
                                                 </div>
                                                 <div class="mentors__info text text--medium text--white text--w-regular">
                                                     <?= $mentors_slider_text; ?>
                                                 </div>
                                             </div>
                                         <?php endwhile; ?>
-                                    </div>
-                                </div>
-                            <?php endif; ?>
-                        </div>
-                        <div class="mentors__slider-wrap">
-                            <?php if (have_rows('mentors-slider')): ?>
-                                <div class="mentors__swiper mentors__swiper--photo js-mentors-slider-photo swiper">
-                                    <div class="mentors__items swiper-wrapper">
-                                        <?php while (have_rows('mentors-slider')): the_row();
-                                            $mentors_slider_photo = get_sub_field('mentors-slider_photo');
-                                        ?>
-                                            <div class="mentors__slide swiper-slide">
-                                                <img src="<?php echo esc_url($mentors_slider_photo['url']); ?>" alt="<?php echo esc_attr($mentors_slider_photo['alt']); ?>" class="mentors__img">
-                                            </div>
-                                        <?php endwhile; ?>
-                                    </div>
-                                    <div class="news-slider__arrows slider-arrows slider-nav">
-                                        <div
-                                            class="swiper-button-prev news-slider__arrow news-slider__arrow--prev slider-arrows__arrow slider-arrows__arrow--prev js-slider-prev">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M19 12H5" stroke="#EFEFEF" stroke-width="2" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path d="M12 19L5 12L12 5" stroke="#EFEFEF" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-
-                                        <div
-                                            class="news-slider__pagination swiper-pagination slider-pagination js-mentors-slider-pagination">
-                                        </div>
-
-                                        <div
-                                            class="swiper-button-next news-slider__arrow news-slider__arrow--next slider-arrows__arrow slider-arrows__arrow--next js-slider-next">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M5 12H19" stroke="#EFEFEF" stroke-width="2" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path d="M12 5L19 12L12 19" stroke="#EFEFEF" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
                                     </div>
                                 </div>
                             <?php endif; ?>
