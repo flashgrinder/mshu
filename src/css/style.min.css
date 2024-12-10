@@ -1764,7 +1764,7 @@ img {
 .dropdown {
   position: relative;
   font-family: var(--font-winston);
-  z-index: 10;
+  z-index: 12;
 }
 
 .selected {
