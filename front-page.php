@@ -345,36 +345,13 @@ $dictation = get_field('dictation');
 					<h2 class="mentors__heading title title--big title--white title--w-bold">
 						Наставники и спикеры
 					</h2>
-					<?php if (have_rows('mentors')): ?>
-						<div class="mentors__tabs-buttons tabs__buttons dropdown">
-							<div id="basic-select" class="selected">
-								<div class="carpet">
-									<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M26 12L16 22L6 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-									</svg>
-								</div>
-								<span id="select-title" class="selected__title">Москва</span>
-							</div>
-							<ul id="option-select" class="options">
-								<?php while (have_rows('mentors')): the_row();
-									$mentors_city = get_sub_field('mentors_city');
-								?>
-									<li class="options__item tabs__button <?php if (get_row_index() == 1) echo 'is-active options__item--active'; ?>" data-tab-trigger="<?= get_row_index(); ?>">
-										<?= $mentors_city; ?>
-									</li>
-								<?php endwhile; ?>
-							</ul>
-						</div>
-					<?php endif; ?>
+					<div class="mentors__location text text--large text--white">Город: <a href="javascript:;" class="mentors__selected-city text--white text--w-bold" data-city-modal="#location" data-tab-trigger="1"></a></div>
 				</div>
 
 				<div class="mentors__tabs-wrapper tabs__wrapper">
 					<?php if (have_rows('mentors')): ?>
 						<?php while (have_rows('mentors')): the_row(); ?>
 							<div class="mentors__outer tabs__content <?php if (get_row_index() == 1) echo 'is-open'; ?> js-slider-mentors-init" data-tab-content="<?= get_row_index(); ?>">
-
-
-							
 								<div class="mentors__slider-wrap">
 									<?php if (have_rows('mentors-slider')): ?>
 										<!-- Слайдер 1 -->

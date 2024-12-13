@@ -1,3 +1,5 @@
+import HystModal from 'hystmodal';
+
 function init() {
 
     const listSlider = Array.from(document.querySelectorAll(".js-slider-mentors-init"));
@@ -33,18 +35,6 @@ function init() {
                     // slidesOffsetBefore: -375,
                 }
             },
-            // autoplay: {
-            //     delay: 3000,
-            //     disableOnInteraction: false,
-            //     pauseOnMouseEnter: true,
-            // },
-            // mousewheel: {
-            //     invert: false,
-            // },
-            // pagination: {
-            //     el: sliderPagination,
-            //     type: 'bullets',
-            // },
             navigation: {
                 nextEl: nextEl,
                 prevEl: prevEl,
@@ -70,69 +60,98 @@ function init() {
         // }
     });
 
-    let tabTriggerBtns = document.querySelectorAll('.tabs__button');
+    const searchInput = document.querySelector(".modal__search .modal__input");
+    const resultMessage = document.querySelector(".modal__message");
+    const list = document.querySelector(".modal__list");
+    const selected = document.querySelector(".mentors__selected-city");
 
-    if (tabTriggerBtns.length !== 0) {
-        tabTriggerBtns.forEach(function (tabTriggerBtn, index) {
+    const templateFragment = document.querySelector("#element-template").content;
+    const template = templateFragment.querySelector("li");
+    const fragment = document.createDocumentFragment();
 
-            tabTriggerBtn.addEventListener('click', function () {
+    const lowerCaseCities = cities.map(city => city.toLowerCase());
 
-                let currentTabData = document.querySelector('.tabs__content[data-tab-content="' + this.dataset.tabTrigger + '"]');
+    const switchSlider = (city) => {
+        let searchValue;
+    
+        // Проверка: city - это элемент input или строка
+        if (city instanceof HTMLInputElement) {
+            searchValue = city.value.trim();
+        } else if (typeof city === 'string') {
+            searchValue = city.trim();
+        } else {
+            searchValue = city.textContent.trim();
+        }
+    
+        if (searchValue === "") {
+            resultMessage.textContent = "Введите название города";
+            return;
+        }
+    
+        const lowerCaseSearchValue = searchValue.toLowerCase();
+        const cityIndex = lowerCaseCities.indexOf(lowerCaseSearchValue);
+    
+        if (cityIndex !== -1) {
+            const originalCity = cities[cityIndex];
+            selected.textContent = originalCity;
+    
+            const selectedIndex = cityIndex + 1; // Для ACF индексация с 1
+            selected.setAttribute('data-tab-trigger', `${selectedIndex}`);
+    
+            const currentTabData = document.querySelector(`.tabs__content[data-tab-content="${selectedIndex}"]`);
+            document.querySelector('.tabs__content.is-open').classList.remove('is-open');
+    
+            currentTabData.classList.add('is-open');
+            citySelectModal.close();
+        } else {
+            resultMessage.textContent = `Город "${searchValue}" не найден`;
+        }
+    };
+    
 
-                document.querySelector('.tabs__content.is-open').classList.remove('is-open');
-                document.querySelector('.tabs__button.is-active').classList.remove('is-active');
-                currentTabData.classList.add('is-open');
-                this.classList.add('is-active');
+    if (typeof cities !== "undefined" && cities.length > 0) {
+        /*  Вывод названия города при первичном рендеринге страницы */
+        selected.textContent = cities[0];
 
-            });
-        });
-
-        const select = document.getElementById("basic-select");
-        const menu = document.getElementById("option-select");
-        const dropdowns = document.querySelectorAll(".dropdown");
-        const cart = document.querySelector(".carpet");
-        const options = document.querySelectorAll(".options .options__item");
-        const selected = document.getElementById("select-title");
-        let active = document.querySelector(".options__item--active");
-        const animTime = 100;
-
-        select.addEventListener('mouseenter', function () {
-            select.classList.add("selected--open");
-            cart.classList.add("carpet--open");
-            setTimeout(function () {
-                select.classList.add("selected--delay");
-            }, animTime);
-        });
-        select.addEventListener('mouseleave', function () {
-            select.classList.remove("selected--open");
-            cart.classList.remove("carpet--open");
-            setTimeout(function () {
-                select.classList.remove("selected--delay");
-            }, animTime);
-        });
-        menu.addEventListener('mouseenter', function () {
-            select.classList.add("selected--open");
-            cart.classList.add("carpet--open");
-            setTimeout(function () {
-                select.classList.add("selected--delay");
-            }, animTime);
-        });
-        menu.addEventListener('mouseleave', function () {
-            select.classList.remove("selected--open");
-            cart.classList.remove("carpet--open");
-            setTimeout(function () {
-                select.classList.remove("selected--delay");
-            }, animTime);
-        });
-        options.forEach(option => {
-            option.addEventListener("click", function () {
-                selected.innerText = option.innerText;
-                active.classList.remove("options__item--active");
-                option.classList.add("options__item--active");
-                active = document.querySelector(".options__item--active");
-            });
-        });
+        cities.forEach(city => {
+            const element = template.cloneNode(true);
+            const link = element.querySelector(".modal__city-button");
+            link.textContent = city;
+            link.addEventListener('click', () => {
+                switchSlider(link.textContent);
+            })
+            fragment.appendChild(element);
+        })
+        list.appendChild(fragment);
     }
+
+    const citySelectModal = new HystModal({
+        linkAttributeName: "data-city-modal",
+        catchFocus: false,
+        waitTransitions: true,
+        backscroll: false,
+        afterClose: function (citySelectModal) {
+            /* Очистка поля input внутри модального окна */
+            if (searchInput) {
+                searchInput.value = '';
+            }
+        }
+    });
+
+    searchInput.addEventListener('keydown', function (event) {
+        if (event.key !== 'Enter') return;
+
+        event.preventDefault();
+
+        const enteredValue = searchInput.value.trim();
+
+        if (enteredValue === "") {
+            resultMessage.textContent = "Введите название города";
+            return;
+        }
+
+        switchSlider(enteredValue);
+    })
 }
 
 export default { init }

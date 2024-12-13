@@ -276,3 +276,19 @@
   transform: translateY(20px);
   transition: transform .8s ease-in-out;
 }
+
+.modal__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 15px;
+  row-gap: 10px;
+}
+
+.modal__city-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

@@ -20,7 +20,6 @@ function init(container = document) {
         waitTransitions: true,
         backscroll: false,
     });
-
 }
 
 export default { init }

@@ -51,3 +51,34 @@
 		/* Отключаем админбар */
 		add_theme_support('admin-bar', ['callback' => '__return_false']);
 	});
+
+
+	/* Добавление городов для слайдера наставников в глобальную переменную */
+
+	function add_acf_cities_to_js() {
+		// Пустой массив для хранения городов
+		global $cities;
+		$cities = array();
+	
+		// Проверяем, есть ли данные в повторителе ACF
+		if (have_rows('mentors')) {
+			while (have_rows('mentors')) {
+				the_row();
+				// Получаем значение под-поля
+				$city = get_sub_field('mentors_city');
+	
+				// Добавляем город в массив, если значение существует
+				if (!empty($city)) {
+					$cities[] = $city;
+				}
+			}
+		}
+	
+		// Генерация JavaScript-кода с массивом городов
+		$inline_script = 'var cities = ' . json_encode($cities) . ';';
+	
+		// Добавляем JavaScript-код перед подключением основного скрипта
+		wp_add_inline_script('scripts', $inline_script, 'before');
+	}
+	add_action('wp_enqueue_scripts', 'add_acf_cities_to_js');
+	

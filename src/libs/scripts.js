@@ -32,3 +32,5 @@ document.addEventListener('DOMContentLoaded', function(e) {
     newsSliderTrue ? newsSlider.init() : false;
     registrationSliderTrue ? registrationSlider.init() : false;
 });
+
+console.log(cities);

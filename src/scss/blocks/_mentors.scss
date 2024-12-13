@@ -17,6 +17,12 @@
   }
 }
 
+.mentors__heading {
+  @include mobileXS-block() {
+    margin-bottom: 30px;
+  }
+}
+
 .mentors__outer {
   position: relative;
 }

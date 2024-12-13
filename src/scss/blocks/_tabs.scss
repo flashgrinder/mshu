@@ -1,106 +1,16 @@
 .tabs__button {
-  cursor: pointer;
-}
-
-.tabs__content {
-  opacity: 0;
-  visibility: hidden;
-  height: 0;
-  transition: opacity .500s ease-in-out;
-}
-
-.tabs__content.is-open {
-  opacity: 1;
-  visibility: visible;
-  height: 100%;
-}
-
-
-:root{
-  --anim-time: .3s;
-  --anim-select-border: .3s;
-  --anim-option-height: .3s;
-  --anim-option-height-delay: .15s;
-}
-
-.dropdown {
-  position: relative;
-  font-family: var(--font-winston);
-  z-index: 12;
-}
-
-.selected {
-  display: flex;
-  min-width: 150px;
-  height: 40px;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 0;
-  font-size: 20px;
-  color: var(--color-white);
-  cursor: pointer;
-  transition: color var(--anim-time) ease-in-out;
-  @include mobileXS-block {
-    min-width: auto;
-    margin-top: 30px;
-    padding: 10px 10px 10px 0;
+    cursor: pointer;
   }
-}
-
-.carpet{
-  transform: rotateX(0deg);
-  transition: transform var(--anim-time) ease-in-out;
-}
-
-.carpet--open{
-  transform: rotateX(180deg);
-}
-
-.options{
-  position: absolute;
-  left: 0;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  color: #e4e4e4;
-  overflow: hidden;
-  transform-origin: center top;
-  transform: scaleY(0);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 20px;
-  transition: transform var(--anim-option-height) cubic-bezier(0.860, 0.005, 0.260, 1.000);
-  @include mobileXS-block {
-    background: #333333c9;
+  
+  .tabs__content {
+    opacity: 0;
+    visibility: hidden;
+    height: 0;
+    transition: opacity .500s ease-in-out;
   }
-}
-
-.options__item{
-  transition: color var(--anim-time) ease-in-out;
-  cursor: pointer;
-  padding: 10px 0;
-  text-align: right;
-  width: 100%;
-  @include mobileXS-block {
-    padding: 10px;
+  
+  .tabs__content.is-open {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
   }
-}
-
-.options__item:hover{
-  color: var(--color-dark);
-  @include mobileXS-block {
-    color: rgba(255, 255, 255, 0.8);
-  }
-}
-
-.selected:hover + .options, .options:hover{
-  transform: scaleY(1);
-  transition-delay: var(--anim-option-height-delay);
-}
-
-.selected--delay{
-  transition-delay: .12s;
-}

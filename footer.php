@@ -10,6 +10,12 @@
 				</div>
 				<div class="footer__contacts contacts">
 					<ul class="contacts__list">
+					<li class="contacts__item">
+							<a class="contacts__link" href="https://rutube.ru/channel/42931625/?ysclid=m4lj2jzf8i252707496" aria-label="RuTube">
+								<img src="<?= STANDART_DIR; ?>/img/contacts/shortcut-rutube.svg" width="36" height="36"
+									class="contacts__icon">
+							</a>
+						</li>
 						<li class="contacts__item">
 							<a class="contacts__link" href="tel:+79271362660" aria-label="Телефон">
 								<img src="<?= STANDART_DIR; ?>/img/contacts/shortcut-phone.svg" width="36" height="36"
@@ -39,8 +45,11 @@
 				</div>
 			</div>
 			<div class="footer__columns-2">
-				<div class="footer__address text text--medium text--white text--w-regular">Город Москва, вн.тер. г.&nbsp;Муниципальный Округ Басманный, пл.&nbsp;Спартаковская,
-					дом&nbsp;14, строение&nbsp;2, этаж/ком.&nbsp;2/1</div>
+				<div class="footer__address text text--medium text--white text--w-regular">
+					АНО "Институт правовой грамотности и поддержки предпринимателей"
+					<br>
+					Г.&nbsp;Москва, ул.&nbsp;Бауманская, офис&nbsp;300
+				</div>
 				<div class="footer__info">
 
 					<div class="footer__copy text text--medium text--white text--w-regular">
@@ -147,6 +156,33 @@
 		</div>
 	</div>
 </div>
+<!-- /. Modal -->
+<!-- Modal -->
+<div class="modal hystmodal" id="location" aria-hidden="true">
+	<div class="hystmodal__wrap">
+		<div class="modal__body hystmodal__window" role="dialog" aria-modal="true">
+			<div class="modal__close" data-hystclose>
+				<svg class="modal__close-svg" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M1 1L12 12M12 1L1 12" stroke-width="1.5" stroke-linecap="round" />
+				</svg>
+			</div>
+			<h3 class="modal__title title title--medium title--white title--w-bold center">
+				Выберите город
+			</h3>
+			<form class="modal__search">
+				<input class="modal__input" type="text" name="city" placeholder="Поиск" aria-label="Поиск" required>
+			</form>
+			<p class="modal__message"></p>
+			<ul class="modal__list"></ul>
+		</div>
+	</div>
+</div>
+
+<template id="element-template">
+	<li class="modal__item">
+		<button class="modal__city-button text text--normal text--white"></button>
+	</li>
+</template>
 <!-- /. Modal -->
 
 <!-- Success -->

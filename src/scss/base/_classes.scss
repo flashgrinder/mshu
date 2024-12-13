@@ -144,6 +144,10 @@
 	&--dark {
 		color: var(--color-dark);
 	}
+	&--large {
+		font-size: responsive 25px 30px;
+		font-range: 360px 1600px;
+	}
 	&--medium {
 		font-size: responsive 16px 20px;
 		font-range: 1024px 1440px;

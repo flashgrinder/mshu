@@ -375,6 +375,24 @@ img {
   color: var(--color-dark);
 }
 
+.text--large {
+  font-size: calc(25px + 5 * ((100vw - 360px) / 1240));
+}
+
+@media screen and (min-width: 1600px){
+
+  .text--large{
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 360px){
+
+  .text--large{
+    font-size: 25px;
+  }
+}
+
 .text--medium {
   font-size: calc(16px + 4 * ((100vw - 1024px) / 416));
 }
@@ -1754,82 +1772,6 @@ img {
   height: 100%;
 }
 
-:root {
-  --anim-time: .3s;
-  --anim-select-border: .3s;
-  --anim-option-height: .3s;
-  --anim-option-height-delay: .15s;
-}
-
-.dropdown {
-  position: relative;
-  font-family: var(--font-winston);
-  z-index: 12;
-}
-
-.selected {
-  display: flex;
-  min-width: 150px;
-  height: 40px;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 0;
-  font-size: 20px;
-  color: var(--color-white);
-  cursor: pointer;
-  transition: color var(--anim-time) ease-in-out;
-}
-
-.carpet {
-  transform: rotateX(0deg);
-  transition: transform var(--anim-time) ease-in-out;
-}
-
-.carpet--open {
-  transform: rotateX(180deg);
-}
-
-.options {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  color: #e4e4e4;
-  overflow: hidden;
-  transform-origin: center top;
-  transform: scaleY(0);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 20px;
-  transition: transform var(--anim-option-height) cubic-bezier(0.86, 0.005, 0.26, 1);
-}
-
-.options__item {
-  transition: color var(--anim-time) ease-in-out;
-  cursor: pointer;
-  padding: 10px 0;
-  text-align: right;
-  width: 100%;
-}
-
-.options__item:hover {
-  color: var(--color-dark);
-}
-
-.selected:hover + .options,
-.options:hover {
-  transform: scaleY(1);
-  transition-delay: var(--anim-option-height-delay);
-}
-
-.selected--delay {
-  transition-delay: 0.12s;
-}
-
 /* News-slider */
 
 .news-slider {
@@ -2775,6 +2717,23 @@ img {
   transition: transform 0.8s ease-in-out;
 }
 
+.modal__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  row-gap: 10px;
+}
+
+.modal__city-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 /* Camp-stages */
 
 .camp-stages {
@@ -3554,22 +3513,8 @@ img {
     align-items: flex-start;
   }
 
-  .selected {
-    min-width: auto;
-    margin-top: 30px;
-    padding: 10px 10px 10px 0;
-  }
-
-  .options {
-    background: rgba(51, 51, 51, 0.7882352941);
-  }
-
-  .options__item {
-    padding: 10px;
-  }
-
-  .options__item:hover {
-    color: rgba(255, 255, 255, 0.8);
+  .mentors__heading {
+    margin-bottom: 30px;
   }
 
   .partners--info .partners__items {
