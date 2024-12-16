@@ -46,8 +46,6 @@
 			</div>
 			<div class="footer__columns-2">
 				<div class="footer__address text text--medium text--white text--w-regular">
-					АНО "Институт правовой грамотности и поддержки предпринимателей"
-					<br>
 					Г.&nbsp;Москва, ул.&nbsp;Бауманская, офис&nbsp;300
 				</div>
 				<div class="footer__info">
