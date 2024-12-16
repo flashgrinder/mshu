@@ -73,7 +73,7 @@ function init() {
 
     const switchSlider = (city) => {
         let searchValue;
-    
+
         // Проверка: city - это элемент input или строка
         if (city instanceof HTMLInputElement) {
             searchValue = city.value.trim();
@@ -82,43 +82,53 @@ function init() {
         } else {
             searchValue = city.textContent.trim();
         }
-    
+
         if (searchValue === "") {
             resultMessage.textContent = "Введите название города";
             return;
         }
-    
+
         const lowerCaseSearchValue = searchValue.toLowerCase();
         const cityIndex = lowerCaseCities.indexOf(lowerCaseSearchValue);
-    
+
         if (cityIndex !== -1) {
             const originalCity = cities[cityIndex];
-            selected.textContent = originalCity;
-    
-            const selectedIndex = cityIndex + 1; // Для ACF индексация с 1
-            selected.setAttribute('data-tab-trigger', `${selectedIndex}`);
-    
-            const currentTabData = document.querySelector(`.tabs__content[data-tab-content="${selectedIndex}"]`);
-            document.querySelector('.tabs__content.is-open').classList.remove('is-open');
-    
-            currentTabData.classList.add('is-open');
-            citySelectModal.close();
+            if (selected.textContent !== originalCity) {
+                selected.textContent = originalCity;
+
+                const selectedIndex = cityIndex + 1; // Для ACF индексация с 1
+                selected.setAttribute('data-tab-trigger', `${selectedIndex}`);
+
+                const currentTabData = document.querySelector(`.tabs__content[data-tab-content="${selectedIndex}"]`);
+                document.querySelector('.tabs__content.is-open').classList.remove('is-open');
+
+                currentTabData.classList.add('is-open');
+                citySelectModal.close();
+            }
         } else {
             resultMessage.textContent = `Город "${searchValue}" не найден`;
         }
     };
-    
+
 
     if (typeof cities !== "undefined" && cities.length > 0) {
         /*  Вывод названия города при первичном рендеринге страницы */
         selected.textContent = cities[0];
 
-        cities.forEach(city => {
+        cities.forEach((city, index) => {
             const element = template.cloneNode(true);
             const link = element.querySelector(".modal__city-button");
             link.textContent = city;
+
+            if (index === 0) {
+                link.classList.add("modal__city-button--active", "text--w-bold");
+            }
+
             link.addEventListener('click', () => {
                 switchSlider(link.textContent);
+                /* Выделение активного города в списке */
+                document.querySelector('.modal__city-button.modal__city-button--active').classList.remove("modal__city-button--active", "text--w-bold");
+                link.classList.add("modal__city-button--active", "text--w-bold");
             })
             fragment.appendChild(element);
         })

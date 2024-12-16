@@ -292,3 +292,8 @@
   border: none;
   cursor: pointer;
 }
+
+.modal__city-button--active {
+  text-decoration: underline;
+  cursor: auto;
+}

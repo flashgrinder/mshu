@@ -2734,6 +2734,11 @@ img {
   cursor: pointer;
 }
 
+.modal__city-button--active {
+  text-decoration: underline;
+  cursor: auto;
+}
+
 /* Camp-stages */
 
 .camp-stages {
