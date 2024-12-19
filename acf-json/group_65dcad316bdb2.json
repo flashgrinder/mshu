@@ -536,6 +536,67 @@
             ]
         },
         {
+            "key": "field_67641d925a131",
+            "label": "Видео МШЮ",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_67641dbd5a132",
+            "label": "Видео МШЮ",
+            "name": "video",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Добавить",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_67641e595a133",
+                    "label": "Ссылка",
+                    "name": "video_link",
+                    "aria-label": "",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "parent_repeater": "field_67641dbd5a132"
+                }
+            ]
+        },
+        {
             "key": "field_66041a7125b59",
             "label": "Партнёры",
             "name": "",
@@ -590,6 +651,7 @@
                         "id": ""
                     },
                     "default_value": "",
+                    "allow_in_bindings": 1,
                     "placeholder": "",
                     "parent_repeater": "field_66041a8325b5a"
                 },
@@ -726,5 +788,5 @@
     "active": true,
     "description": "Главная страница",
     "show_in_rest": 0,
-    "modified": 1733828109
+    "modified": 1734615155
 }

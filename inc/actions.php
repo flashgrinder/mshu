@@ -22,6 +22,18 @@
 				]
 			);
 		}
+		if (is_front_page()) {
+			wp_enqueue_script(
+				'lodash-js',
+				'https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js',
+				[],
+				time(),
+				[
+					'in_footer' => true,
+					'strategy'  => 'defer',
+				]
+			);
+		}
 		wp_enqueue_script('scripts', get_stylesheet_directory_uri() . '/assets/js/scripts.min.js', [], time(), true);
 	});
 

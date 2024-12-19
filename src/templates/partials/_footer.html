@@ -1,30 +1,61 @@
-    <footer class="footer">
-        <div class="footer__body container">
-            <div class="footer__inner">
-                <div class="footer__company">
-                    <div class="footer__logo">
-                        <img src="./img/footer-logo.svg" alt="" class="footer__img-logo">
-                    </div>
-                    <a class="footer__creator text text--normal text--white text--w-regular" href="https://fcdigital.ru/" target="_blank">
-                        <span class="footer__creator-capture">Создание и разработка сайта Fincom Digital</span>
-                        <img src="./img/fincom-logo.svg" class="footer__creator-logo" width="40"
-                            height="40" alt="Логотип Fincom Digital">
-                    </a>
+<footer class="footer">
+    <div class="footer__body container">
+        <div class="footer__inner">
+            <div class="footer__company">
+                <div class="footer__logo">
+                    <img src="./img/footer-logo.svg" alt="" class="footer__img-logo">
                 </div>
-                <div class="footer__info">
-                    <div class="footer__copy text text--medium text--white text--w-regular">
-                        © 2024 МШЮ, Все права защищены
-                    </div>
-                    <a href="/policy/" class="footer__policy text text--medium text--white text--w-regular">
-                        Политика конфиденциальности
-                    </a>
-                    <a href="./docs/mshu_regulation.pdf" class="footer__regulation text text--medium text--white text--w-regular">Положение о МШЮ</a>
+                <a class="footer__creator text text--normal text--white text--w-regular" href="https://fcdigital.ru/"
+                    target="_blank">
+                    <span class="footer__creator-capture">Создание и разработка сайта Fincom Digital</span>
+                    <img src="./img/fincom-logo.svg" class="footer__creator-logo" width="40" height="40"
+                        alt="Логотип Fincom Digital">
+                </a>
+            </div>
+            <div class="footer__info">
+                <div class="footer__copy text text--medium text--white text--w-regular">
+                    © 2024 МШЮ, Все права защищены
                 </div>
+                <a href="/policy/" class="footer__policy text text--medium text--white text--w-regular">
+                    Политика конфиденциальности
+                </a>
+                <a href="./docs/mshu_regulation.pdf"
+                    class="footer__regulation text text--medium text--white text--w-regular">Положение о МШЮ</a>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+<!-- Modal -->
+<div class="modal hystmodal" id="location" aria-hidden="true">
+	<div class="hystmodal__wrap">
+		<div class="modal__body hystmodal__window" role="dialog" aria-modal="true">
+			<div class="modal__close" data-hystclose>
+				<svg class="modal__close-svg" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M1 1L12 12M12 1L1 12" stroke-width="1.5" stroke-linecap="round" />
+				</svg>
+			</div>
+			<h3 class="modal__title title title--medium title--white title--w-bold center">
+				Выберите город
+			</h3>
+			<form class="modal__search">
+				<input class="modal__input" type="text" name="city" placeholder="Поиск" aria-label="Поиск" required>
+			</form>
+			<p class="modal__message"></p>
+			<ul class="modal__list"></ul>
+		</div>
+	</div>
+</div>
+
+<template id="element-template">
+	<li class="modal__item">
+		<button class="modal__city-button text text--normal text--white"></button>
+	</li>
+</template>
+<!-- /. Modal -->
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+<script src="js/scripts.min.js"></script>
 </body>
 </html>

@@ -14,7 +14,8 @@
   width: 30px;
 }
 
-.mentors-slider__arrows .slider-arrows__arrow svg {
+.mentors-slider__arrows .slider-arrows__arrow svg,
+.video-slider__arrows .slider-arrows__arrow svg {
   width: 7px;
 
   @include from(769px) {
