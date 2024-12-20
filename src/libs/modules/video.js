@@ -44,8 +44,10 @@ function init() {
 
     function resetVideoSlider() {
         if (videoSlider) {
-            videoSlider.update();
+            videoSlider.destroy(true, true);
         }
+
+        initializeVideoSlider();
     }
 
     const debouncedResetVideoSlider = _.debounce(resetVideoSlider, 200);
