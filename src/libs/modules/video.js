@@ -24,8 +24,6 @@ function init() {
                     }
                 ), '*');
             }, 200)
-
-
         });
 
         document.querySelector('.video-slider .js-slider-prev').addEventListener('click', function () {
@@ -39,8 +37,6 @@ function init() {
                     }
                 ), '*');
             }, 200)
-
-
         });
     }
 
@@ -48,17 +44,15 @@ function init() {
 
     function resetVideoSlider() {
         if (videoSlider) {
-            videoSlider.destroy(true, true);
+            videoSlider.update();
         }
-
-        initializeVideoSlider();
     }
 
     const debouncedResetVideoSlider = _.debounce(resetVideoSlider, 200);
 
     window.addEventListener('resize', debouncedResetVideoSlider);
 
-    window.addEventListener('resize', resetVideoSlider);
+    // window.addEventListener('resize', resetVideoSlider);
 }
 
 export default { init }

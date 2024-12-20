@@ -43,21 +43,6 @@ function init() {
                 swiper: mentorsSliderText,
             },
         });
-
-        // function isMobileDevice() {
-        //     return navigator.userAgentData && navigator.userAgentData.mobile;
-        // }
-
-        // const viewportWidth = window.innerWidth;
-        // if (!isMobileDevice() && (viewportWidth < 769)) {
-        //     console.log('я надеюсь что я чемпион');
-        //     window.addEventListener('resize', () => {
-        //         if (window.innerWidth >= 769) {
-        //             console.log('мне нужно спросить у мамы кто ее чемпион');
-        //             mentorsSliderPhoto.update;
-        //         }
-        //     })
-        // }
     });
 
     const searchInput = document.querySelector(".modal__search .modal__input");
@@ -69,7 +54,7 @@ function init() {
     const template = templateFragment.querySelector("li");
     const fragment = document.createDocumentFragment();
 
-    const lowerCaseCities = cities.map(city => city.toLowerCase());
+    // const lowerCaseCities = cities.map(city => city.toLowerCase());
 
     const switchSlider = (city) => {
         let searchValue;
@@ -112,6 +97,7 @@ function init() {
 
 
     if (typeof cities !== "undefined" && cities.length > 0) {
+        const lowerCaseCities = cities.map(city => city.toLowerCase());
         /*  Вывод названия города при первичном рендеринге страницы */
         selected.textContent = cities[0];
 
