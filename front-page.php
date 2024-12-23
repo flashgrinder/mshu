@@ -8,38 +8,35 @@ $dictation = get_field('dictation');
 	<!-- Main-screen -->
 	<section class="main-screen js-reveal gs-reveal">
 		<div class="main-screen__body container">
-			<div class="main-screen__decor">
-				<img src="<?= STANDART_DIR; ?>/img/main-screen/main-screen-decor.svg" alt="Декоративный элемент" class="main-screen__img-decor">
-			</div>
-			<div class="main-screen__inner">
-				<h1 class="main-screen__heading title title--big title--white title--w-bold js-reveal gs-reveal a-reveal-left">
-					Молодежная
-					<br>
-					Школа
-					<br>
-					Юриста
-				</h1>
-				<div class="main-screen__info">
-					<p class="main-screen__text text text--medium text--white text--w-regular right js-reveal gs-reveal a-reveal-right">
-						получи уникальные знания от лучших экспертов страны
-					</p>
-					<p class="main-screen__text text text--medium text--white text--w-regular right js-reveal gs-reveal a-reveal-right">
-						стань успешным и измени мир вокруг себя
-					</p>
-					<p class="main-screen__text text text--medium text--white text--w-regular right js-reveal gs-reveal a-reveal-right">
-						погрузись в будущую профессию
-					</p>
-				</div>
-			</div>
-			<div class="main-screen__wrap-lines">
-				<div class="main-screen__lines">
-					<span class="main-screen__line main-screen__line--large"></span>
-					<span class="main-screen__line main-screen__line--medium"></span>
-					<span class="main-screen__line main-screen__line--medium"></span>
-					<span class="main-screen__line main-screen__line--large"></span>
-				</div>
-			</div>
-		</div>
+
+            <img src="<?= STANDART_DIR; ?>/img/main-screen/main-screen-decor.svg" alt="Декоративный элемент" class="main-screen__img-decor-1">
+            <img src="<?= STANDART_DIR; ?>/img/main-screen/main-screen-decor.svg" alt="Декоративный элемент" class="main-screen__img-decor-2">
+
+            <img src="<?= STANDART_DIR; ?>/img/main-screen/first-girl.png" alt="Декоративный элемент" class="main-screen__img-girl-1">
+            <img src="<?= STANDART_DIR; ?>/img/main-screen/second-girl.png" alt="Декоративный элемент" class="main-screen__img-girl-2">
+
+            <div class="main-screen__inner">
+                <h1
+                    class="main-screen__heading title title--pre-large title--white title--w-bold title--indent-small js-reveal gs-reveal a-reveal-left">
+                    Молодежная школа юриста
+                </h1>
+                <ul class="main-screen__info-list">
+                    <li
+                        class="main-screen__info-item text text--medium text--white text--w-regular js-reveal gs-reveal a-reveal-right">
+                        Получи уникальные знания от лучших экспертов страны
+                    </li>
+                    <li
+                        class="main-screen__info-item text text--medium text--white text--w-regular js-reveal gs-reveal a-reveal-right">
+                        Стань успешным и измени мир вокруг себя
+                    </li>
+                    <li
+                        class="main-screen__info-item text text--medium text--white text--w-regular js-reveal gs-reveal a-reveal-right">
+                        Погрузись в будущую профессию
+                    </li>
+                </ul>
+            </div>
+
+        </div>
 		<div class="main-screen__wrap-logos container">
 			<div class="main-screen__logos">
 				<img src="<?= STANDART_DIR; ?>/img/main-screen/logo-1.svg" width="89" height="33" alt="Логотип уполномоченного по защите прав предпринимателей в г.Москве" class="main-screen__img">
