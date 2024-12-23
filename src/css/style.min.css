@@ -2914,6 +2914,7 @@ img {
   transform: scale(0.46);
   transition: all 0.3s ease-in-out;
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  pointer-events: auto;
 }
 
 .video-slider__swiper .video-slider__item.swiper-slide-active {

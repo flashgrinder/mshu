@@ -470,7 +470,7 @@ $dictation = get_field('dictation');
 					if (!empty($video_link)) :
 				?>
 						<div class="video-slider__item swiper-slide">
-							<iframe class="video-slider__player" width="100%" height="100%" src="<?php echo esc_url($video_link); ?>" frameBorder="0" allow="clipboard-write; autoplay" webkitAllowFullScreen mozallowfullscreen allowFullScreen loading="lazy"></iframe>
+							<iframe class="video-slider__player" width="100%" height="100%" src="<?php echo esc_url($video_link); ?>" frameBorder="0" allow="clipboard-write" webkitAllowFullScreen mozallowfullscreen allowFullScreen loading="lazy"></iframe>
 						</div>
 				<?php endif;
 				endwhile; ?>
