@@ -1,8 +1,18 @@
 .combine {
   position: relative;
-  padding: 60px 0 300px;
-  @include mobile(padding, 30px 0 200px);
-  @include mobileXS(padding, 30px 0 270px);
+  padding: 30px 0 75px;
+
+  @include from(769px) {
+    padding: 60px 0 100px;
+  }
+
+  @include from(993px) {
+    padding: 60px 0 270px;
+  }
+
+  @include from(1201px) {
+    padding: 60px 0 305px;
+  }
 }
 
 .combine::before {
@@ -12,37 +22,34 @@
   background-repeat: no-repeat;
   background-size: contain;
   left: 0;
-  bottom: 100px;
+  bottom: 0;
   height: 48px;
   width: 90%;
-  max-width: 1421px;
-  @include to(1365px){
-    max-width: 1024px;
+
+  @include from(769px) {
+    bottom: 10px;
   }
-  @include mobile(bottom, 50px);
-  @include mobileXS(content, none);
+
+  @include from(993px) {
+    bottom: 80px;
+  }
+
+  @include from(1201px) {
+    bottom: 100px;
+  }
 }
 
 .combine__body {
   position: relative;
-}
+  background: var(--gradient-main-screen);
 
-.combine__body::before {
-  content: '';
-  position: absolute;
-  width: 90%;
-  height: 100%;
-  max-width: 1421px;
-  background-image: url('../img/combine/combine-bg.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  user-select: none;
-  pointer-events: none;
-  z-index: -1;
-  @include to(1365px){
-    max-width: 1024px;
+  @include from(993px) {
+    margin-right: 220px;
   }
-  @include mobileXS(width, 100%);
+
+  @include from(1201px) {
+    margin-right: calc((100vw - 1200px) / 2 + 220px);
+  }
 }
 
 .combine__body::after {
@@ -50,56 +57,68 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  top: -10%;
+  top: 0;
   left: 0;
-  background-image: url('../img/combine/combine-bg-line.svg');
+  background-image: url('../img/combine/combine-mobile-grid.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  user-select: none;
-  pointer-events: none;
+
+  @include from(577px) {
+    background-image: url('../img/combine/combine-desktop-grid.svg');
+  }
+}
+
+.combine__wrap {
+  padding-top: 30px;
+  padding-right: $fields_mobileXS;
+  padding-bottom: 30px;
+  padding-left: $fields_mobileXS;
+
+  @include from(577px) {
+    padding-right: $fields_mobile;
+    padding-left: $fields_mobile;
+  }
+
+  @include from(769px) {
+    padding-right: $fields;
+    padding-left: $fields;
+  }
+
+  @include from(993px) {
+    padding-right: 240px;
+  }
+
+  @include from(1201px) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: calc((100vw - 1200px) / 2 + $fields);
+  }
+
 }
 
 .combine__info {
-  padding: 65px 0;
-  max-width: 710px;
-  @include to(1365px){
-    max-width: 500px;
-  }
-  @include mobile-block {
-    padding: 65px 0 85px;
+  position: relative;
+  min-height: 218px;
+  background-image: url('../img/combine/combine-mobile-banner.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  @include from(577px) {
+    min-height: 227px;
+    background-image: url('../img/combine/combine-desktop-banner.svg');
   }
 }
 
-.combine__text ~ .combine__text {
-  margin-top: 30px;
-}
-
+/* Декоративные элементы */
 
 .combine__wrapper-decor {
   position: relative;
-  max-width: 1380px;
-  width: 85%;
-  @include to(1365px){
-    max-width: 1024px;
-  }
-  @include mobile(width, 90%);
 }
 
-.combine__wrapper-decor--only-desktop {
-  @include mobileXS(display, none);
-}
-
-.combine__wrapper-decor--only-mobile {
-  display: none;
-  @include mobileXS(display, block);
-}
-
-.combine__decor {
-  position: absolute;
-  right: 0;
-  width: 100%;
-  z-index: 1;
+.combine__wrapper-decor {
+  @include tabletSM(display, none);
 }
 
 .combine__images-decor {
@@ -111,8 +130,7 @@
 .combine__circle-decor--big {
   position: absolute;
   top: -60px;
-  right: -300px;
-  //right: -220px;
+  right: -220px;
   width: 441px;
   height: 441px;
   background: linear-gradient(208.77deg, #A42E32 -24.41%, #E52A31 92.24%);
@@ -124,11 +142,7 @@
   align-items: center;
   animation: rotate 30s linear infinite forwards;
   overflow: hidden;
-  @include mobile-block {
-    width: 320px;
-    height: 320px;
-    right: -150px;
-  }
+  box-shadow: -4px 0 25px 0 var(--color-black-15);
 }
 
 .combine__circle-decor--big::before {
@@ -142,8 +156,7 @@
 .combine__circle-decor--small {
   position: absolute;
   top: 5px;
-  //right: -154px;
-  right: -230px;
+  right: -154px;
   width: 308px;
   height: 308px;
   background: linear-gradient(208.77deg, #A42E32 -24.41%, #E52A31 92.24%);
@@ -153,12 +166,6 @@
   box-shadow: 0 0 12px 0 #00000026;
   overflow: hidden;
   animation: rotate-revert 30s linear infinite forwards;
-  @include mobile-block {
-    width: 230px;
-    height: 230px;
-    top: -12px;
-    right: -105px;
-  }
 }
 
 .combine__circle-decor--small::before {
@@ -174,11 +181,7 @@
 .combine__name-decor {
   position: absolute;
   top: -28px;
-  right: -150px;
-  @include mobile-block {
-    right: -45px;
-    top: -30px;
-  }
+  right: -75px;
 }
 
 .combine__name-svg {

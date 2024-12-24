@@ -1,13 +1,14 @@
 :root {
   --color-white: #FFFFFF;
   --color-black: #000000;
+  --color-black-15: rgba(0, 0, 0, 0.15);
   --color-black-25: rgba(0, 0, 0, 0.25);
   --color-gray: #c2c2c2;
   --color-dark: #3E3E3E;
   --text-red-gradient: linear-gradient(208.77deg, #A42E32 -24.41%, #E52A31 92.24%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
   --gradient-btn: linear-gradient(208.77deg, #A42E32 -24.41%, #E52A31 92.24%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
 
-  --gradient-main-screen: linear-gradient(0deg, #A42E32 0%, #E52A31 100%);
+  --gradient-main-screen: linear-gradient(0deg, #E52A31 0%, #A42E32 100%);
   --color-red: #A42E32;
   --color-blue: #00b2ff;
   --invalid: #f30008;

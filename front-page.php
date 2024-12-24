@@ -22,15 +22,15 @@ $dictation = get_field('dictation');
                 </h1>
                 <ul class="main-screen__info-list">
                     <li
-                        class="main-screen__info-item text text--medium text--white text--w-regular js-reveal gs-reveal a-reveal-right">
+                        class="main-screen__info-item text text--pre-large text--white text--w-regular js-reveal gs-reveal a-reveal-right">
                         Получи уникальные знания от лучших экспертов страны
                     </li>
                     <li
-                        class="main-screen__info-item text text--medium text--white text--w-regular js-reveal gs-reveal a-reveal-right">
+                        class="main-screen__info-item text text--pre-large text--white text--w-regular js-reveal gs-reveal a-reveal-right">
                         Стань успешным и измени мир вокруг себя
                     </li>
                     <li
-                        class="main-screen__info-item text text--medium text--white text--w-regular js-reveal gs-reveal a-reveal-right">
+                        class="main-screen__info-item text text--pre-large text--white text--w-regular js-reveal gs-reveal a-reveal-right">
                         Погрузись в будущую профессию
                     </li>
                 </ul>
@@ -68,44 +68,22 @@ $dictation = get_field('dictation');
 
 <!-- Combine -->
 <section class="combine js-reveal gs-reveal">
-	<div class="combine__body">
-		<div class="combine__wrapper-decor combine__wrapper-decor--only-desktop">
-			<div class="combine__decor">
-				<div class="combine__images-decor">
-					<div class="combine__circle-decor combine__circle-decor--big"></div>
-					<div class="combine__circle-decor combine__circle-decor--small"></div>
-				</div>
-				<div class="combine__name-decor">
-					<img src="<?= STANDART_DIR; ?>/img/combine/img-name.svg" alt="" class="combine__name-svg">
-				</div>
-			</div>
-		</div>
-		<div class="combine__wrap container">
-			<div class="combine__info">
-				<h2 class="combine__heading title title--big title--white title--w-bold left title--indent-small js-reveal gs-reveal a-reveal-left">
-					Объединяем
-				</h2>
-				<div class="combine__text text text--medium text--white text--w-regular">
-					1. Талантливую молодёжь страны
-				</div>
-				<div class="combine__text text text--medium text--white text--w-regular">
-					2. Уникальные компетенции представителей крупнейших вузов страны, органов власти,
-					профессиональных юристов и предпринимателей
-				</div>
-			</div>
-		</div>
-		<div class="combine__wrapper-decor combine__wrapper-decor--only-mobile">
-			<div class="combine__decor">
-				<div class="combine__images-decor">
-					<div class="combine__circle-decor combine__circle-decor--big"></div>
-					<div class="combine__circle-decor combine__circle-decor--small"></div>
-				</div>
-				<div class="combine__name-decor">
-					<img src="<?= STANDART_DIR; ?>/img/combine/img-name.svg" alt="" class="combine__name-svg">
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="combine__body">
+        <div class="combine__wrapper-decor">
+            <div class="combine__decor">
+                <div class="combine__images-decor">
+                    <div class="combine__circle-decor combine__circle-decor--big"></div>
+                    <div class="combine__circle-decor combine__circle-decor--small"></div>
+                </div>
+                <div class="combine__name-decor">
+                    <img src="<?= STANDART_DIR; ?>/img/combine/img-name.svg" alt="" class="combine__name-svg">
+                </div>
+            </div>
+        </div>
+        <div class="combine__wrap">
+            <div class="combine__info"></div>
+        </div>
+    </div>
 </section>
 <!-- ./ Combine -->
 
