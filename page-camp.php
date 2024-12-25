@@ -5,10 +5,12 @@
 <section class="head-info head-info--camp js-reveal gs-reveal">
     <div class="head-info__body">
         <div class="head-info__text-decor">
-            <h1 class="head-info__heading title title--pre-big title--white title--w-bold js-reveal gs-reveal"><?php echo esc_html(get_field('head-info_heading')); ?></h1>
-            <span class="head-info__heading-decor title title--pre-big title--white title--w-bold js-reveal gs-reveal"><?php echo esc_html(get_field('head-info_heading')); ?></span>
-            <span class="head-info__heading-decor title title--pre-big title--white title--w-bold js-reveal gs-reveal"><?php echo esc_html(get_field('head-info_heading')); ?></span>
-            <span class="head-info__heading-decor head-info__heading-decor--absolute title title--pre-big title--white title--w-bold js-reveal gs-reveal"><?php echo esc_html(get_field('head-info_heading')); ?></span>
+            <h1 class="head-info__heading title title--pre-big title--white title--w-bold js-reveal gs-reveal">Летний правовой лагерь</h1>
+            <span class="head-info__heading-decor title title--pre-big title--white title--w-bold js-reveal gs-reveal">Летний правовой лагерь&nbsp;&nbsp;&nbsp;&nbsp;Летний правовой лагерь</span>
+
+            <div class="head-info__heading-decor-absolute">
+                <span class="head-info__heading-decor title title--pre-big title--white title--w-bold js-reveal gs-reveal">Летний правовой лагерь</span>
+            </div>
         </div>
 
         <?php

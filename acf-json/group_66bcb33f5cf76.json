@@ -21,26 +21,6 @@
             "selected": 0
         },
         {
-            "key": "field_66bdabf994c1e",
-            "label": "Заголовок страницы",
-            "name": "head-info_heading",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "Летний правовой лагерь",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_66bdace394c1f",
             "label": "Описание",
             "name": "head-info_description",
@@ -533,5 +513,5 @@
     "active": true,
     "description": "Лагерь МШЮ",
     "show_in_rest": 0,
-    "modified": 1733828017
+    "modified": 1735124714
 }

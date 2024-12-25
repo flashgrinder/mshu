@@ -1,18 +1,26 @@
-<?php /* Template Name: Диктант */?>
+<?php /* Template Name: Диктант */ ?>
 <?php get_header(); ?>
 <?php
-	$description = get_field('description');
-	$short_text = get_field('short_text');
+$description = get_field('description');
+$short_text = get_field('short_text');
 ?>
 <?php the_post(); ?>
 <!-- Head-info -->
 <section class="head-info js-reveal gs-reveal">
-	<div class="head-info__body container">
-		<h1 class="head-info__heading title title--big title--white title--w-bold title--indent-small js-reveal gs-reveal a-reveal-left">
-			Диктант
-		</h1>
-		<div class="head-info__description text text--medium text--white text--w-regular js-reveal gs-reveal a-reveal-right">
+	<div class="head-info__body">
+		<div class="head-info__text-decor">
+			<h1 class="head-info__heading title title--pre-big title--white title--w-bold js-reveal gs-reveal">Диктант</h1>
+			<span class="head-info__heading-decor title title--pre-big title--white title--w-bold js-reveal gs-reveal">Диктант&nbsp;&nbsp;&nbsp;&nbsp;Диктант&nbsp;&nbsp;&nbsp;&nbsp;Диктант&nbsp;&nbsp;&nbsp;&nbsp;Диктант&nbsp;&nbsp;&nbsp;&nbsp;Диктант&nbsp;&nbsp;&nbsp;&nbsp;Диктант</span>
+
+			<div class="head-info__heading-decor-absolute">
+				<span class="head-info__heading-decor title title--pre-big title--white title--w-bold js-reveal gs-reveal">Диктант&nbsp;&nbsp;&nbsp;&nbsp;Диктант&nbsp;&nbsp;&nbsp;&nbsp;Диктант</span>
+			</div>
+		</div>
+
+		<div class="head-info__description container">
+			<div class="head-info__text text text--medium text--white text--w-regular js-reveal gs-reveal a-reveal-right">
 			<?= $description; ?>
+			</div>
 		</div>
 	</div>
 </section>
@@ -103,7 +111,7 @@
 					$team_name = get_sub_field('team_name');
 					$team_description = get_sub_field('team_description');
 
-					?>
+				?>
 					<article class="team__item js-reveal gs-reveal a-reveal-left">
 						<div class="team__card team__side--front">
 							<?php if (!empty($team_photo)) : ?>

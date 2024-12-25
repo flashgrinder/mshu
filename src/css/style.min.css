@@ -1959,8 +1959,6 @@ img {
 
 .head-info {
   padding: 35px 0;
-  background: url("../img/head-info-bg.png") no-repeat;
-  background-size: cover;
   overflow: hidden;
 }
 
@@ -1968,12 +1966,12 @@ img {
   background: url("../img/head-info-news.png") no-repeat;
 }
 
-.head-info.head-info--camp {
+.head-info {
   position: relative;
   background: var(--gradient-bg);
 }
 
-.head-info--camp::before {
+.head-info::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1991,27 +1989,28 @@ img {
 
 .head-info__text-decor {
   position: relative;
-  display: flex;
-  -moz-column-gap: 50px;
-       column-gap: 50px;
-  padding-bottom: 40px;
   margin: 0 10px 35px 10px;
 }
 
-.head-info__text-decor::before {
+.head-info__heading {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 40px;
+  margin: 0;
+}
+
+.head-info__heading::before {
   content: "";
   position: absolute;
   background-image: url("../img/head-info/head-info-decor-line.svg");
   background-repeat: no-repeat;
   background-size: 100% 15px;
   left: 0;
+  right: 0;
   bottom: 0;
-  width: calc(0.56 * (100vw - 20px));
+  width: 100%;
+  max-width: calc(100vw - 20px);
   height: 15px;
-}
-
-.head-info__heading {
-  margin: 0;
 }
 
 .head-info__heading-decor {
@@ -3036,8 +3035,8 @@ img {
     margin: 0 15px 35px 15px;
   }
 
-  .head-info__text-decor::before {
-    width: calc(0.56 * (100vw - 30px));
+  .head-info__heading::before {
+    max-width: calc(100vw - 30px);
   }
 
   .footer__columns-1 {
@@ -3187,8 +3186,8 @@ img {
     margin: 0 30px 47px 30px;
   }
 
-  .head-info__text-decor::before {
-    width: calc(0.56 * (100vw - 60px));
+  .head-info__heading::before {
+    max-width: calc(100vw - 60px);
   }
 
   .footer__columns-2 {
@@ -3360,30 +3359,25 @@ img {
 
   .head-info__text-decor {
     margin: 0 0 47px calc((100vw - 1200px) / 2 + 30px);
-  }
-
-  .head-info__text-decor::before {
-    width: 672px;
+    white-space: nowrap;
   }
 }
 
 @media screen and (min-width: 1600px) {
+  .head-info__heading,
   .head-info__heading-decor {
-    display: block;
+    display: inline-block;
+    margin-right: 50px;
+    white-space: nowrap;
   }
 
-  .head-info__heading-decor--absolute {
-    text-align: end;
+  .head-info__heading-decor-absolute {
     position: absolute;
-    right: calc(100% + 50px);
+    right: 100%;
     top: 0;
     width: 100%;
     height: 100%;
-  }
-
-  .head-info__heading,
-  .head-info__heading-decor {
-    white-space: nowrap;
+    text-align: end;
   }
 
   .camp-stages__list {
