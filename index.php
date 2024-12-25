@@ -1,22 +1,29 @@
 <?php get_header(); ?>
 
 <?php the_post(); ?>
-<!-- Head-info news -->
+<!-- Head-info -->
 <section class="head-info head-info--news js-reveal gs-reveal">
-	<div class="head-info__body container">
-		<h1 class="head-info__heading title title--big title--white title--w-bold js-reveal gs-reveal a-reveal-left">
-			<?= get_the_title(get_option('page_for_posts', true)); ?>
-		</h1>
+	<div class="head-info__body">
+		<div class="head-info__text-decor">
+			<h1 class="head-info__heading title title--pre-big title--white title--w-bold js-reveal gs-reveal">
+				<?= get_the_title(get_option('page_for_posts', true)); ?>
+			</h1>
+			<span class="head-info__heading-decor title title--pre-big title--white title--w-bold js-reveal gs-reveal">Новости&nbsp;&nbsp;&nbsp;&nbsp;Новости&nbsp;&nbsp;&nbsp;&nbsp;Новости&nbsp;&nbsp;&nbsp;&nbsp;Новости&nbsp;&nbsp;&nbsp;&nbsp;Новости&nbsp;&nbsp;&nbsp;&nbsp;Новости</span>
+
+			<div class="head-info__heading-decor-absolute">
+				<span class="head-info__heading-decor title title--pre-big title--white title--w-bold js-reveal gs-reveal">Новости&nbsp;&nbsp;&nbsp;&nbsp;Новости&nbsp;&nbsp;&nbsp;&nbsp;Новости</span>
+			</div>
+		</div>
 	</div>
 </section>
-<!-- ./ Head-info news -->
+<!-- ./ Head-info -->
 
 <!-- Registration -->
-<?php if( have_rows('reg-slider', 12) ): ?>
+<?php if (have_rows('reg-slider', 12)): ?>
 	<section class="reg-slider js-reveal gs-reveal">
 		<div class="reg-slider__swiper swiper js-registration-slider">
 			<div class="reg-slider__items swiper-wrapper">
-				<?php while( have_rows('reg-slider', 12) ): the_row();
+				<?php while (have_rows('reg-slider', 12)): the_row();
 					$reg_slider_title = get_sub_field('reg-slider_title');
 					$reg_slider_description = get_sub_field('reg-slider_description');
 					$reg_slider_date = get_sub_field('reg-slider_date');

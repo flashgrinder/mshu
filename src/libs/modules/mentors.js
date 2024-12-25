@@ -74,6 +74,7 @@ function init() {
         }
 
         const lowerCaseSearchValue = searchValue.toLowerCase();
+        const lowerCaseCities = cities.map(city => city.toLowerCase());
         const cityIndex = lowerCaseCities.indexOf(lowerCaseSearchValue);
 
         if (cityIndex !== -1) {
@@ -97,7 +98,6 @@ function init() {
 
 
     if (typeof cities !== "undefined" && cities.length > 0) {
-        const lowerCaseCities = cities.map(city => city.toLowerCase());
         /*  Вывод названия города при первичном рендеринге страницы */
         selected.textContent = cities[0];
 
