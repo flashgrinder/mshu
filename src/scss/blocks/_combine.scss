@@ -41,7 +41,7 @@
 
 .combine__body {
   position: relative;
-  background: var(--gradient-main-screen);
+  background: var(--gradient-bg);
 
   @include from(993px) {
     margin-right: 220px;

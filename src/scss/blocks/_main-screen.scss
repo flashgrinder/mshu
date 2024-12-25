@@ -4,7 +4,7 @@
 
 .main-screen__body {
   position: relative;
-  background: var(--gradient-main-screen);
+  background: var(--gradient-bg);
   overflow: hidden;
 
   @include from(993px) {

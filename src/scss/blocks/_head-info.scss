@@ -1,8 +1,12 @@
 .head-info {
-  padding: 60px 0;
-  background: url("../img/head-info-bg.png") no-repeat;
+  padding: 35px 0;
+  background: url("../img/head-info-bg.png") no-repeat; // отключить это?
   background-size: cover;
-  @include mobile(padding, 30px 0);
+  overflow: hidden;
+
+  @include from(769px) {
+    padding: 45px 0 50px;
+  };
 }
 
 .head-info.head-info--news {
@@ -10,6 +14,97 @@
 }
 
 .head-info.head-info--camp {
-  background: url("../img/head-info-camp.png") no-repeat;
-  background-size: cover;
+  position: relative;
+  background: var(--gradient-bg);
+}
+
+.head-info--camp::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/head-info/head-info-bg1.svg"), url("../img/head-info/head-info-bg2.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  pointer-events: none;
+  user-select: none;
+}
+
+.head-info__text-decor {
+  position: relative;
+  display: flex;
+  column-gap: 50px;
+  padding-bottom: 40px;
+  margin: 0 $fields_mobileXS 35px $fields_mobileXS;
+
+  @include from(577px) {
+    margin: 0 $fields_mobile 35px $fields_mobile;
+  }
+
+  @include from(769px) {
+    margin: 0 $fields 47px $fields;
+  }
+
+  @include from(1201px) {
+    margin: 0 0 47px calc((100vw - 1200px) / 2 + $fields);
+  }
+}
+
+.head-info__text-decor::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/head-info/head-info-decor-line.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 15px;
+  left: 0;
+  bottom: 0;
+  width: calc(0.56*(100vw - $fields_mobileXS*2));
+  height: 15px;
+
+  @include from(577px) {
+    width: calc(0.56*(100vw - $fields_mobile*2));
+  }
+
+  @include from(769px) {
+    width: calc(0.56*(100vw - $fields*2));
+  }
+
+  @include from(1201px) {
+    width: calc(0.56*$break_large);
+  }
+}
+
+.head-info__heading {
+  margin: 0;
+}
+
+.head-info__heading-decor {
+  display: none;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-white);
+  text-stroke: 1px var(--color-white);
+
+  @include from(1600px) {
+    display: block;
+
+    &--absolute {
+      text-align: end;
+      position: absolute;
+      right: calc(100% + 50px);
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.head-info__heading,
+.head-info__heading-decor {
+  text-transform: uppercase;
+
+  @include from(1600px) {
+    white-space: nowrap;
+  }
 }

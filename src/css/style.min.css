@@ -31,13 +31,14 @@
 :root {
   --color-white: #FFFFFF;
   --color-black: #000000;
+  --color-black-05: rgba(0, 0, 0, 0.05);
   --color-black-15: rgba(0, 0, 0, 0.15);
   --color-black-25: rgba(0, 0, 0, 0.25);
   --color-gray: #c2c2c2;
   --color-dark: #3E3E3E;
   --text-red-gradient: linear-gradient(208.77deg, #A42E32 -24.41%, #E52A31 92.24%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
   --gradient-btn: linear-gradient(208.77deg, #A42E32 -24.41%, #E52A31 92.24%), linear-gradient(0deg, #FFFFFF, #FFFFFF);
-  --gradient-main-screen: linear-gradient(0deg, #E52A31 0%, #A42E32 100%);
+  --gradient-bg: linear-gradient(0deg, #E52A31 0%, #A42E32 100%);
   --color-red: #A42E32;
   --color-blue: #00b2ff;
   --invalid: #f30008;
@@ -283,6 +284,24 @@ img {
 @media screen and (max-width: 360px){
 
   .title--big{
+    font-size: 30px;
+  }
+}
+
+.title--pre-big {
+  font-size: calc(30px + 15 * ((100vw - 360px) / 1080));
+}
+
+@media screen and (min-width: 1440px){
+
+  .title--pre-big{
+    font-size: 45px;
+  }
+}
+
+@media screen and (max-width: 360px){
+
+  .title--pre-big{
     font-size: 30px;
   }
 }
@@ -1215,7 +1234,7 @@ img {
 
 .main-screen__body {
   position: relative;
-  background: var(--gradient-main-screen);
+  background: var(--gradient-bg);
   overflow: hidden;
 }
 
@@ -1312,7 +1331,7 @@ img {
 
 .combine__body {
   position: relative;
-  background: var(--gradient-main-screen);
+  background: var(--gradient-bg);
 }
 
 .combine__body::after {
@@ -1939,9 +1958,10 @@ img {
 /* Head-info */
 
 .head-info {
-  padding: 60px 0;
+  padding: 35px 0;
   background: url("../img/head-info-bg.png") no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 .head-info.head-info--news {
@@ -1949,8 +1969,61 @@ img {
 }
 
 .head-info.head-info--camp {
-  background: url("../img/head-info-camp.png") no-repeat;
-  background-size: cover;
+  position: relative;
+  background: var(--gradient-bg);
+}
+
+.head-info--camp::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/head-info/head-info-bg1.svg"), url("../img/head-info/head-info-bg2.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, cover;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.head-info__text-decor {
+  position: relative;
+  display: flex;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  padding-bottom: 40px;
+  margin: 0 10px 35px 10px;
+}
+
+.head-info__text-decor::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/head-info/head-info-decor-line.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 15px;
+  left: 0;
+  bottom: 0;
+  width: calc(0.56 * (100vw - 20px));
+  height: 15px;
+}
+
+.head-info__heading {
+  margin: 0;
+}
+
+.head-info__heading-decor {
+  display: none;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-white);
+  text-stroke: 1px var(--color-white);
+}
+
+.head-info__heading,
+.head-info__heading-decor {
+  text-transform: uppercase;
 }
 
 /* Stages */
@@ -2959,6 +3032,14 @@ img {
     background-image: url("../img/combine/combine-desktop-banner.svg");
   }
 
+  .head-info__text-decor {
+    margin: 0 15px 35px 15px;
+  }
+
+  .head-info__text-decor::before {
+    width: calc(0.56 * (100vw - 30px));
+  }
+
   .footer__columns-1 {
     display: flex;
     gap: 50px;
@@ -3096,6 +3177,18 @@ img {
   .mentors-slider__arrows .slider-arrows__arrow svg,
   .video-slider__arrows .slider-arrows__arrow svg {
     width: 9px;
+  }
+
+  .head-info {
+    padding: 45px 0 50px;
+  }
+
+  .head-info__text-decor {
+    margin: 0 30px 47px 30px;
+  }
+
+  .head-info__text-decor::before {
+    width: calc(0.56 * (100vw - 60px));
   }
 
   .footer__columns-2 {
@@ -3264,9 +3357,35 @@ img {
     padding-bottom: 50px;
     padding-left: calc((100vw - 1200px) / 2 + 30px);
   }
+
+  .head-info__text-decor {
+    margin: 0 0 47px calc((100vw - 1200px) / 2 + 30px);
+  }
+
+  .head-info__text-decor::before {
+    width: 672px;
+  }
 }
 
 @media screen and (min-width: 1600px) {
+  .head-info__heading-decor {
+    display: block;
+  }
+
+  .head-info__heading-decor--absolute {
+    text-align: end;
+    position: absolute;
+    right: calc(100% + 50px);
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .head-info__heading,
+  .head-info__heading-decor {
+    white-space: nowrap;
+  }
+
   .camp-stages__list {
     -moz-column-gap: 100px;
          column-gap: 100px;
@@ -3491,10 +3610,6 @@ img {
 
   .dictation--member .dictation__actions {
     flex-direction: column;
-  }
-
-  .head-info {
-    padding: 30px 0;
   }
 
   .stages {

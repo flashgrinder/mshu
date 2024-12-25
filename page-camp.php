@@ -3,18 +3,23 @@
 
 <!-- Head-info -->
 <section class="head-info head-info--camp js-reveal gs-reveal">
-    <div class="head-info__body container">
-        <h1
-            class="head-info__heading title title--big title--white title--w-bold title--indent-small js-reveal gs-reveal a-reveal-left">
-            <?php echo esc_html(get_field('head-info_heading')); ?>
-        </h1>
+    <div class="head-info__body">
+        <div class="head-info__text-decor">
+            <h1 class="head-info__heading title title--pre-big title--white title--w-bold js-reveal gs-reveal"><?php echo esc_html(get_field('head-info_heading')); ?></h1>
+            <span class="head-info__heading-decor title title--pre-big title--white title--w-bold js-reveal gs-reveal"><?php echo esc_html(get_field('head-info_heading')); ?></span>
+            <span class="head-info__heading-decor title title--pre-big title--white title--w-bold js-reveal gs-reveal"><?php echo esc_html(get_field('head-info_heading')); ?></span>
+            <span class="head-info__heading-decor head-info__heading-decor--absolute title title--pre-big title--white title--w-bold js-reveal gs-reveal"><?php echo esc_html(get_field('head-info_heading')); ?></span>
+        </div>
+
         <?php
         $head_info_description = get_field('head-info_description');
         if (!empty($head_info_description)) :
         ?>
-            <div
-                class="head-info__description text text--medium text--white text--w-regular js-reveal gs-reveal a-reveal-left">
-                <?php echo wp_kses_post($head_info_description); ?>
+            <div class="head-info__description container">
+                <div
+                    class="head-info__description text text--medium text--white text--w-regular js-reveal gs-reveal a-reveal-left">
+                    <?php echo wp_kses_post($head_info_description); ?>
+                </div>
             </div>
         <?php endif; ?>
     </div>
