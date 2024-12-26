@@ -1,11 +1,6 @@
 <?php get_header(); ?>
 
 <?php the_post(); ?>
-<style>
-    .post__header::before {
-        background-image: url('<?=get_the_post_thumbnail_url();?>');
-    }
-</style>
 <!-- News-detail -->
 <section class="post js-reveal gs-reveal">
 	<article class="post__article">
