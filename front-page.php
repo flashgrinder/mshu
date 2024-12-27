@@ -12,8 +12,7 @@ $dictation = get_field('dictation');
 			<img src="<?= STANDART_DIR; ?>/img/main-screen/main-screen-decor.svg" alt="Декоративный элемент" class="main-screen__img-decor-1">
 			<img src="<?= STANDART_DIR; ?>/img/main-screen/main-screen-decor.svg" alt="Декоративный элемент" class="main-screen__img-decor-2">
 
-			<img src="<?= STANDART_DIR; ?>/img/main-screen/first-girl.png" alt="Декоративный элемент" class="main-screen__img-girl-1">
-			<img src="<?= STANDART_DIR; ?>/img/main-screen/second-girl.png" alt="Декоративный элемент" class="main-screen__img-girl-2">
+			<img src="<?= STANDART_DIR; ?>/img/main-screen/girls.png" alt="Декоративный элемент" class="main-screen__img-girls">
 
 			<div class="main-screen__inner">
 				<h1
@@ -53,7 +52,7 @@ $dictation = get_field('dictation');
 			<h2 class="dictation__heading title title--big title--black title--w-bold left title--indent-small js-reveal gs-reveal a-reveal-left">
 				О программе
 			</h2>
-			<div class="dictation__text text text--medium text--dark text--w-regular left">
+			<div class="dictation__text text text--medium text--dark text--w-regular left js-reveal gs-reveal a-reveal-right">
 				<?= $about; ?>
 			</div>
 			<div class="dictation__actions left">
@@ -94,7 +93,7 @@ $dictation = get_field('dictation');
 			Задачи проекта
 		</h2>
 		<ul class="tasks__list text text--medium text--dark text--w-regular left">
-			<li class="tasks__item js-reveal gs-reveal a-reveal-left">
+			<li class="tasks__item js-reveal gs-reveal a-reveal-right">
 				<div class="tasks__icon">
 					<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M17.5 17.5C24.1447 17.5 29.5312 14.5619 29.5312 10.9375C29.5312 7.31313 24.1447 4.375 17.5 4.375C10.8553 4.375 5.46875 7.31313 5.46875 10.9375C5.46875 14.5619 10.8553 17.5 17.5 17.5Z" stroke="#3E3E3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -104,7 +103,7 @@ $dictation = get_field('dictation');
 				</div>
 				Раскрыть вопросы финансово-правовой грамотности
 			</li>
-			<li class="tasks__item js-reveal gs-reveal a-reveal-right">
+			<li class="tasks__item js-reveal gs-reveal a-reveal-left">
 				<div class="tasks__icon">
 					<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M14.7656 21.875C19.2961 21.875 22.9688 18.2023 22.9688 13.6719C22.9688 9.14141 19.2961 5.46875 14.7656 5.46875C10.2352 5.46875 6.5625 9.14141 6.5625 13.6719C6.5625 18.2023 10.2352 21.875 14.7656 21.875Z" stroke="#3E3E3E" stroke-width="2" stroke-miterlimit="10" />
@@ -120,7 +119,7 @@ $dictation = get_field('dictation');
 				</div>
 				Провести раннюю профориентацию для школьников
 			</li>
-			<li class="tasks__item js-reveal gs-reveal a-reveal-left">
+			<li class="tasks__item js-reveal gs-reveal a-reveal-right">
 				<div class="tasks__icon">
 					<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M12.0312 21.875C15.9576 21.875 19.1406 18.692 19.1406 14.7656C19.1406 10.8392 15.9576 7.65625 12.0312 7.65625C8.10485 7.65625 4.92188 10.8392 4.92188 14.7656C4.92188 18.692 8.10485 21.875 12.0312 21.875Z" stroke="#3E3E3E" stroke-width="2" stroke-miterlimit="10" />
@@ -131,7 +130,7 @@ $dictation = get_field('dictation');
 				</div>
 				Внедрить систему наставничества
 			</li>
-			<li class="tasks__item js-reveal gs-reveal a-reveal-right">
+			<li class="tasks__item js-reveal gs-reveal a-reveal-left">
 				<div class="tasks__icon">
 					<svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M4.375 29.5312V7.65625C4.375 7.36617 4.49023 7.08797 4.69535 6.88285C4.90047 6.67773 5.17867 6.5625 5.46875 6.5625H29.5312C29.8213 6.5625 30.0995 6.67773 30.3046 6.88285C30.5098 7.08797 30.625 7.36617 30.625 7.65625V29.5312L26.25 27.3438L21.875 29.5312L17.5 27.3438L13.125 29.5312L8.75 27.3438L4.375 29.5312Z" stroke="#3E3E3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -419,10 +418,10 @@ $dictation = get_field('dictation');
 		<!--			знаний и понимания молодежью основных правовых аспектов предпринимательской деятельности.-->
 		<!--		</div>-->
 		<div class="dictation__actions center">
-			<a href="javascript:;" class="dictation__button button button--primary js-reveal gs-reveal a-reveal-left" data-modal="#participant">
+			<a href="javascript:;" class="dictation__button button button--primary js-reveal gs-reveal" data-modal="#participant">
 				Участник
 			</a>
-			<a href="javascript:;" class="dictation__button button button--primary js-reveal gs-reveal a-reveal-right" data-modal="#mentor">
+			<a href="javascript:;" class="dictation__button button button--primary js-reveal gs-reveal" data-modal="#mentor">
 				Наставник
 			</a>
 		</div>
@@ -476,7 +475,7 @@ $dictation = get_field('dictation');
 <!-- Partners-slider -->
 <section class="partners partners--slider js-reveal gs-reveal">
 	<div class="partners__body container">
-		<h2 class="partners__heading title title--big title--red-gradient title--w-bold center title--indent-large js-reveal gs-reveal a-reveal-left">
+		<h2 class="partners__heading title title--big title--black title--w-bold center title--indent-large js-reveal gs-reveal a-reveal-left">
 			Партнёры
 		</h2>
 	</div>
@@ -502,7 +501,7 @@ $dictation = get_field('dictation');
 <!-- Partners-info -->
 <section class="partners partners--info js-reveal gs-reveal">
 	<div class="partners__body container">
-		<h2 class="partners__heading title title--big title--red-gradient title--w-bold center title--indent-large js-reveal gs-reveal a-reveal-left">
+		<h2 class="partners__heading title title--big title--black title--w-bold center title--indent-large js-reveal gs-reveal a-reveal-left">
 			Информационные партнёры
 		</h2>
 		<div class="partners__items">
@@ -511,7 +510,7 @@ $dictation = get_field('dictation');
 					$info_partners_link = get_sub_field('info_partners_link');
 					$info_partners_logo = get_sub_field('info_partners_logo');
 				?>
-					<a href="<?= (!empty($info_partners_link)) ? $info_partners_link : 'javascript:;'; ?>" class="partners__item js-reveal gs-reveal a-reveal-left">
+					<a href="<?= (!empty($info_partners_link)) ? $info_partners_link : 'javascript:;'; ?>" class="partners__item js-reveal gs-reveal a-reveal-right">
 						<img src="<?php echo esc_url($info_partners_logo['url']); ?>" alt="<?php echo esc_attr($info_partners_logo['alt']); ?>" class="partners__logo">
 					</a>
 				<?php endwhile; ?>
@@ -524,7 +523,7 @@ $dictation = get_field('dictation');
 <!-- Dictation-info -->
 <section class="dictation dictation--info js-reveal gs-reveal">
 	<div class="dictation__body container">
-		<h2 class="dictation__heading title title--big title--red-gradient title--w-bold center title--indent-small js-reveal gs-reveal a-reveal-left">
+		<h2 class="dictation__heading title title--big title--black title--w-bold center title--indent-small js-reveal gs-reveal a-reveal-left">
 			Правовой диктант
 		</h2>
 		<div
@@ -543,7 +542,7 @@ $dictation = get_field('dictation');
 <!-- News -->
 <section class="news js-reveal gs-reveal">
 	<div class="news__body container">
-		<h2 class="news__heading title title--big title--red-gradient title--w-bold center title--indent-large js-reveal gs-reveal a-reveal-left">
+		<h2 class="news__heading title title--big title--black title--w-bold center title--indent-large js-reveal gs-reveal a-reveal-left">
 			Новости
 		</h2>
 

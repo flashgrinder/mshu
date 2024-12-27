@@ -54,42 +54,25 @@
   }
 }
 
-.main-screen__img-girl-1 {
+.main-screen__img-girls {
   position: absolute;
-  right: calc(50% - 147px);
+  right: calc(50% - 257px);
   bottom: 0;
-  width: 487px;
+  width: 479px;
   max-width: initial;
-  height: 304px;
+  height: 315px;
 
   @include from(993px) {
     bottom: -20px;
-    right: 149px;
-    width: 548px;
-    height: 364px;
-  }
-}
-
-.main-screen__img-girl-2 {
-  position: absolute;
-  left: calc(50% - 116px);
-  bottom: -144px;
-  width: 394px;
-  max-width: initial;
-  height: 592px;
-
-  @include from(993px) {
-    bottom: -192px;
-    left: auto;
-    right: -8px;
-    width: 472px;
-    height: 708px;
+    right: 20px;
+    width: 572px;
+    height: 376px;
   }
 }
 
 .main-screen__inner {
 
-  padding: 30px 0 352px;
+  padding: 30px 0 330px;
 
   @include from(993px) {
     padding: 60px 558px 60px 40px;

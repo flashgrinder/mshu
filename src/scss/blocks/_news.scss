@@ -18,7 +18,7 @@
   @include from(769px) {
     display: grid;
     grid-template-columns: 36.71fr 11.37fr 24.04fr 24.04fr;
-    grid-template-rows: 394px 292px;
+    grid-template-rows: minmax(394px, auto) minmax(292px, auto);
     gap: 15px;
   }
 
