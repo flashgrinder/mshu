@@ -4,7 +4,6 @@ import modal from '../libs/modules/modal';
 import scrollHeader from '../libs/modules/scroll-header';
 import burgerMenu from '../libs/modules/burger-menu';
 import videoSlider from '../libs/modules/video';
-import newsSlider from '../libs/modules/news-slider';
 import partnersSlider from '../libs/modules/partners';
 import slimSelect from '../libs/modules/slim-select.js';
 import mentors from '../libs/modules/mentors';
@@ -21,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function(e) {
     const partnersSliderTrue = document.querySelector('.partners--slider');
     const mentorsSliderTrue = document.querySelector('.js-mentors-init');
     const videoSliderTrue = document.querySelector('.js-video-slider');
-    const newsSliderTrue = document.querySelector('.news-slider');
     const registrationSliderTrue = document.querySelector('.js-registration-slider');
 
     burgerMenu.init();
@@ -32,6 +30,5 @@ document.addEventListener('DOMContentLoaded', function(e) {
     partnersSliderTrue ? partnersSlider.init() : false;
     mentorsSliderTrue ? mentors.init() : false;
     videoSliderTrue ? videoSlider.init() : false;
-    newsSliderTrue ? newsSlider.init() : false;
     registrationSliderTrue ? registrationSlider.init() : false;
 });

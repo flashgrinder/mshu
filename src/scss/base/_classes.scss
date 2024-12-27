@@ -103,6 +103,10 @@
 		font-size: responsive 30px 35px;
 		font-range: 360px 1440px;
 	}
+	&--upper-medium {
+		font-size: responsive 20px 30px;
+		font-range: 360px 1440px;
+	}
 	&--medium {
 		font-size: responsive 20px 25px;
 		font-range: 360px 1440px;
@@ -157,6 +161,10 @@
 		font-range: 360px 1600px;
 	}
 	&--pre-large {
+		font-size: responsive 20px 30px;
+		font-range: 360px 1600px;
+	}
+	&--upper-medium {
 		font-size: responsive 16px 22px;
 		font-range: 360px 1600px;
 	}
