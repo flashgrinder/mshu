@@ -520,6 +520,39 @@ $dictation = get_field('dictation');
 </section>
 <!-- ./ Partners-info -->
 
+<!-- MSHU in numbers -->
+<section class="numbers js-reveal gs-reveal">
+    <div class="numbers__body container">
+        <h2
+            class="numbers__heading title title--big title--white title--w-bold center title--indent-large js-reveal gs-reveal a-reveal-left">
+            МШЮ в цифрах</h2>
+        <ul class="numbers__list">
+            <li class="numbers__item">
+                <span class="numbers__number text text--giant text--white text--w-bold js-reveal gs-reveal a-reveal-right">3</span>
+                <span
+                    class="numbers__unit text text--pre-pre-large text--white text--w-semibold center js-reveal gs-reveal a-reveal-right">Региона</span>
+            </li>
+            <li class="numbers__item">
+                <span class="numbers__number text text--giant text--white text--w-bold js-reveal gs-reveal a-reveal-right">4</span>
+                <span
+                    class="numbers__unit text text--pre-pre-large text--white text--w-semibold center js-reveal gs-reveal a-reveal-right">Ведущих
+                    ВУЗа страны</span>
+            </li>
+            <li class="numbers__item">
+                <span class="numbers__number text text--giant text--white text--w-bold js-reveal gs-reveal a-reveal-right">400+</span>
+                <span
+                    class="numbers__unit text text--pre-pre-large text--white text--w-semibold center js-reveal gs-reveal a-reveal-right">Участников</span>
+            </li>
+            <li class="numbers__item">
+                <span class="numbers__number text text--giant text--white text--w-bold js-reveal gs-reveal a-reveal-right">70+</span>
+                <span
+                    class="numbers__unit text text--pre-pre-large text--white text--w-semibold center js-reveal gs-reveal a-reveal-right">Наставников</span>
+            </li>
+        </ul>
+    </div>
+</section>
+<!-- ./ MSHU in numbers -->
+
 <!-- Dictation-info -->
 <section class="dictation dictation--info js-reveal gs-reveal">
 	<div class="dictation__body container">
