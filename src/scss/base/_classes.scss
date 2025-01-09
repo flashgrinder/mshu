@@ -156,6 +156,9 @@
 	&--dark {
 		color: var(--color-dark);
 	}
+	&--red {
+		color: var(--color-red);
+	}
 	&--giant {
 		font-size: responsive 40px 50px;
 		font-range: 360px 1600px;
