@@ -60,14 +60,16 @@ $dictation = get_field('dictation');
 						<?= $about; ?>
 					</div>
 					<div class="dictation__actions left">
-						<a href="javascript:;" class="dictation__button button button--primary" data-modal="#feedback">
+						<a href="javascript:;" class="dictation__button button button--primary js-reveal gs-reveal" data-modal="#participant">
 							Присоединиться
 						</a>
 					</div>
 				</div>
 				<?php if (!empty($quotes)) : ?>
 					<div class="dictation__opinion">
-						<img src="" alt="" class="dictation__photo js-reveal gs-reveal">
+						<a href="#mentors" class="dictation__link">
+							<img src="" alt="" class="dictation__photo js-reveal gs-reveal">
+						</a>
 						<div class="dictation__quote js-reveal gs-reveal a-reveal-opacity">
 							<p class="dictation__quote-text text text--upper-small text--dark text--w-regular"></p>
 						</div>
