@@ -12,11 +12,21 @@
   padding: 50px 0 50px;
 }
 
+.dictation__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+
 .dictation--about .dictation__actions {
+  display: flex;
   margin-top: 35px;
 }
 
 .dictation--info .dictation__actions {
+  display: flex;
+  justify-content: center;
   margin-top: 60px;
 }
 
@@ -37,7 +47,6 @@
 
 .dictation__inner {
   @include from(993px) {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 56px;
   }
@@ -69,7 +78,6 @@
 .dictation__quote {
   position: relative;
   z-index: 2;
-  // width: 297px;
   padding: 25px 20px;
   margin-bottom: 37px;
   border-top-left-radius: 10px;
@@ -91,14 +99,10 @@
 }
 
 .dictation__mentor {
-  // width: 210px;
   padding: 0 100px 0 20px;
 }
 
-.dictation__mentor-name {
-  display: block;
-}
-
+.dictation__mentor-name,
 .dictation__mentor-postition {
   display: block;
 }

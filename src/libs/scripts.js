@@ -3,6 +3,7 @@ import gsReveal from '../libs/modules/gs-reveal';
 import modal from '../libs/modules/modal';
 import scrollHeader from '../libs/modules/scroll-header';
 import burgerMenu from '../libs/modules/burger-menu';
+import quotes from '../libs/modules/quotes';
 import videoSlider from '../libs/modules/video';
 import partnersSlider from '../libs/modules/partners';
 import slimSelect from '../libs/modules/slim-select.js';
@@ -24,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     burgerMenu.init();
     scrollHeader.init();
+    quotes.init();
     gsReveal.init();
     modalTrue ? modal.init() : false;
     modalTrue ? slimSelect.init() : false;

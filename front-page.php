@@ -49,16 +49,34 @@ $dictation = get_field('dictation');
 	<!-- Dictation-about -->
 	<section class="dictation dictation--about js-reveal gs-reveal">
 		<div class="dictation__body container">
-			<h2 class="dictation__heading title title--big title--black title--w-bold left title--indent-small js-reveal gs-reveal a-reveal-left">
+			<h2
+				class="dictation__heading title title--big title--black title--w-bold left title--indent-small js-reveal gs-reveal a-reveal-left">
 				О программе
 			</h2>
-			<div class="dictation__text text text--medium text--dark text--w-regular left js-reveal gs-reveal a-reveal-right">
-				<?= $about; ?>
-			</div>
-			<div class="dictation__actions left">
-				<a href="javascript:;" class="dictation__button button button--primary" data-modal="#participant">
-					Присоединиться
-				</a>
+			<div class="dictation__inner" <?php if (!empty($quotes)) echo 'style="display: grid;"'; ?>>
+				<div class="dictation__info">
+					<div
+						class="dictation__text text text--medium text--dark text--w-regular left js-reveal gs-reveal a-reveal-right">
+						<?= $about; ?>
+					</div>
+					<div class="dictation__actions left">
+						<a href="javascript:;" class="dictation__button button button--primary" data-modal="#feedback">
+							Присоединиться
+						</a>
+					</div>
+				</div>
+				<?php if (!empty($quotes)) : ?>
+					<div class="dictation__opinion">
+						<img src="" alt="" class="dictation__photo js-reveal gs-reveal">
+						<div class="dictation__quote js-reveal gs-reveal a-reveal-opacity">
+							<p class="dictation__quote-text text text--upper-small text--dark text--w-regular"></p>
+						</div>
+						<div class="dictation__mentor js-reveal gs-reveal a-reveal-opacity">
+							<span class="dictation__mentor-name text text--normal text--red text--w-regular"></span>
+							<span class="dictation__mentor-position text text--normal text--black text--w-regular"></span>
+						</div>
+					</div>
+				<?php endif; ?>
 			</div>
 		</div>
 	</section>
@@ -522,34 +540,34 @@ $dictation = get_field('dictation');
 
 <!-- MSHU in numbers -->
 <section class="numbers js-reveal gs-reveal">
-    <div class="numbers__body container">
-        <h2
-            class="numbers__heading title title--big title--white title--w-bold center title--indent-large js-reveal gs-reveal a-reveal-left">
-            МШЮ в цифрах</h2>
-        <ul class="numbers__list">
-            <li class="numbers__item">
-                <span class="numbers__number text text--giant text--white text--w-bold js-reveal gs-reveal a-reveal-right">3</span>
-                <span
-                    class="numbers__unit text text--pre-pre-large text--white text--w-semibold center js-reveal gs-reveal a-reveal-right">Региона</span>
-            </li>
-            <li class="numbers__item">
-                <span class="numbers__number text text--giant text--white text--w-bold js-reveal gs-reveal a-reveal-right">4</span>
-                <span
-                    class="numbers__unit text text--pre-pre-large text--white text--w-semibold center js-reveal gs-reveal a-reveal-right">Ведущих
-                    ВУЗа страны</span>
-            </li>
-            <li class="numbers__item">
-                <span class="numbers__number text text--giant text--white text--w-bold js-reveal gs-reveal a-reveal-right">400+</span>
-                <span
-                    class="numbers__unit text text--pre-pre-large text--white text--w-semibold center js-reveal gs-reveal a-reveal-right">Участников</span>
-            </li>
-            <li class="numbers__item">
-                <span class="numbers__number text text--giant text--white text--w-bold js-reveal gs-reveal a-reveal-right">70+</span>
-                <span
-                    class="numbers__unit text text--pre-pre-large text--white text--w-semibold center js-reveal gs-reveal a-reveal-right">Наставников</span>
-            </li>
-        </ul>
-    </div>
+	<div class="numbers__body container">
+		<h2
+			class="numbers__heading title title--big title--white title--w-bold center title--indent-large js-reveal gs-reveal a-reveal-left">
+			МШЮ в цифрах</h2>
+		<ul class="numbers__list">
+			<li class="numbers__item">
+				<span class="numbers__number text text--giant text--white text--w-bold js-reveal gs-reveal a-reveal-right">3</span>
+				<span
+					class="numbers__unit text text--pre-pre-large text--white text--w-semibold center js-reveal gs-reveal a-reveal-right">Региона</span>
+			</li>
+			<li class="numbers__item">
+				<span class="numbers__number text text--giant text--white text--w-bold js-reveal gs-reveal a-reveal-right">4</span>
+				<span
+					class="numbers__unit text text--pre-pre-large text--white text--w-semibold center js-reveal gs-reveal a-reveal-right">Ведущих
+					ВУЗа страны</span>
+			</li>
+			<li class="numbers__item">
+				<span class="numbers__number text text--giant text--white text--w-bold js-reveal gs-reveal a-reveal-right">400+</span>
+				<span
+					class="numbers__unit text text--pre-pre-large text--white text--w-semibold center js-reveal gs-reveal a-reveal-right">Участников</span>
+			</li>
+			<li class="numbers__item">
+				<span class="numbers__number text text--giant text--white text--w-bold js-reveal gs-reveal a-reveal-right">70+</span>
+				<span
+					class="numbers__unit text text--pre-pre-large text--white text--w-semibold center js-reveal gs-reveal a-reveal-right">Наставников</span>
+			</li>
+		</ul>
+	</div>
 </section>
 <!-- ./ MSHU in numbers -->
 
@@ -594,7 +612,7 @@ $dictation = get_field('dictation');
 			<?php if ($main_list->have_posts()) :
 				while ($main_list->have_posts()) : $main_list->the_post(); ?>
 
-					<li class="news__item" style="background-image: url('<?=get_the_post_thumbnail_url();?>">
+					<li class="news__item" style="background-image: url('<?= get_the_post_thumbnail_url(); ?>">
 						<a class="news__link" href="<?php the_permalink(); ?>">
 							<h3 class="news__subheading title title--upper-medium title--white title--w-bold"><?php the_title(); ?></h3>
 						</a>
@@ -606,7 +624,7 @@ $dictation = get_field('dictation');
 
 			<li class="news__item news__item--all-news">
 				<span class="text text--pre-large text--white text--w-bold">Все новости</span>
-				<a class="news__link news__link--all-news" href="<?= get_permalink( get_option( 'page_for_posts', true ) ); ?>" aria-label="Посмотреть все новости">
+				<a class="news__link news__link--all-news" href="<?= get_permalink(get_option('page_for_posts', true)); ?>" aria-label="Посмотреть все новости">
 					<svg class="news__icon" width="50" height="50" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 						<path
 							d="M25 .625A24.375 24.375 0 1 0 49.375 25 24.422 24.422 0 0 0 25 .625Zm11.11 25.102a2.037 2.037 0 0 1-.422.609l-7.946 7.945a1.781 1.781 0 0 1-1.312.54 1.828 1.828 0 0 1-1.336-.54 1.875 1.875 0 0 1 0-2.648l4.758-4.758H15.625a1.875 1.875 0 1 1 0-3.75h14.227l-4.758-4.758a1.875 1.875 0 0 1 2.648-2.648l7.945 7.945c.177.176.32.382.422.61.188.466.188.986 0 1.453Z"

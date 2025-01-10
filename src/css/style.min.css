@@ -563,6 +563,24 @@ img {
   }
 }
 
+.text--upper-small {
+  font-size: calc(12px + 2 * ((100vw - 1024px) / 416));
+}
+
+@media screen and (min-width: 1440px){
+
+  .text--upper-small{
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1024px){
+
+  .text--upper-small{
+    font-size: 12px;
+  }
+}
+
 .text--small {
   font-size: 12px;
 }
@@ -2027,11 +2045,21 @@ img {
   padding: 50px 0 50px;
 }
 
+.dictation__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+
 .dictation--about .dictation__actions {
+  display: flex;
   margin-top: 35px;
 }
 
 .dictation--info .dictation__actions {
+  display: flex;
+  justify-content: center;
   margin-top: 60px;
 }
 
@@ -2088,10 +2116,7 @@ img {
   padding: 0 100px 0 20px;
 }
 
-.dictation__mentor-name {
-  display: block;
-}
-
+.dictation__mentor-name,
 .dictation__mentor-postition {
   display: block;
 }
@@ -3544,7 +3569,6 @@ img {
   }
 
   .dictation__inner {
-    display: grid;
     grid-template-columns: repeat(2, 1fr);
     -moz-column-gap: 56px;
          column-gap: 56px;

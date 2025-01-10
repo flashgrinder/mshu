@@ -65,15 +65,16 @@ add_action('after_setup_theme', function () {
 });
 
 
-/* Добавление городов для слайдера наставников в глобальную переменную */
+/* Добавление городов для слайдера наставников и цитат менторов для блока цитат в глобальные переменные */
 
-function add_acf_cities_to_js()
+function add_acf_data_to_js()
 {
-	// Пустой массив для хранения городов
-	global $cities;
+	// Пустой объект для хранения цитат
+	global $cities, $quotes;
 	$cities = array();
+	$quotes = array();
 
-	// Проверяем, есть ли данные в повторителе ACF
+	// Получение данных о городах (из повторителя 'mentors')
 	if (have_rows('mentors')) {
 		while (have_rows('mentors')) {
 			the_row();
@@ -88,12 +89,36 @@ function add_acf_cities_to_js()
 		}
 	}
 
-	// Генерация JavaScript-кода с массивом городов
+	// Получение данных о цитатах (из повторителя 'opinion')
+	if (have_rows('opinion')) {
+		while (have_rows('opinion')) {
+			the_row();
+
+			$photo_url = get_sub_field('opinion_photo')['url'];
+			$photo_alt = get_sub_field('opinion_photo')['alt'];
+			$quote = get_sub_field('opinion_quote');
+			$name = get_sub_field('opinion_name');
+			$position = get_sub_field('opinion_position');
+
+			// Если значение существует, добавить его в массив
+			if ($photo_url && $quote && $name && $position) {
+				$opinion = new stdClass();
+				$opinion->photo_url = $photo_url;
+				$opinion->photo_alt = $photo_alt;
+				$opinion->quote = $quote;
+				$opinion->name = $name;
+				$opinion->position = $position;
+
+				$quotes[] = $opinion;
+			}
+		}
+	}
+
+	// Генерация JavaScript-кода с массивом городов и цитат
 	$inline_script = 'var cities = ' . json_encode($cities) . ';';
+	$inline_script .= 'var quotes = ' . json_encode($quotes) . ';';
 
 	// Добавляем JavaScript-код перед подключением основного скрипта
 	wp_add_inline_script('scripts', $inline_script, 'before');
 }
-add_action('wp_enqueue_scripts', 'add_acf_cities_to_js');
-
-
+add_action('wp_enqueue_scripts', 'add_acf_data_to_js');
