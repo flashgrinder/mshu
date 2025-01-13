@@ -67,13 +67,11 @@ $dictation = get_field('dictation');
 				</div>
 				<?php if (!empty($quotes)) : ?>
 					<div class="dictation__opinion">
-						<a href="#mentors" class="dictation__link">
-							<img src="" alt="" class="dictation__photo js-reveal gs-reveal">
-						</a>
-						<div class="dictation__quote js-reveal gs-reveal a-reveal-opacity">
+						<img src="" alt="" class="dictation__photo">
+						<div class="dictation__quote">
 							<p class="dictation__quote-text text text--upper-small text--dark text--w-regular"></p>
 						</div>
-						<div class="dictation__mentor js-reveal gs-reveal a-reveal-opacity">
+						<div class="dictation__mentor">
 							<span class="dictation__mentor-name text text--normal text--red text--w-regular"></span>
 							<span class="dictation__mentor-position text text--normal text--black text--w-regular"></span>
 						</div>

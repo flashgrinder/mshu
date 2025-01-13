@@ -2087,6 +2087,12 @@ img {
      object-position: center bottom;
   mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%);
   -webkit-mask-image: linear-gradient(to bottom, rgb(0, 0, 0) 95%, rgba(0, 0, 0, 0) 100%);
+  opacity: 0;
+  transition: opacity 1s ease-out 0.5s;
+}
+
+.dictation__photo--visible {
+  opacity: 1;
 }
 
 .dictation__quote {
@@ -2099,6 +2105,12 @@ img {
   border-bottom-left-radius: 10px;
   background-color: var(--color-gray);
   box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 1s ease-out 1.5s;
+}
+
+.dictation__quote--visible {
+  opacity: 1;
 }
 
 .dictation__quote::before {
@@ -2114,6 +2126,12 @@ img {
 
 .dictation__mentor {
   padding: 0 100px 0 20px;
+  opacity: 0;
+  transition: opacity 1s ease-out 1.5s;
+}
+
+.dictation__mentor--visible {
+  opacity: 1;
 }
 
 .dictation__mentor-name,

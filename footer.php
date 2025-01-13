@@ -1,6 +1,6 @@
 </main>
 <!-- /. MAIN -->
-<footer class="footer">
+<footer class="footer" id="footer">
 	<div class="footer__body container">
 		<div class="footer__inner">
 			<div class="footer__columns-1">
