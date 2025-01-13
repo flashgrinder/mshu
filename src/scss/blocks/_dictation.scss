@@ -1,3 +1,7 @@
+.dictation {
+  overflow: hidden;
+}
+
 .dictation--member {
   padding: 75px 0 50px;
   @include mobile(padding, 60px 0 30px);

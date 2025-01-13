@@ -1403,6 +1403,7 @@ img {
 .combine {
   position: relative;
   padding: 30px 0 75px;
+  overflow: hidden;
 }
 
 .combine::before {
@@ -1615,6 +1616,7 @@ img {
 
 .blocks-team-wrapper {
   background: linear-gradient(248.14deg, #A42E32 14.32%, #E52A31 85.68%), linear-gradient(0deg, #d9d9d9, #d9d9d9);
+  overflow: hidden;
 }
 
 .main-blocks-wrapper,
@@ -2032,6 +2034,10 @@ img {
 }
 
 /* Dictation */
+
+.dictation {
+  overflow: hidden;
+}
 
 .dictation--member {
   padding: 75px 0 50px;
