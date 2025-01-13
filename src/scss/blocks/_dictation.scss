@@ -1,6 +1,6 @@
 .dictation--member {
-  padding: 100px 0 100px;
-  @include mobile(padding, 60px 0);
+  padding: 75px 0 50px;
+  @include mobile(padding, 60px 0 30px);
 }
 
 .dictation--about {
@@ -9,7 +9,8 @@
 }
 
 .dictation--info {
-  padding: 50px 0 50px;
+  padding: 100px 0 50px;
+  @include mobile(padding, 60px 0 30px);
 }
 
 .dictation__info {

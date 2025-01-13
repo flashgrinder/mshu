@@ -1,6 +1,7 @@
 .party {
   position: relative;
   padding: 100px 0;
+  overflow: hidden;
   @include mobileXS(padding, 60px 0);
 }
 

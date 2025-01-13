@@ -1,5 +1,5 @@
 .partners--slider {
-  padding: 100px 0 30px;
+  padding: 50px 0 30px;
   @include mobile(padding, 30px 0);
 }
 
@@ -10,8 +10,8 @@
 }
 
 .partners--info {
-  padding: 30px 0 50px;
-  @include mobile(padding, 30px 0);
+  padding: 30px 0 100px;
+  @include mobile(padding, 30px 0 60px);
 }
 
 .partners__logo {

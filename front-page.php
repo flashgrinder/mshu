@@ -495,7 +495,7 @@ $dictation = get_field('dictation');
 <!-- Partners-slider -->
 <section class="partners partners--slider js-reveal gs-reveal">
 	<div class="partners__body container">
-		<h2 class="partners__heading title title--big title--black title--w-bold center title--indent-large js-reveal gs-reveal a-reveal-left">
+		<h2 class="partners__heading title title--big title--red-gradient title--w-bold center title--indent-large js-reveal gs-reveal a-reveal-left">
 			Партнёры
 		</h2>
 	</div>
@@ -521,7 +521,7 @@ $dictation = get_field('dictation');
 <!-- Partners-info -->
 <section class="partners partners--info js-reveal gs-reveal">
 	<div class="partners__body container">
-		<h2 class="partners__heading title title--big title--black title--w-bold center title--indent-large js-reveal gs-reveal a-reveal-left">
+		<h2 class="partners__heading title title--big title--red-gradient title--w-bold center title--indent-large js-reveal gs-reveal a-reveal-left">
 			Информационные партнёры
 		</h2>
 		<div class="partners__items">
@@ -576,7 +576,7 @@ $dictation = get_field('dictation');
 <!-- Dictation-info -->
 <section class="dictation dictation--info js-reveal gs-reveal">
 	<div class="dictation__body container">
-		<h2 class="dictation__heading title title--big title--black title--w-bold center title--indent-small js-reveal gs-reveal a-reveal-left">
+		<h2 class="dictation__heading title title--big title--red-gradient title--w-bold center title--indent-small js-reveal gs-reveal a-reveal-left">
 			Правовой диктант
 		</h2>
 		<div
@@ -595,7 +595,7 @@ $dictation = get_field('dictation');
 <!-- News -->
 <section class="news js-reveal gs-reveal">
 	<div class="news__body container">
-		<h2 class="news__heading title title--big title--black title--w-bold center title--indent-large js-reveal gs-reveal a-reveal-left">
+		<h2 class="news__heading title title--big title--red-gradient title--w-bold center title--indent-large js-reveal gs-reveal a-reveal-left">
 			Новости
 		</h2>
 

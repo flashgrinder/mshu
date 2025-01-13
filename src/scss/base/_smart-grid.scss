@@ -1,5 +1,5 @@
 $columns: 12;
-$atom: (100% / $columns);
+$atom: calc(100% / $columns);
 
 $break_large: 1200px;
 $break_tablet: 1024px;
@@ -16,13 +16,13 @@ $offset_mobile: 15px;
 $offset_mobileXS: $offset_mobile;
 $offset_mobileXSS: $offset_mobile;
 
-$offset_one_side: ($offset / 2);
-$offset_large_one_side: ($offset_large / 2);
-$offset_tablet_one_side: ($offset_tablet / 2);
-$offset_tabletSM_one_side: ($offset_tabletSM / 2);
-$offset_mobile_one_side: ($offset_mobile / 2);
-$offset_mobileXS_one_side: ($offset_mobileXS / 2);
-$offset_mobileXSS_one_side: ($offset_mobileXSS / 2);
+$offset_one_side: calc($offset / 2);
+$offset_large_one_side: calc($offset_large / 2);
+$offset_tablet_one_side: calc($offset_tablet / 2);
+$offset_tabletSM_one_side: calc($offset_tabletSM / 2);
+$offset_mobile_one_side: calc($offset_mobile / 2);
+$offset_mobileXS_one_side: calc($offset_mobileXS / 2);
+$offset_mobileXSS_one_side: calc($offset_mobileXSS / 2);
 
 $fields: 20px;
 $fields_mobile: 15px;
