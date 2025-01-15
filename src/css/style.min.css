@@ -1294,7 +1294,6 @@ img {
   margin: 0 auto;
   flex: 1 0 auto;
   padding-top: 149px;
-  overflow-x: hidden;
 }
 
 /* Buttons */
@@ -1528,6 +1527,7 @@ img {
   background-repeat: no-repeat;
   background-color: rgba(252, 252, 252, 0.9);
   background-size: cover;
+  overflow-x: hidden;
 }
 
 .tasks__list {
@@ -1615,15 +1615,16 @@ img {
 
 /* Blocks-team-wrapper */
 
-.blocks-team-wrapper {
-  background: linear-gradient(248.14deg, #A42E32 14.32%, #E52A31 85.68%), linear-gradient(0deg, #d9d9d9, #d9d9d9);
-  overflow: hidden;
-}
-
 .main-blocks-wrapper,
 .camp-blocks-wrapper {
   background: url("../img/main-pattern.svg") no-repeat fixed;
   background-size: cover;
+  overflow: hidden;
+}
+
+.blocks-team-wrapper {
+  background: linear-gradient(248.14deg, #A42E32 14.32%, #E52A31 85.68%), linear-gradient(0deg, #d9d9d9, #d9d9d9);
+  overflow: hidden;
 }
 
 /* General */
@@ -1878,6 +1879,7 @@ img {
 
 .news {
   padding: 50px 0 100px;
+  overflow: hidden;
 }
 
 .news__list {
@@ -2008,6 +2010,10 @@ img {
 }
 
 /* Partners */
+
+.partners {
+  overflow: hidden;
+}
 
 .partners--slider {
   padding: 50px 0 30px;
@@ -3243,6 +3249,7 @@ img {
   position: relative;
   padding: 60px 0;
   background: var(--gradient-bg);
+  overflow: hidden;
 }
 
 .numbers::before {

@@ -57,7 +57,6 @@ function init() {
     slider.addEventListener('resize', debouncedResetVideoSlider);
 
     // window.addEventListener('resize', resetVideoSlider);
-
 }
 
 export default { init }

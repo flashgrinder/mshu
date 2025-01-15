@@ -2,6 +2,7 @@
     position: relative;
     padding: 60px 0;
     background: var(--gradient-bg);
+    overflow: hidden;
 }
 
 .numbers::before {
