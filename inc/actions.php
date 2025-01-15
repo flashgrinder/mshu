@@ -94,20 +94,21 @@ function add_acf_data_to_js()
 		while (have_rows('opinion')) {
 			the_row();
 
-			$photo_url = get_sub_field('opinion_photo')['url'];
-			$photo_alt = get_sub_field('opinion_photo')['alt'];
+			$photo_url = get_sub_field('opinion_photo');
 			$quote = get_sub_field('opinion_quote');
 			$name = get_sub_field('opinion_name');
 			$position = get_sub_field('opinion_position');
+			$company = get_sub_field('opinion_company');
 
 			// Если значение существует, добавить его в массив
 			if ($photo_url && $quote && $name && $position) {
 				$opinion = new stdClass();
 				$opinion->photo_url = $photo_url;
-				$opinion->photo_alt = $photo_alt;
+				$opinion->photo_alt = $name;
 				$opinion->quote = $quote;
 				$opinion->name = $name;
 				$opinion->position = $position;
+				$opinion->company = $company;
 
 				$quotes[] = $opinion;
 			}

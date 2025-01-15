@@ -74,6 +74,7 @@ $dictation = get_field('dictation');
 						<div class="dictation__mentor">
 							<span class="dictation__mentor-name text text--normal text--red text--w-regular"></span>
 							<span class="dictation__mentor-position text text--normal text--black text--w-regular"></span>
+							<span class="dictation__mentor-company text text--normal text--black text--w-regular"></span>
 						</div>
 					</div>
 				<?php endif; ?>

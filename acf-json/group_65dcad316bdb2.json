@@ -94,7 +94,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array",
+                    "return_format": "url",
                     "library": "all",
                     "min_width": "",
                     "min_height": "",
@@ -112,7 +112,7 @@
                     "label": "Цитата наставника",
                     "name": "opinion_quote",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "textarea",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -123,10 +123,10 @@
                     },
                     "default_value": "",
                     "maxlength": "",
-                    "allow_in_bindings": 0,
+                    "allow_in_bindings": 1,
+                    "rows": "",
                     "placeholder": "",
-                    "prepend": "",
-                    "append": "",
+                    "new_lines": "",
                     "parent_repeater": "field_677fb316be419"
                 },
                 {
@@ -171,6 +171,28 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
+                    "parent_repeater": "field_677fb316be419"
+                },
+                {
+                    "key": "field_67876d9adaa7d",
+                    "label": "Компания наставника",
+                    "name": "opinion_company",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 1,
+                    "rows": "",
+                    "placeholder": "",
+                    "new_lines": "br",
                     "parent_repeater": "field_677fb316be419"
                 }
             ]
@@ -923,5 +945,5 @@
     "active": true,
     "description": "Главная страница",
     "show_in_rest": 0,
-    "modified": 1736427745
+    "modified": 1736938033
 }

@@ -6,6 +6,7 @@ function init() {
         const quote = document.querySelector(".dictation__quote-text");
         const name = document.querySelector(".dictation__mentor-name");
         const position = document.querySelector(".dictation__mentor-position");
+        const company = document.querySelector(".dictation__mentor-company");
 
         function getRandomInt(min, max) {
             return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -20,6 +21,7 @@ function init() {
         quote.textContent = "«" + quotes[opinionNumber].quote + "».";
         name.textContent = quotes[opinionNumber].name;
         position.textContent = quotes[opinionNumber].position;
+        company.innerHTML = quotes[opinionNumber].company;
 
 
         // Добавление классов для анимации

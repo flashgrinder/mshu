@@ -70,7 +70,7 @@
 
 .dictation__photo {
   position: absolute;
-  right: 0;
+  right: -100px;
   bottom: 0;
   width: 306px;
   height: 348px;
@@ -79,10 +79,11 @@
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
   -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0) 100%);
   opacity: 0;
-  transition: opacity 1s ease-out 0.5s;
+  transition: all 1s ease-out 0.5s;
 
   &--visible {
     opacity: 1;
+    right: 0;
   }
 }
 
@@ -126,6 +127,7 @@
 }
 
 .dictation__mentor-name,
-.dictation__mentor-postition {
+.dictation__mentor-postition,
+.dictation__mentor-company {
   display: block;
 }
