@@ -2394,10 +2394,6 @@ img {
   transition: filter 0.15s ease-in-out;
 }
 
-.news-list__post:hover .news-list__pic {
-  filter: blur(10px) grayscale(1);
-}
-
 .news-list__plunk {
   position: absolute;
   left: 0;

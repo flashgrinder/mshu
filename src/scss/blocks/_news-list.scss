@@ -46,9 +46,9 @@
   transition: filter .150s ease-in-out;
 }
 
-.news-list__post:hover .news-list__pic {
-  filter: blur(10px) grayscale(1);
-}
+// .news-list__post:hover .news-list__pic {
+//   filter: blur(10px) grayscale(1);
+// }
 
 .news-list__plunk {
   position: absolute;
