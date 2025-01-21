@@ -3284,6 +3284,52 @@ img {
   align-items: center;
 }
 
+/* Cookie */
+
+.cookie-container {
+  position: fixed;
+  z-index: 1000;
+  bottom: 20px;
+  left: 50%;
+  border-radius: 20px;
+  transform: translateX(-50%);
+  -webkit-backdrop-filter: blur(12.5px);
+          backdrop-filter: blur(12.5px);
+}
+
+.cookie-container.hidden {
+  display: none !important;
+}
+
+.cookie-popup {
+  width: 320px;
+  border-radius: 20px;
+  opacity: 0.8;
+  background: #ECECEC;
+}
+
+.cookie-content {
+  padding: 20px 35px;
+  text-align: center;
+}
+
+.cookie-text-1 {
+  margin-bottom: 10px;
+}
+
+.cookie-text-2 {
+  margin-bottom: 20px;
+}
+
+.cookie-accept-button {
+  width: 200px;
+  height: 40px;
+  padding: 5px 15px;
+  background: var(--gradient-btn);
+  border: none;
+  cursor: pointer;
+}
+
 /* MEDIA QUERIES */
 
 @media screen and (min-width: 577px) {
@@ -3321,6 +3367,25 @@ img {
     grid-template-columns: auto 290px;
     gap: 50px;
     justify-content: space-between;
+  }
+
+  .cookie-container {
+    left: initial;
+    right: 20px;
+    transform: translateX(0);
+  }
+
+  .cookie-popup {
+    width: 400px;
+  }
+
+  .cookie-content {
+    padding: 35px 50px;
+  }
+
+  .cookie-accept-button {
+    width: 300px;
+    height: 50px;
   }
 }
 
@@ -3656,6 +3721,19 @@ img {
 
   .mentors__quote {
     margin-left: 450px;
+  }
+
+  .cookie-popup {
+    width: 500px;
+  }
+
+  .cookie-content {
+    padding: 50px 65px;
+  }
+
+  .cookie-accept-button {
+    width: 370px;
+    height: 55px;
   }
 }
 

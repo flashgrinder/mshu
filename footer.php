@@ -205,6 +205,18 @@
 </div>
 <!-- /. Success -->
 
+<!-- Cookie -->
+<div class="cookie-container hidden">
+    <div class="cookie-popup">
+        <div class="cookie-content">
+            <p class="cookie-text-1 text text--medium text--black text--w-semibold">Мы используем cookie для улучшения работы сайта</p>
+            <p class="cookie-text-2 text text--normal text--black text--w-regular">Оставаясь с нами, вы соглашаетесь на использование файлов cookie</p>
+            <button class="cookie-accept-button text text--normal text--white text--w-regular">Ок</button>
+        </div>
+    </div>
+</div>
+<!-- /. Cookie -->
+
 <?php wp_footer(); ?>
 </body>
 

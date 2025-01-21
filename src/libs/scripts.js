@@ -9,6 +9,7 @@ import partnersSlider from '../libs/modules/partners';
 import slimSelect from '../libs/modules/slim-select.js';
 import mentors from '../libs/modules/mentors';
 import registrationSlider from '../libs/modules/registration.js';
+import cookie from '../libs/modules/cookie.js';
 
 document.addEventListener('DOMContentLoaded', function(e) {
 
@@ -33,4 +34,5 @@ document.addEventListener('DOMContentLoaded', function(e) {
     mentorsSliderTrue ? mentors.init() : false;
     videoSliderTrue ? videoSlider.init() : false;
     registrationSliderTrue ? registrationSlider.init() : false;
+    cookie.init();
 });
