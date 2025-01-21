@@ -3295,6 +3295,7 @@ img {
   transform: translateX(-50%);
   -webkit-backdrop-filter: blur(12.5px);
           backdrop-filter: blur(12.5px);
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
 }
 
 .cookie-container.hidden {
@@ -3305,7 +3306,7 @@ img {
   width: 320px;
   border-radius: 20px;
   opacity: 0.8;
-  background: #ECECEC;
+  background: var(--color-white);
 }
 
 .cookie-content {
