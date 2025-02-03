@@ -37,11 +37,20 @@ $dictation = get_field('dictation');
 
 		</div>
 		<div class="main-screen__wrap-logos container">
-			<div class="main-screen__logos">
-				<img src="<?= STANDART_DIR; ?>/img/main-screen/logo-1.svg" width="89" height="33" alt="Логотип уполномоченного по защите прав предпринимателей в г.Москве" class="main-screen__img">
-				<img src="<?= STANDART_DIR; ?>/img/main-screen/logo-2.svg" width="125" height="33" alt="Логотип Института правовой грамотности и поддержки предпринимательства" class="main-screen__img">
-				<img src="<?= STANDART_DIR; ?>/img/main-screen/logo-3.svg" width="90" height="33" alt="Логотип Ассоциации юристов России" class="main-screen__img">
-			</div>
+			<ul class="main-screen__logos">
+                <li class="main-screen__logo">
+                    <div class="main-screen__capture text text--medium text--dark text--w-regular js-reveal gs-reveal a-reveal-right">При поддержке:</div>
+                    <img src="<?= STANDART_DIR; ?>/img/main-screen/logo-1.svg" width="89" height="33" alt="Логотип уполномоченного по защите прав предпринимателей в г.Москве" class="main-screen__img">
+                </li>
+                <li class="main-screen__logo">
+                    <div class="main-screen__capture text text--medium text--dark text--w-regular js-reveal gs-reveal a-reveal-right">При поддержке:</div>
+                    <img src="<?= STANDART_DIR; ?>/img/main-screen/logo-2.svg" width="125" height="33" alt="Логотип Института правовой грамотности и поддержки предпринимательства" class="main-screen__img">
+                </li>
+                <li class="main-screen__logo">
+                    <div class="main-screen__capture text text--medium text--dark text--w-regular js-reveal gs-reveal a-reveal-right">Оператор проекта:</div>
+                    <img src="<?= STANDART_DIR; ?>/img/main-screen/logo-3.svg" width="90" height="33" alt="Логотип Ассоциации юристов России" class="main-screen__img">
+                </li>
+            </ul>
 		</div>
 	</section>
 	<!-- ./ Main-screen -->

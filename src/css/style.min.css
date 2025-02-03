@@ -1385,10 +1385,16 @@ img {
 }
 
 .main-screen__logos {
-  margin-top: 60px;
+  list-style: none;
+  padding: 0;
+  margin: 60px 0 0;
   display: flex;
   gap: 72px;
   justify-content: space-around;
+}
+
+.main-screen__capture {
+  margin-bottom: 30px;
 }
 
 .main-screen__img {
@@ -3934,6 +3940,10 @@ img {
 
   .main-screen__logos {
     gap: 10px;
+  }
+
+  .main-screen__capture {
+    display: none;
   }
 
   .main-screen__img {
