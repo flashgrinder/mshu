@@ -1,6 +1,6 @@
 {
     "key": "group_67a1f223d50e5",
-    "title": "Команда",
+    "title": "Настройки страницы",
     "fields": [
         {
             "key": "field_67a1fc502bd5a",
@@ -171,7 +171,7 @@
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
-    "description": "",
+    "description": "Команда",
     "show_in_rest": 0,
-    "modified": 1738669277
+    "modified": 1738672668
 }
