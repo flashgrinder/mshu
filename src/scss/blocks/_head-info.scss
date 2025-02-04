@@ -1,15 +1,12 @@
 .head-info {
+  position: relative;
   padding: 35px 0;
+  background: var(--gradient-bg);
   overflow: hidden;
 
   @include from(769px) {
     padding: 45px 0 50px;
   }
-}
-
-.head-info {
-  position: relative;
-  background: var(--gradient-bg);
 }
 
 .head-info::before {
@@ -88,7 +85,7 @@
 .head-info__heading-decor {
   text-transform: uppercase;
 
-  @include from(1600px) {
+  @include from(1201px) {
     display: inline-block;
     margin-right: 50px;
     white-space: nowrap;
@@ -96,7 +93,7 @@
 }
 
 .head-info__heading-decor-absolute {
-  @include from(1600px) {
+  @include from(1201px) {
     position: absolute;
     right: calc(100%);
     top: 0;

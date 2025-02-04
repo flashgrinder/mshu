@@ -2175,13 +2175,10 @@ img {
 /* Head-info */
 
 .head-info {
-  padding: 35px 0;
-  overflow: hidden;
-}
-
-.head-info {
   position: relative;
+  padding: 35px 0;
   background: var(--gradient-bg);
+  overflow: hidden;
 }
 
 .head-info::before {
@@ -2310,6 +2307,7 @@ img {
 .team__img {
   display: block;
   width: 100%;
+  aspect-ratio: 1/1;
 }
 
 .team__name {
@@ -2345,17 +2343,40 @@ img {
 
 .team__side--front {
   transform: rotateY(0deg);
-  height: 100%;
   overflow: hidden;
   border-radius: 20px;
+}
+
+.team--mshu .team__side--front {
+  margin-bottom: 30px;
 }
 
 .team__item:hover .team__side--front {
   transform: rotateY(180deg);
 }
 
+.team--mshu .team__item:hover .team__side--front {
+  transform: rotateY(0);
+}
+
 .team__item:hover .team__side--back {
   transform: rotateY(0deg);
+}
+
+.team__position {
+  position: relative;
+  padding-left: 20px;
+}
+
+.team__position::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--color-black);
 }
 
 /* News-list */
@@ -3772,9 +3793,7 @@ img {
     margin-left: calc((100vw - 1200px) / 2 + 20px);
     white-space: nowrap;
   }
-}
 
-@media screen and (min-width: 1600px) {
   .head-info__heading,
   .head-info__heading-decor {
     display: inline-block;
@@ -3790,7 +3809,9 @@ img {
     height: 100%;
     text-align: end;
   }
+}
 
+@media screen and (min-width: 1600px) {
   .camp-stages__list {
     -moz-column-gap: 100px;
          column-gap: 100px;
