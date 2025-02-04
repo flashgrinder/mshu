@@ -170,8 +170,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": true,
+    "active": false,
     "description": "Команда",
     "show_in_rest": 0,
-    "modified": 1738670765
+    "modified": 1738671438
 }
