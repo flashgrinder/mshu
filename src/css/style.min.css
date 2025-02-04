@@ -3960,15 +3960,16 @@ img {
   }
 
   .main-screen__logos {
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 20px;
   }
 
   .main-screen__capture {
-    display: none;
+    margin-bottom: 15px;
   }
 
   .main-screen__img {
-    height: 35px;
+    height: 48px;
   }
 
   .combine__name-svg {

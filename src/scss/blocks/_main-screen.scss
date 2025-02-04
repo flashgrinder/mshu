@@ -101,7 +101,8 @@
   justify-content: space-around;
 
   @include mobile-block {
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 20px;
   }
 }
 
@@ -109,7 +110,8 @@
   margin-bottom: 30px;
 
   @include mobile-block {
-    display: none;
+    // display: none;
+    margin-bottom: 15px;
   }
 }
 
@@ -120,6 +122,6 @@
   height: 65px;
 
   @include mobile-block {
-    height: 35px;
+    height: 48px;
   }
 }

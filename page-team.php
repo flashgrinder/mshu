@@ -1,10 +1,6 @@
 <?php /* Template Name: Команда */ ?>
 <?php get_header(); ?>
 
-<?php
-$short_text = get_field('short_text');
-?>
-
 <!-- Head-info -->
 <section class="head-info head-info--camp js-reveal gs-reveal">
     <div class="head-info__body">
@@ -56,13 +52,18 @@ $short_text = get_field('short_text');
 <!-- ./ Team -->
 
 <!-- Short-text -->
+<?php
+$short_text = get_field('short_text');
+if (!empty($short_text)) :
+?>
 <div class="short-text js-reveal gs-reveal">
 	<div class="short-text__body container">
 		<div class="short-text__description text text--medium text--white text--w-regular">
-			<?= $short_text; ?>
+			<?php echo wp_kses_post($short_text); ?>
 		</div>
 	</div>
 </div>
+<?php endif; ?>
 <!-- ./Short-text -->
 
 <?php get_footer(); ?>
