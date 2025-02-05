@@ -66,4 +66,21 @@ if (!empty($short_text)) :
 <?php endif; ?>
 <!-- ./Short-text -->
 
+<!-- Map -->
+<div class="map container">
+    <div class="map__heading title title--big title--black title--w-bold left title--indent-small js-reveal gs-reveal a-reveal-left">4 региона страны:</div>
+    <picture>
+        <source media="(min-width: 1201px)" srcset="<?= STANDART_DIR; ?>/img/team/desktop-map.png">
+        <img class="map__pic" src="<?= STANDART_DIR; ?>/img/team/mobile-map.png"
+            alt="Карта России с обозначением областей присутствия МШЮ">
+    </picture>
+    <ul class="map__cities">
+        <li class="map__city text text--medium text--dark text--w-bold js-reveal gs-reveal a-reveal-right">Саратов</li>
+        <li class="map__city text text--medium text--dark text--w-bold js-reveal gs-reveal a-reveal-right">Москва и Московская область</li>
+        <li class="map__city text text--medium text--dark text--w-bold js-reveal gs-reveal a-reveal-right">Казань</li>
+        <li class="map__city text text--medium text--dark text--w-bold js-reveal gs-reveal a-reveal-right">Уфа</li>
+    </ul>
+</div>
+<!-- ./Map -->
+
 <?php get_footer(); ?>
