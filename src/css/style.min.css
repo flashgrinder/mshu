@@ -3363,11 +3363,11 @@ img {
 .map {
   padding-top: 60px;
   padding-bottom: 60px;
-  overflow: hidden;
 }
 
-.map__heading {
-  display: none;
+.map__body {
+  position: relative;
+  overflow: hidden;
 }
 
 .map__pic {
@@ -3378,27 +3378,51 @@ img {
      object-fit: contain;
 }
 
-.map__cities {
-  display: none;
+.map__pic [data-tooltip]:hover {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
-.map__city {
-  position: relative;
-  padding-left: 43px;
-}
-
-.map__city:not(:last-child) {
-  margin-bottom: 23px;
-}
-
-.map__city::before {
-  content: "";
+.map__buttons {
   position: absolute;
-  top: -4px;
-  left: 5px;
-  width: 22px;
-  height: 28px;
-  background: url("../img/team/marker.svg") no-repeat center;
+  top: calc(50% - 40px);
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid var(--color-gray);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.map__button {
+  width: 40px;
+  height: 40px;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+}
+
+.map__button--disabled {
+  color: var(--color-gray);
+}
+
+.map__button--zoom-in {
+  border-bottom: 1px solid var(--color-gray);
+}
+
+.map__tooltip {
+  position: absolute;
+  display: none;
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: var(--color-white);
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 /* MEDIA QUERIES */
@@ -3873,19 +3897,8 @@ img {
 }
 
 @media screen and (max-width: 1200px) {
-  .map__heading {
-    display: block;
-  }
-
-  .map__pic {
+  .map__body {
     margin-bottom: 48px;
-  }
-
-  .map__cities {
-    display: block;
-    list-style: none;
-    padding: 0;
-    margin: 0;
   }
 }
 

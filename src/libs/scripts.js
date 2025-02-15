@@ -10,6 +10,7 @@ import slimSelect from '../libs/modules/slim-select.js';
 import mentors from '../libs/modules/mentors';
 import registrationSlider from '../libs/modules/registration.js';
 import cookie from '../libs/modules/cookie.js';
+import map from '../libs/modules/map.js';
 
 document.addEventListener('DOMContentLoaded', function(e) {
 
@@ -23,6 +24,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     const mentorsSliderTrue = document.querySelector('.js-mentors-init');
     const videoSliderTrue = document.querySelector('.js-video-slider');
     const registrationSliderTrue = document.querySelector('.js-registration-slider');
+    const mapBlock = document.querySelector('.map');
 
     burgerMenu.init();
     scrollHeader.init();
@@ -35,4 +37,5 @@ document.addEventListener('DOMContentLoaded', function(e) {
     videoSliderTrue ? videoSlider.init() : false;
     registrationSliderTrue ? registrationSlider.init() : false;
     cookie.init();
+    mapBlock ? map.init() : false;
 });
