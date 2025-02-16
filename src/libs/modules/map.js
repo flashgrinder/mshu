@@ -99,7 +99,9 @@ function init() {
 
     // Перетаскивание с пальцами (для сенсорных экранов)
     frame.addEventListener('touchstart', function (e) {
-        e.preventDefault();
+        if (e.target !== frame && e.target !== map) {
+            e.preventDefault();
+        }
         // Обрабатываем только первое касание, если их больше одного
         if (e.touches.length === 1) {
             isDragging = true;
@@ -117,7 +119,9 @@ function init() {
 
     // Функция для перемещения элемента с помощью пальцев
     function onTouchMove(e) {
-        e.preventDefault();
+        if (e.target !== frame && e.target !== map) {
+            e.preventDefault();
+        }
         if (isDragging && e.touches.length === 1 && (currentScale > 1)) {
             const touch = e.touches[0];
             const offsetX2 = touch.clientX - frame.getBoundingClientRect().left;
@@ -134,7 +138,6 @@ function init() {
     }
 
     function onTouchEnd() {
-        e.preventDefault();
         isDragging = false;
         document.removeEventListener('touchmove', onTouchMove);
         document.removeEventListener('touchend', onTouchEnd);
@@ -143,7 +146,9 @@ function init() {
 
     // Обработчики для мобильного масштабирования (жесты пальцами)
     frame.addEventListener('touchstart', function (e) {
-        e.preventDefault();  // Отменяем стандартное поведение браузера, во избежание увеличения всего сайта при попытке увеличить карту
+        if (e.target !== frame && e.target !== map) {
+            e.preventDefault();
+        }  // Отменяем стандартное поведение браузера, во избежание увеличения всего сайта при попытке увеличить карту
         if (e.touches.length === 2) {
             initialDistance = getDistance(e.touches[0], e.touches[1]);
             initialScale = currentScale;
@@ -151,7 +156,9 @@ function init() {
     });
 
     frame.addEventListener('touchmove', function (e) {
-        e.preventDefault();
+        if (e.target !== frame && e.target !== map) {
+            e.preventDefault();
+        }
         if (e.touches.length === 2) {
             const newDistance = getDistance(e.touches[0], e.touches[1]);
             const scaleFactor = newDistance / initialDistance;
@@ -160,7 +167,9 @@ function init() {
     });
 
     frame.addEventListener('touchend', function (e) {
-        e.preventDefault();
+        if (e.target !== frame && e.target !== map) {
+            e.preventDefault();
+        }
         if (e.touches.length < 2) {
             initialDistance = null;
         }
