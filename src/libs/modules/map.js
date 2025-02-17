@@ -140,9 +140,6 @@ function init() {
 
     // ОБРАБОТЧИКИ ДЛЯ МОБИЛЬНОГО МАСШТАБИРОВАНИЯ (ЖЕСТЫ ПАЛЬЦАМИ)
     frame.addEventListener('touchstart', function (e) {
-        // if (e.target !== frame && e.target !== map) {
-        //     e.preventDefault();
-        // }  // Отменяем стандартное поведение браузера, во избежание увеличения всего сайта при попытке увеличить карту
         if (e.touches.length === 2) {
             initialDistance = getDistance(e.touches[0], e.touches[1]);
             initialScale = currentScale;
@@ -150,9 +147,6 @@ function init() {
     });
 
     frame.addEventListener('touchmove', function (e) {
-        // if (e.target !== frame && e.target !== map) {
-        //     e.preventDefault();
-        // }
         if (e.touches.length === 2) {
             const newDistance = getDistance(e.touches[0], e.touches[1]);
             const scaleFactor = newDistance / initialDistance;
@@ -161,9 +155,6 @@ function init() {
     });
 
     frame.addEventListener('touchend', function (e) {
-        // if (e.target !== frame && e.target !== map) {
-        //     e.preventDefault();
-        // }
         if (e.touches.length < 2) {
             initialDistance = null;
         }
