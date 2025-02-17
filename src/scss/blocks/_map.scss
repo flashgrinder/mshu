@@ -11,10 +11,12 @@
 .map__body {
     position: relative;
     overflow: hidden;
+    touch-action: none;
+    -ms-touch-action: none;
 
-    @include large-block () {
-        margin-bottom: 48px;
-    }
+    // @include large-block () {
+    //     margin-bottom: 48px;
+    // }
 }
 
 // .map__heading {

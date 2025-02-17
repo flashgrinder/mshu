@@ -3368,6 +3368,8 @@ img {
 .map__body {
   position: relative;
   overflow: hidden;
+  touch-action: none;
+  -ms-touch-action: none;
 }
 
 .map__pic {
@@ -3893,12 +3895,6 @@ img {
 
   .lawsuit::before {
     max-width: 1024px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .map__body {
-    margin-bottom: 48px;
   }
 }
 

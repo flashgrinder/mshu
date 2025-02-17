@@ -55,7 +55,7 @@ function init() {
         zoomMap(0.9091); // Уменьшаем на 10%
     });
 
-    // Отслеживаем координаты мыши, чтобы знать, на какую часть карты мы навели.
+    // ОТСЛЕЖИВАЕМ КООРДИНАТЫ МЫШИ, ЧТОБЫ ЗНАТЬ, НА КАКУЮ ЧАСТЬ КАРТЫ МЫ НАВЕЛИ
     frame.addEventListener('mousedown', function (e) {
         isDragging = true;
         offsetX1 = e.clientX - frame.getBoundingClientRect().left;
@@ -97,11 +97,8 @@ function init() {
     }
 
 
-    // Перетаскивание с пальцами (для сенсорных экранов)
+    // ПЕРЕТАСКИВАНИЕ С ПАЛЬЦАМИ (ДЛЯ СЕНСОРНЫХ ЭКРАНОВ)
     frame.addEventListener('touchstart', function (e) {
-        if (e.target !== frame && e.target !== map) {
-            e.preventDefault();
-        }
         // Обрабатываем только первое касание, если их больше одного
         if (e.touches.length === 1) {
             isDragging = true;
@@ -119,9 +116,6 @@ function init() {
 
     // Функция для перемещения элемента с помощью пальцев
     function onTouchMove(e) {
-        if (e.target !== frame && e.target !== map) {
-            e.preventDefault();
-        }
         if (isDragging && e.touches.length === 1 && (currentScale > 1)) {
             const touch = e.touches[0];
             const offsetX2 = touch.clientX - frame.getBoundingClientRect().left;
@@ -144,11 +138,11 @@ function init() {
     }
 
 
-    // Обработчики для мобильного масштабирования (жесты пальцами)
+    // ОБРАБОТЧИКИ ДЛЯ МОБИЛЬНОГО МАСШТАБИРОВАНИЯ (ЖЕСТЫ ПАЛЬЦАМИ)
     frame.addEventListener('touchstart', function (e) {
-        if (e.target !== frame && e.target !== map) {
-            e.preventDefault();
-        }  // Отменяем стандартное поведение браузера, во избежание увеличения всего сайта при попытке увеличить карту
+        // if (e.target !== frame && e.target !== map) {
+        //     e.preventDefault();
+        // }  // Отменяем стандартное поведение браузера, во избежание увеличения всего сайта при попытке увеличить карту
         if (e.touches.length === 2) {
             initialDistance = getDistance(e.touches[0], e.touches[1]);
             initialScale = currentScale;
@@ -156,9 +150,9 @@ function init() {
     });
 
     frame.addEventListener('touchmove', function (e) {
-        if (e.target !== frame && e.target !== map) {
-            e.preventDefault();
-        }
+        // if (e.target !== frame && e.target !== map) {
+        //     e.preventDefault();
+        // }
         if (e.touches.length === 2) {
             const newDistance = getDistance(e.touches[0], e.touches[1]);
             const scaleFactor = newDistance / initialDistance;
@@ -167,9 +161,9 @@ function init() {
     });
 
     frame.addEventListener('touchend', function (e) {
-        if (e.target !== frame && e.target !== map) {
-            e.preventDefault();
-        }
+        // if (e.target !== frame && e.target !== map) {
+        //     e.preventDefault();
+        // }
         if (e.touches.length < 2) {
             initialDistance = null;
         }
@@ -182,6 +176,7 @@ function init() {
         return Math.sqrt(dx * dx + dy * dy);
     }
 
+    // ТУЛТИПЫ
     const tooltip = document.querySelector('.map__tooltip');
 
     document.querySelectorAll('[data-tooltip]').forEach(function (region) {
