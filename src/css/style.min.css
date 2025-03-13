@@ -1378,10 +1378,17 @@ img {
 .main-screen__info-list {
   padding: 0 60px 0 30px;
   margin: 0;
+  padding-bottom: 15px;
 }
 
 .main-screen__info-item:not(:last-child) {
   margin-bottom: 15px;
+}
+
+.main-screen__button {
+  background: var(--color-white);
+  color: var(--color-red);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
 }
 
 .main-screen__logos {
@@ -2062,13 +2069,6 @@ img {
 
 .dictation--info {
   padding: 100px 0 50px;
-}
-
-.dictation__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-bottom: 15px;
 }
 
 .dictation--about .dictation__actions {
@@ -3507,6 +3507,10 @@ img {
 }
 
 @media screen and (min-width: 769px) {
+  .main-screen__info-list {
+    padding-bottom: 26px;
+  }
+
   .main-screen__info-item:not(:last-child) {
     margin-bottom: 26px;
   }

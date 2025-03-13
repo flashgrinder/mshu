@@ -19,7 +19,7 @@ $dictation = get_field('dictation');
 					class="main-screen__heading title title--pre-large title--white title--w-bold title--indent-small js-reveal gs-reveal a-reveal-left">
 					Молодежная школа юриста
 				</h1>
-				<ul class="main-screen__info-list">
+				<!-- <ul class="main-screen__info-list">
 					<li
 						class="main-screen__info-item text text--upper-medium text--white text--w-regular js-reveal gs-reveal a-reveal-right">
 						Получи уникальные знания от лучших экспертов страны
@@ -32,25 +32,45 @@ $dictation = get_field('dictation');
 						class="main-screen__info-item text text--upper-medium text--white text--w-regular js-reveal gs-reveal a-reveal-right">
 						Погрузись в будущую профессию
 					</li>
+				</ul> -->
+				<ul class="main-screen__info-list">
+					<li
+						class="main-screen__info-item text text--upper-medium text--white text--w-regular js-reveal gs-reveal a-reveal-right">
+						II сезон МШЮ уже ждёт тебя!
+					</li>
+					<li
+						class="main-screen__info-item text text--upper-medium text--white text--w-regular js-reveal gs-reveal a-reveal-right">
+						Погрузись в будущую профессию
+					</li>
+					<li
+						class="main-screen__info-item text text--upper-medium text--white text--w-regular js-reveal gs-reveal a-reveal-right">
+						Получи уникальные знания от ведущих экспертов
+					</li>
+					<li
+						class="main-screen__info-item text text--upper-medium text--white text--w-regular js-reveal gs-reveal a-reveal-right">
+						Попробуй себя в роли юриста
+					</li>
 				</ul>
+				<a href="javascript:;" class="main-screen__button button" data-modal="#participant">
+					Зарегистрироваться
+				</a>
 			</div>
-
 		</div>
 		<div class="main-screen__wrap-logos container">
 			<ul class="main-screen__logos">
-                <li class="main-screen__logo">
-                    <div class="main-screen__capture text text--medium text--dark text--w-regular js-reveal gs-reveal a-reveal-right">При поддержке:</div>
-                    <img src="<?= STANDART_DIR; ?>/img/main-screen/logo-1.svg" width="89" height="33" alt="Логотип уполномоченного по защите прав предпринимателей в г.Москве" class="main-screen__img">
-                </li>
-                <li class="main-screen__logo">
-                    <div class="main-screen__capture text text--medium text--dark text--w-regular js-reveal gs-reveal a-reveal-right">При поддержке:</div>
-                    <img src="<?= STANDART_DIR; ?>/img/main-screen/logo-2.svg" width="125" height="33" alt="Логотип Института правовой грамотности и поддержки предпринимательства" class="main-screen__img">
-                </li>
-                <li class="main-screen__logo">
-                    <div class="main-screen__capture text text--medium text--dark text--w-regular js-reveal gs-reveal a-reveal-right">Оператор проекта:</div>
-                    <img src="<?= STANDART_DIR; ?>/img/main-screen/logo-3.svg" width="90" height="33" alt="Логотип Ассоциации юристов России" class="main-screen__img">
-                </li>
-            </ul>
+				<li class="main-screen__logo">
+					<div class="main-screen__capture text text--medium text--dark text--w-regular js-reveal gs-reveal a-reveal-right">При поддержке:</div>
+					<img src="<?= STANDART_DIR; ?>/img/main-screen/logo-1.svg" width="89" height="33" alt="Логотип уполномоченного по защите прав предпринимателей в г.Москве" class="main-screen__img">
+				</li>
+				<li class="main-screen__logo">
+					<div class="main-screen__capture text text--medium text--dark text--w-regular js-reveal gs-reveal a-reveal-right">При поддержке:</div>
+					<img src="<?= STANDART_DIR; ?>/img/main-screen/logo-2.svg" width="125" height="33" alt="Логотип Института правовой грамотности и поддержки предпринимательства" class="main-screen__img">
+				</li>
+				<li class="main-screen__logo">
+					<div class="main-screen__capture text text--medium text--dark text--w-regular js-reveal gs-reveal a-reveal-right">Оператор проекта:</div>
+					<img src="<?= STANDART_DIR; ?>/img/main-screen/logo-3.svg" width="90" height="33" alt="Логотип Ассоциации юристов России" class="main-screen__img">
+				</li>
+			</ul>
 		</div>
 	</section>
 	<!-- ./ Main-screen -->

@@ -17,13 +17,6 @@
   @include mobile(padding, 60px 0 30px);
 }
 
-.dictation__info {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-bottom: 15px;
-}
-
 .dictation--about .dictation__actions {
   display: flex;
   margin-top: 35px;

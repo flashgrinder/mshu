@@ -82,6 +82,11 @@
 .main-screen__info-list {
   padding: 0 60px 0 30px;
   margin: 0;
+  padding-bottom: 15px;
+
+  @include from(769px) {
+    padding-bottom: 26px;
+  }
 }
 
 .main-screen__info-item:not(:last-child) {
@@ -90,6 +95,12 @@
   @include from(769px) {
     margin-bottom: 26px;
   }
+}
+
+.main-screen__button {
+  background: var(--color-white); 
+  color: var(--color-red);
+  box-shadow: 0 4px 10px 0 #00000033;
 }
 
 .main-screen__logos {
