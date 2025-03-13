@@ -98,9 +98,16 @@
 }
 
 .main-screen__button {
-  background: var(--color-white); 
   color: var(--color-red);
+  background: var(--color-white); 
+  width: 100%;
+  padding: 27px;
   box-shadow: 0 4px 10px 0 #00000033;
+
+  @include from(576px) {
+    width: auto;
+    padding: 27px;
+  }
 }
 
 .main-screen__logos {
