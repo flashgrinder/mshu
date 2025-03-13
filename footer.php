@@ -23,7 +23,7 @@
 							</a>
 						</li>
 						<li class="contacts__item">
-							<a class="contacts__link" href="mailto:lawschool@inregions.com"
+							<a class="contacts__link" href="mailto:info@law-school.ru"
 								aria-label="Электронная почта">
 								<img src="<?= STANDART_DIR; ?>/img/contacts/shortcut-mail.svg" width="36" height="36"
 									class="contacts__icon">
