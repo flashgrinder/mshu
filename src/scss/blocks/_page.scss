@@ -15,8 +15,9 @@
     }
 }
 
-.page-template-front-page .page__container {
-    @include mobile(padding-top, 76px);
+.page__container {
+    padding-bottom: 50px;
+    @include mobile(padding-bottom, 30px);
 }
 
 // .page.is-open {

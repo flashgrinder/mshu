@@ -230,4 +230,47 @@ if ((!empty($lawsuit_heading)) && (!empty($lawsuit_description))) :
 </section>
 <!-- ./ Dictation-member -->
 
+<!-- Video -->
+<?php if (have_rows('video')): ?>
+	<section class="video-slider js-reveal gs-reveal">
+		<h2
+			class="video-slider__header title title--big title--black title--w-bold center title--indent-small js-reveal gs-reveal a-reveal-left">
+			Видео летнего правового лагеря
+		</h2>
+
+		<div class="video-slider__swiper js-video-slider swiper">
+			<div class="video-slider__items swiper-wrapper">
+				<?php while (have_rows('video')): the_row();
+					$video_link = get_sub_field('video_link');
+					if (!empty($video_link)) :
+				?>
+						<div class="video-slider__item swiper-slide">
+							<iframe class="video-slider__player" width="100%" height="100%" src="<?php echo esc_url($video_link); ?>" frameBorder="0" allow="clipboard-write" webkitAllowFullScreen mozallowfullscreen allowFullScreen loading="lazy"></iframe>
+						</div>
+				<?php endif;
+				endwhile; ?>
+			</div>
+			<div class="video-slider__arrows slider-arrows">
+				<div
+					class="swiper-button-prev video-slider__arrow video-slider__arrow--prev slider-arrows__arrow slider-arrows__arrow--prev js-slider-prev">
+					<svg width="11" height="20" viewBox="0 0 11 20" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path d="M10 1L1 10L10 19" stroke="white" stroke-width="2"
+							stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</div>
+				<div
+					class="swiper-button-next video-slider__arrow video-slider__arrow--next slider-arrows__arrow slider-arrows__arrow--next js-slider-next">
+					<svg width="11" height="20" viewBox="0 0 11 20" fill="none"
+						xmlns="http://www.w3.org/2000/svg">
+						<path d="M1 19L10 10L1 1" stroke="white" stroke-width="2"
+							stroke-linecap="round" stroke-linejoin="round" />
+					</svg>
+				</div>
+			</div>
+		</div>
+	</section>
+<?php endif; ?>
+<!-- ./ Video -->
+
 <?php get_footer(); ?>

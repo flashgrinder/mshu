@@ -1,6 +1,6 @@
 .camp {
-    padding: 100px 0;
-    @include mobile(padding, 60px 0);
+    padding: 100px 0 50px;
+    @include mobile(padding, 60px 0 30px);
 }
   
   .camp__actions {
