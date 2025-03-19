@@ -22,7 +22,7 @@ add_action('wp_enqueue_scripts', function () {
 			]
 		);
 	}
-	if (is_front_page()) {
+	if (is_front_page() || is_page('lager-mshu')) {
 		wp_enqueue_script(
 			'lodash-js',
 			'https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js',
