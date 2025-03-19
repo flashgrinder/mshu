@@ -19,7 +19,7 @@
         ?>
             <div class="head-info__description container">
                 <div
-                    class="head-info__description text text--medium text--white text--w-regular js-reveal gs-reveal a-reveal-left">
+                    class="head-info__description text text--medium text--white text--w-regular js-reveal gs-reveal a-reveal-right">
                     <?php echo wp_kses_post($head_info_description); ?>
                 </div>
             </div>
@@ -38,7 +38,7 @@
         <section class="participants js-reveal gs-reveal">
             <div class="participants__body container">
                 <h2
-                    class="participants__heading title title--big title--black title--w-bold title--indent-small js-reveal gs-reveal a-reveal-right">
+                    class="participants__heading title title--big title--black title--w-bold title--indent-small js-reveal gs-reveal a-reveal-left">
                     <?php echo esc_html($participants_heading); ?>
                 </h2>
                 <div
@@ -91,7 +91,7 @@ if ((!empty($lawsuit_heading)) && (!empty($lawsuit_description))) :
         <div class="lawsuit__body">
             <div class="lawsuit__wrapper container">
                 <h2
-                    class="lawsuit__heading title title--big title--black title--w-bold title--indent-small js-reveal gs-reveal a-reveal-right">
+                    class="lawsuit__heading title title--big title--black title--w-bold title--indent-small js-reveal gs-reveal a-reveal-left">
                     <?php echo esc_html($lawsuit_heading); ?>
                 </h2>
                 <div
@@ -118,8 +118,6 @@ if ((!empty($lawsuit_heading)) && (!empty($lawsuit_description))) :
                 <div class="mentors__tabs-wrapper tabs__wrapper">
                     <div class="mentors__outer tabs__content is-open js-slider-mentors-init"
                         data-tab-content="slider-1">
-
-
 
                         <div class="mentors__slider-wrap">
                             <?php if (have_rows('mentors-slider')): ?>
@@ -214,7 +212,7 @@ if ((!empty($lawsuit_heading)) && (!empty($lawsuit_description))) :
         $camp_text = get_field('camp_text');
         if (!empty($camp_text)) :
         ?>
-            <div class="camp__text text text--medium text--dark text--w-regular center js-reveal gs-reveal a-reveal-left">
+            <div class="camp__text text text--medium text--dark text--w-regular center js-reveal gs-reveal a-reveal-right">
                 <?php echo wp_kses_post($camp_text); ?>
             </div>
         <?php endif; ?>
@@ -232,44 +230,44 @@ if ((!empty($lawsuit_heading)) && (!empty($lawsuit_description))) :
 
 <!-- Video -->
 <?php if (have_rows('video')): ?>
-	<section class="video-slider js-reveal gs-reveal">
-		<h2
-			class="video-slider__header title title--big title--black title--w-bold center title--indent-small js-reveal gs-reveal a-reveal-left">
-			Видео летнего правового лагеря
-		</h2>
+    <section class="video-slider js-reveal gs-reveal">
+        <h2
+            class="video-slider__header title title--big title--black title--w-bold center title--indent-small js-reveal gs-reveal a-reveal-left">
+            Видео летнего правового лагеря
+        </h2>
 
-		<div class="video-slider__swiper js-video-slider swiper">
-			<div class="video-slider__items swiper-wrapper">
-				<?php while (have_rows('video')): the_row();
-					$video_link = get_sub_field('video_link');
-					if (!empty($video_link)) :
-				?>
-						<div class="video-slider__item swiper-slide">
-							<iframe class="video-slider__player" width="100%" height="100%" src="<?php echo esc_url($video_link); ?>" frameBorder="0" allow="clipboard-write" webkitAllowFullScreen mozallowfullscreen allowFullScreen loading="lazy"></iframe>
-						</div>
-				<?php endif;
-				endwhile; ?>
-			</div>
-			<div class="video-slider__arrows slider-arrows">
-				<div
-					class="swiper-button-prev video-slider__arrow video-slider__arrow--prev slider-arrows__arrow slider-arrows__arrow--prev js-slider-prev">
-					<svg width="11" height="20" viewBox="0 0 11 20" fill="none"
-						xmlns="http://www.w3.org/2000/svg">
-						<path d="M10 1L1 10L10 19" stroke="white" stroke-width="2"
-							stroke-linecap="round" stroke-linejoin="round" />
-					</svg>
-				</div>
-				<div
-					class="swiper-button-next video-slider__arrow video-slider__arrow--next slider-arrows__arrow slider-arrows__arrow--next js-slider-next">
-					<svg width="11" height="20" viewBox="0 0 11 20" fill="none"
-						xmlns="http://www.w3.org/2000/svg">
-						<path d="M1 19L10 10L1 1" stroke="white" stroke-width="2"
-							stroke-linecap="round" stroke-linejoin="round" />
-					</svg>
-				</div>
-			</div>
-		</div>
-	</section>
+        <div class="video-slider__swiper js-video-slider swiper">
+            <div class="video-slider__items swiper-wrapper">
+                <?php while (have_rows('video')): the_row();
+                    $video_link = get_sub_field('video_link');
+                    if (!empty($video_link)) :
+                ?>
+                        <div class="video-slider__item swiper-slide">
+                            <iframe class="video-slider__player" width="100%" height="100%" src="<?php echo esc_url($video_link); ?>" frameBorder="0" allow="clipboard-write" webkitAllowFullScreen mozallowfullscreen allowFullScreen loading="lazy"></iframe>
+                        </div>
+                <?php endif;
+                endwhile; ?>
+            </div>
+            <div class="video-slider__arrows slider-arrows">
+                <div
+                    class="swiper-button-prev video-slider__arrow video-slider__arrow--prev slider-arrows__arrow slider-arrows__arrow--prev js-slider-prev">
+                    <svg width="11" height="20" viewBox="0 0 11 20" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 1L1 10L10 19" stroke="white" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <div
+                    class="swiper-button-next video-slider__arrow video-slider__arrow--next slider-arrows__arrow slider-arrows__arrow--next js-slider-next">
+                    <svg width="11" height="20" viewBox="0 0 11 20" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 19L10 10L1 1" stroke="white" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
 <?php endif; ?>
 <!-- ./ Video -->
 

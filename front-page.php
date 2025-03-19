@@ -528,18 +528,20 @@ $dictation = get_field('dictation');
 	</div>
 	<div class="partners__outer">
 		<div class="partners__swiper partners__slider js-partners-slider swiper">
-			<div class="partners__items swiper-wrapper">
+			<ul class="partners__items swiper-wrapper">
 				<?php if (have_rows('partners')): ?>
 					<?php while (have_rows('partners')): the_row();
 						$partners_link = get_sub_field('partners_link');
 						$partners_logo = get_sub_field('partners_logo');
 					?>
-						<a href="<?= (!empty($partners_link)) ? $partners_link : 'javascript:;'; ?>" class="partners__item swiper-slide">
-							<img src="<?php echo esc_url($partners_logo['url']); ?>" alt="<?php echo esc_attr($partners_logo['alt']); ?>" class="partners__logo">
-						</a>
+						<li class="partners__item swiper-slide">
+							<a href="<?= (!empty($partners_link)) ? $partners_link : 'javascript:;'; ?>" class="partners__link">
+								<img src="<?php echo esc_url($partners_logo['url']); ?>" alt="<?php echo esc_attr($partners_logo['alt']); ?>" class="partners__logo">
+							</a>
+						</li>
 					<?php endwhile; ?>
 				<?php endif; ?>
-			</div>
+			</ul>
 		</div>
 	</div>
 </section>

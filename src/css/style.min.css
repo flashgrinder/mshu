@@ -2059,6 +2059,12 @@ img {
   gap: 30px;
 }
 
+.partners__slider .partners__link {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+}
+
 /* Dictation */
 
 .dictation {
