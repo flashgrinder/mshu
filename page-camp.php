@@ -220,9 +220,9 @@ if ((!empty($lawsuit_heading)) && (!empty($lawsuit_description))) :
             <a href="javascript:;" class="camp__button button button--primary js-reveal gs-reveal a-reveal-left" data-modal="#partner">
                 Стать партнером
             </a>
-            <a href="javascript:;" class="camp__button button button--primary js-reveal gs-reveal a-reveal-right" data-modal="#participant-camp">
+            <!-- <a href="javascript:;" class="camp__button button button--primary js-reveal gs-reveal a-reveal-right" data-modal="#participant-camp">
                 Стать участником
-            </a>
+            </a> -->
         </div>
     </div>
 </section>
