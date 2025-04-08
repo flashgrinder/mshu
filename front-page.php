@@ -579,7 +579,7 @@ $dictation = get_field('dictation');
 			<li class="numbers__item">
 				<span class="numbers__number text text--giant text--white text--w-bold js-reveal gs-reveal a-reveal-right">5</span>
 				<span
-					class="numbers__unit text text--pre-pre-large text--white text--w-semibold center js-reveal gs-reveal a-reveal-right">Региона</span>
+					class="numbers__unit text text--pre-pre-large text--white text--w-semibold center js-reveal gs-reveal a-reveal-right">Регионов</span>
 			</li>
 			<li class="numbers__item">
 				<span class="numbers__number text text--giant text--white text--w-bold js-reveal gs-reveal a-reveal-right">4</span>
