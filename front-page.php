@@ -268,19 +268,19 @@ $dictation = get_field('dictation');
 		<div class="general__body container">
 			<div class="general__member">
 				<div class="general__photo js-reveal gs-reveal a-reveal-left">
-					<img src="<?= STANDART_DIR; ?>/img/general/member.png" alt="Татьяна Минеева" class="general__img">
+					<img src="<?= STANDART_DIR; ?>/img/general/member.png" alt="Татьяна Сизова" class="general__img">
 				</div>
 				<div class="general__info js-reveal gs-reveal a-reveal-rigth">
 					<h3 class="general__title text text--medium text--white text--w-bold">
 						Проект разработан по поручению Уполномоченного
 						по защите прав предпринимателей в городе
-						Москве Татьяны Минеевой
+						Москве Татьяны Сизовой
 					</h3>
 					<p class="general__description text text--medium text--white text--w-regular">
 						“Наращивание профессиональных компетенций, ранняя профориентация в сфере юриспруденции и общая правовая грамотность населения составляют основу развития гражданского общества в нашей стране"
 					</p>
 					<div class="general__name text text--medium text--white text--w-regular">
-						© Т.В. Минеева
+						© Т.В. Сизова
 					</div>
 				</div>
 			</div>
